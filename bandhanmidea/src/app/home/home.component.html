@@ -1,129 +1,79 @@
 <div class="wrap">
-    <!-- Header -->
-    
+
+  <!-- Header -->
   <app-header></app-header>
-    <!-- Hero + Sidebar -->
-    <section class="hero">
-      <!-- Hero Card -->
-      <div class="hero-card">
-        <h2 style="color: #df4f73;">আপনার ধর্ম এবং মূল্যবোধের সঙ্গে মিল থাকা জীবনসঙ্গী খুঁজুন।</h2>
-        <p class="lead">
-            একটি নিরাপদ ও সম্মানজনক স্থান গম্ভীর মিলনের জন্য — শালীন প্রোফাইল, পরিবার-বান্ধব যোগাযোগ এবং শরিয়া-সম্মত দিকনির্দেশনা।
-        </p>
-  
-        <!-- Search Form -->
-        <form class="search" (ngSubmit)="onSearch()">
-          <div class="field">
-            <label>Looking for</label>
-            <select [(ngModel)]="filters.gender" name="gender">
-              <option value="female">Bride</option>
-              <option value="male">Groom</option>
-            </select>
-          </div>
-  
-          <div class="field">
-            <label>Country</label>
-            <select [(ngModel)]="filters.country" name="country">
-              <option value="">Any</option>
-              <option>Bangladesh</option>
-              <option>United Kingdom</option>
-              <option>Saudi Arabia</option>
-              <option>United States</option>
-            </select>
-          </div>
-  
-          <div class="field">
-            <label>Age</label>
-            <input [(ngModel)]="filters.age" name="age" placeholder="25-32" />
-          </div>
-  
-          <div class="field" style="min-width:140px">
-            <label>&nbsp;</label>
-            <button class="btn" type="submit">Search</button>
-          </div>
-  
-          <div style="width:100%; margin-top:6px">
-            <div class="stats">
-              <div class="stat">15,784 Profiles</div>
-              <div class="stat">2,342 Verified</div>
-              <div class="stat">Global community</div>
-            </div>
-          </div>
-        </form>
-      </div>
-  
-      <!-- Filters Sidebar -->
-      <aside class="filters">
-        <h4>Refine results</h4>
-  
-        <div class="group">
-          <label>Education</label>
-          <select>
-            <option>Any</option>
-            <option>Bachelor</option>
-            <option>Master</option>
-            <option>PhD</option>
+
+  <!-- Hero + Sidebar -->
+  <section class="hero">
+
+  <!-- Hero Card -->
+  <div class="hero-card">
+    <div class="overlay">
+      <h2 class="title">
+        দেশি ও প্রবাসী পাত্র-পাত্রী সন্ধান ও মধ্যস্থতাকারী নির্ভরযোগ্য প্রতিষ্ঠান
+      </h2>
+
+      <p class="lead">
+        একটি নিরাপদ ও সম্মানজনক স্থান গম্ভীর মিলনের জন্য — শালীন প্রোফাইল, পরিবার-বান্ধব যোগাযোগ এবং শরিয়া-সম্মত দিকনির্দেশনা
+      </p>
+
+      <!-- Search Form -->
+      <form class="search" (ngSubmit)="onSearch()">
+        <div class="field">
+          <label>আপনি খুঁজছেন</label>
+          <select [(ngModel)]="filters.gender" name="gender">
+            <option value="female">বধূ</option>
+            <option value="male">বর</option>
           </select>
         </div>
-  
-        <div class="group">
-          <label>Religious practice</label>
-          <select>
-            <option>Any</option>
-            <option>Regular</option>
-            <option>Conservative</option>
-            <option>Very Conservative</option>
+
+        <div class="field">
+          <label>দেশ</label>
+          <select [(ngModel)]="filters.country" name="country">
+            <option value="">যেকোনো</option>
+            <option>বাংলাদেশ</option>
+            <option>যুক্তরাজ্য</option>
+            <option>সৌদি আরব</option>
+            <option>যুক্তরাষ্ট্র</option>
           </select>
         </div>
-  
-        <div class="group">
-          <label>Marital status</label>
-          <select>
-            <option>Never married</option>
-            <option>Divorced</option>
-            <option>Widowed</option>
-          </select>
+
+        <div class="field">
+          <label>বয়স</label>
+          <input [(ngModel)]="filters.age" name="age" placeholder="25-32" />
         </div>
-  
-        <div class="group">
-          <label>Show only</label>
-          <div style="display:flex; gap:8px">
-            <label><input type="checkbox" /> Verified</label>
-            <label><input type="checkbox" /> Photos</label>
-          </div>
+
+        <div class="field full">
+          <button class="btn" type="submit" (click)="goToProfile()">অনুসন্ধান করুন</button>
         </div>
-  
-        <div style="display:flex; gap:8px; margin-top:8px;">
-          <button class="btn-primary">Apply</button>
-          <button class="btn-outline">Reset</button>
+
+        <div class="stats full">
+          <div class="stat">15,784 প্রোফাইল</div>
+          <div class="stat">2,342 যাচাইকৃত</div>
+          <div class="stat">বিশ্বব্যাপী সম্প্রদায়</div>
         </div>
-      </aside>
-    </section>
-  
-    <!-- Profiles Grid -->
-    <section style="margin-bottom:18px">
-      <div class="profiles">
-        <div class="card" *ngFor="let p of filteredProfiles">
-          <div class="avatar">
-            <div class="badge">{{ p.badge }}</div>
-       
-            <img [src]="p.initial" alt="Profile">
-          </div>
-  
-          <h4 class="name">{{ p.name }}</h4>
-          <div class="meta">{{ p.age }} • {{ p.location }}</div>
-  
-          <div class="attributes">
-            <span class="pill" *ngFor="let t of p.tags">{{ t }}</span>
-          </div>
-  
-          <div class="actions">
-            <button class="btn-outline">View</button>
-            <button class="btn-primary">Connect</button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <app-how-itwork></app-how-itwork>
+      </form>
+    </div>
+
+    <!-- Filters Sidebar over the background -->
+    
+
   </div>
-  
+</section>
+
+  <section style="margin-bottom:18px">
+   <app-tutorial></app-tutorial>
+  </section>
+
+  <!-- Stats Counter -->
+  <section style="margin-bottom:18px">
+    <app-stats-counter></app-stats-counter>
+  </section>
+  <section style="margin-bottom:18px">
+    <app-how-itwork></app-how-itwork>
+  </section>
+  <section style="margin-bottom:18px">
+    <app-footer></app-footer>>
+  </section>
+
+</div>

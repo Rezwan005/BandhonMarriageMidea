@@ -1,0 +1,12 @@
+<div class="stepper-container">
+  <div class="line"></div>
+
+  <div *ngFor="let step of steps"
+       class="step-item"
+       [class.active]="currentStep == step.id"
+ (click)="goToStep(step.id)"
+  >
+    <div class="circle">{{ step.id }}</div>
+    <div class="label">{{ step.label }}</div>
+  </div>
+</div>

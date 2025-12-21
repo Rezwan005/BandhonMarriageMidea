@@ -1,0 +1,33 @@
+.edit-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Left sidebar */
+.left-panel {
+  width: 260px;
+  flex-shrink: 0;
+}
+
+/* Right content */
+.right-panel {
+  flex: 1;
+  padding: 20px;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+  .edit-wrapper {
+    flex-direction: column;
+  }
+
+  .left-panel {
+    width: 100%;
+    order: 2;
+  }
+
+  .right-panel {
+    order: 1;
+    padding: 12px;
+  }
+}

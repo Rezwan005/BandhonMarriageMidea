@@ -1,0 +1,83 @@
+.stats-wrapper {
+  text-align: center;
+  padding: 20px 12px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #351f55;
+}
+
+/* GRID – responsive */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
+  padding: 10px;
+}
+
+/* CARD */
+.stat-card {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 20px 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* Text */
+.label {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.count {
+  font-size: 26px;
+  font-weight: bold;
+  color: #111;
+}
+
+/* ------------------
+   MOBILE DESIGN
+------------------- */
+@media (max-width: 480px) {
+  .title {
+    font-size: 20px;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .count {
+    font-size: 22px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 360px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}

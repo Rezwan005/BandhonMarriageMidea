@@ -1,0 +1,114 @@
+/* Page background */
+body {
+  background: #f6f4fb;
+}
+
+/* Card container */
+.custom-form-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px 28px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+/* Title */
+.title-text {
+  color: #4b2c71;
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 6px;
+  letter-spacing: 0.3px;
+}
+
+/* Divider */
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, #512da8, #d81b60);
+  opacity: 0.4;
+}
+
+/* Labels */
+.label-custom {
+  color: #6b4a8f;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* Inputs */
+.custom-input {
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  padding: 14px 14px;
+  font-size: 14px;
+  transition: all 0.25s ease;
+  background: #fafafa;
+}
+
+.custom-input:focus {
+  border-color: #d81b60;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(216, 27, 96, 0.15);
+}
+
+/* Checkbox */
+.form-check-input {
+  cursor: pointer;
+}
+
+.checkbox-label {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Hint text */
+.hint-text {
+  font-size: 13px;
+  color: #7a4eb5;
+  background: #f3effa;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-top: 6px;
+}
+
+/* Buttons */
+.btn {
+  margin-top: 20px;
+  height: 26px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+ 
+}
+
+.btn-back {
+  background: #ececec;
+  color: #555;
+  margin-right: 10px;
+
+}
+
+.btn-back:hover {
+  background: #dedede;
+}
+
+.btn-save {
+  background: linear-gradient(90deg, #512da8, #d81b60);
+  color:white
+ 
+}
+
+
+
+/* Mobile polish */
+@media (max-width: 576px) {
+  .custom-form-card {
+    padding: 24px 18px;
+  }
+
+  .btn {
+    width: 48%;
+  }
+}

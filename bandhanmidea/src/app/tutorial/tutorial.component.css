@@ -1,0 +1,137 @@
+/* --- Base Styling and Variables (using CSS custom properties for variables) --- */
+:root {
+  --primary-start: #9d25a6; /* Deep Purple */
+  --primary-end: #f06;      /* Bright Pink/Magenta */
+  --secondary-color: #f06;  /* Used for the outline color */
+  --text-dark: #333;
+  --text-light: #fff;
+  --font-bengali: 'Arial', sans-serif; /* IMPORTANT: Replace with your actual Bengali font */
+}
+
+.cta-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #f8f8f8;
+  font-family: var(--font-bengali);
+}
+
+/* --- Headline Styling (Gradient Text Effect) --- */
+.cta-headline {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  text-align: center;
+
+  /* The magic for gradient text */
+  background: linear-gradient(90deg, var(--primary-start), var(--primary-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* --- Button Group Layout --- */
+.cta-buttons {
+  display: flex;
+  gap: 30px; /* Space between buttons */
+  flex-wrap: wrap; /* Critical for wrapping on smaller screens */
+  justify-content: center;
+}
+
+/* --- Base Button Style --- */
+.cta-button {
+  padding: 15px 35px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease; /* Smooth hover effects */
+  min-width: 250px;
+  text-align: center;
+}
+
+.icon {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+/* --- Primary Gradient Button Style --- */
+.primary-gradient-btn {
+  color: var(--text-light);
+  border: none;
+  background-image: linear-gradient(135deg, var(--primary-start), var(--primary-end));
+  /* Modern Lifted appearance */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.primary-gradient-btn:hover {
+  transform: translateY(-3px); /* Subtle lift on hover */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.primary-gradient-btn .icon {
+  font-weight: 900;
+}
+
+/* --- Secondary Outline Button Style --- */
+.secondary-outline-btn {
+  background-color: var(--text-light);
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.secondary-outline-btn:hover {
+  background-color: var(--secondary-color); /* Fill with color on hover */
+  color: var(--text-light);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02); /* Slight scale for emphasis */
+}
+
+/* Custom Video Icon (Play Triangle) */
+.secondary-outline-btn .video-icon::before {
+  content: '\25B6';
+  display: inline-block;
+  color: var(--secondary-color);
+  transition: color 0.3s ease;
+}
+
+.secondary-outline-btn:hover .video-icon::before {
+  color: var(--text-light);
+}
+
+/* ================================================= */
+/* --- MOBILE OPTIMIZATION (Media Query) --- */
+/* Styles applied when the screen width is 600px or less */
+@media (max-width: 600px) {
+    
+    /* Reduce Headline Size on small screens */
+    .cta-headline {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+        padding: 0 10px;
+    }
+
+    /* Stack buttons and ensure they take full width */
+    .cta-buttons {
+        flex-direction: column; /* Explicitly stack them */
+        gap: 15px; /* Reduce vertical gap */
+    }
+    
+    /* Make buttons full width (minus padding) and adjust padding */
+    .cta-button {
+        width: 90vw; /* Use viewport width for near full screen width */
+        max-width: 350px;
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+    
+    .icon {
+        font-size: 1.2rem;
+    }
+}

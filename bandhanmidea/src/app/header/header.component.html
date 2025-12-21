@@ -1,18 +1,28 @@
-
 <header class="site-header">
-    <a class="brand">
-      <div class="logo">
-          
-      </div>
-      <div>
-        <h1 style="color: #FF3366;">বান্ধন  মিডিয়া </h1>
-        <p> Faith-first matrimonial for devout Muslims</p>
-      </div>
-    </a>
 
-    <nav class="top-nav">
-      <a>How it works</a>
-      <a>Profiles</a>
-      <a class="cta">Join Free</a>
-    </nav>
-  </header>
+  <!-- Brand / Logo -->
+  <a class="brand" href="#">
+    <div class="logo">
+      <img src="assets/Img/logo.png" alt="বন্ধন মিডিয়া সেন্টার Logo" />
+    </div>
+    <div class="brand-text">
+      <h1>বন্ধন মিডিয়া সেন্টার </h1>
+      <p>দেশি ও প্রবাসী পাত্র-পাত্রী সন্ধান ও মধ্যস্থতাকারী নির্ভরযোগ্য প্রতিষ্ঠান</p>
+    </div>
+  </a>
+
+  <!-- Navigation -->
+  <nav [class.active]="isMenuOpen" class="top-nav">
+    <a href="#">কিভাবে কাজ করে</a>
+    <a href="#">প্রোফাইল</a>
+    <a href="#" class="cta">ফ্রি যোগদান করুন</a>
+  </nav>
+
+  <!-- Hamburger for mobile -->
+  <div class="hamburger" (click)="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+</header>

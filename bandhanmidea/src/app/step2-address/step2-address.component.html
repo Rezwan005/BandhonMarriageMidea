@@ -1,0 +1,51 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6 custom-form-card">
+      
+      <h2 class="title-text">ঠিকানা</h2>
+      <hr class="mb-4">
+
+      <div class="mb-4">
+        <label class="label-custom">স্থায়ী ঠিকানা <span class="text-danger">*</span></label>
+        <select class="form-select custom-input" name="permanent" [(ngModel)]="formData.permanentAddress">
+          <option value="">ঠিকানা নির্বাচন করুন</option>
+          <option value="Dhaka">ঢাকা</option>
+        </select>
+        <div class="hint-text mt-1">
+          বাসার নাম্বার না লিখে শুধু গ্রাম বা এলাকার নাম লিখুন। যেমন- মিরপুর ১০, বাঘমারা।
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <label class="label-custom">বর্তমান ঠিকানা <span class="text-danger">*</span></label>
+        
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="checkbox" id="sameAddr" 
+                 name="isSame" [(ngModel)]="formData.isSameAddress" (change)="toggleSameAddress()">
+          <label class="form-check-label checkbox-label" for="sameAddr">
+            স্থায়ী ও বর্তমান ঠিকানা একই
+          </label>
+        </div>
+
+        <select class="form-select custom-input" name="current" [(ngModel)]="formData.currentAddress">
+          <option value="">ঠিকানা নির্বাচন করুন</option>
+          <option value="Dhaka">ঢাকা</option>
+        </select>
+        <div class="hint-text mt-1">
+          বাসার নাম্বার না লিখে শুধু গ্রাম বা এলাকার নাম লিখুন। যেমন- মিরপুর ১০, বাঘমারা।
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <label class="label-custom">কোথায় বড় হয়েছেন? <span class="text-danger">*</span></label>
+        <input type="text" class="form-control custom-input" name="hometown" [(ngModel)]="formData.hometown">
+      </div>
+
+      <div class="d-flex justify-content-between">
+        <button type="button" class="btn btn-back px-5">Back</button>
+        <button type="button" class="btn btn-save px-5" (click)="onSave()">Save & Next</button>
+      </div>
+
+    </div>
+  </div>
+</div>

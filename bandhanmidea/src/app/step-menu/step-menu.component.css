@@ -1,0 +1,110 @@
+/* Outer container */
+.stepper-container {
+  position: relative;
+  width: 200px;
+  padding: 20px 0;
+}
+
+/* The vertical line */
+.stepper-container .line {
+  position: absolute;
+  left: 28px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #dcdcdc;
+}
+
+/* Each item */
+.step-item {
+  position: relative;
+  padding-left: 60px;
+  margin-bottom: 25px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.step-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Step label (Bangla text) */
+.step-item .label {
+  font-size: 14px;
+  color: #555;
+  font-weight: 500;
+}
+
+/* Circle */
+.step-item .circle {
+  position: absolute;
+  left: 15px;
+  width: 26px;
+  height: 26px;
+  background: white;
+  border: 2px solid #dcdcdc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  color: #7a7a7a;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+/* Active State */
+.step-item.active .circle {
+  background: #e81ecc;
+  color: white;
+  border-color: #e81ecc;
+  transform: scale(1.1);
+}
+
+.step-item.active .label {
+  color: #e81ecc;
+  font-weight: 600;
+}
+/* ================= MOBILE EXACT MATCH ================= */
+@media (max-width: 768px) {
+
+  .edit-wrapper {
+    display: block;
+    width: 100%;
+  }
+
+  .left-panel {
+    display: none !important;   /* 🔥 hide sidebar completely */
+  }
+
+  .right-panel {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 12px !important;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .brand-text h1 {
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 180px;
+  }
+
+  .brand {
+    max-width: calc(100% - 50px);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .stepper-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
+    justify-content: center;
+  }
+}

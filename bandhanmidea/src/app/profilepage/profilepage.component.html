@@ -1,0 +1,23 @@
+<app-header></app-header>
+<div class="page-container">
+
+  <!-- Mobile Filter Toggle -->
+  <button class="filter-toggle" (click)="toggleFilter()">⚙️ ফিল্টার</button>
+
+  <!-- Left Filter Drawer -->
+  <aside class="sidebar" [class.open]="isFilterOpen">
+    <app-filters (filterChanged)="applyFilters($event)"></app-filters>
+  </aside>
+
+  <!-- Right Profile List -->
+  <section class="content">
+    <app-profile-list [filters]="activeFilters"></app-profile-list>
+  </section>
+
+</div>
+
+<!-- Overlay for Mobile Filter -->
+<div class="overlay" *ngIf="isFilterOpen" (click)="toggleFilter()"></div>
+  <section style="margin-bottom:18px">
+    <app-footer></app-footer>>
+  </section>

@@ -1,0 +1,48 @@
+.result-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #4c1d95;
+  margin-bottom: 20px;
+}
+
+.profiles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 20px;
+}
+
+.profile-card {
+  display: flex;
+  background: white;
+  padding: 18px;
+  border-radius: 14px;
+  border: 1px solid #eee;
+  gap: 15px;
+  transition: all .2s;
+}
+
+.profile-card:hover {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transform: translateY(-4px);
+}
+
+.avatar {
+  width: 75px;
+  height: 75px;
+}
+
+.code {
+  font-size: 20px;
+  color: #5b21b6;
+  margin-bottom: 10px;
+}
+
+.view-btn {
+  background: #ec4899;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  margin-top: 10px;
+  cursor: pointer;
+}

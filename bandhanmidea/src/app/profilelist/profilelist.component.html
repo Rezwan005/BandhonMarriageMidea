@@ -1,0 +1,22 @@
+<h2 class="result-title">বায়োডাটা সমূহ</h2>
+
+<div class="profiles-grid">
+  
+  <div class="profile-card" *ngFor="let p of filteredProfiles">
+
+    <div class="left">
+      <img [src]="p.avatar" class="avatar">
+    </div>
+
+    <div class="right">
+      <h3 class="code">{{ p.code }}</h3>
+      <p>বয়সঃ {{ p.age }}</p>
+      <p>উচ্চতাঃ {{ p.height }}</p>
+      <p>পেশাঃ {{ p.job }}</p>
+
+      <button class="view-btn">বায়োডাটা →</button>
+    </div>
+
+  </div>
+
+</div>

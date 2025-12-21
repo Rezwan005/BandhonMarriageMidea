@@ -1,0 +1,35 @@
+<div class="stats-wrapper">
+  <h2 class="title">বন্ধন মিডিয়া সেবা গ্রহীতার পরিসংখ্যান</h2>
+
+  <div class="stats-grid">
+
+    <!-- Total Male-Female -->
+    <div class="stat-card">
+      <img src="assets/Img/images.jpg" class="icon" />
+      <p class="label">সর্বমোট পাত্র-পাত্রীর বারোডাটা</p>
+      <h3 class="count">{{ totalAll | number }}</h3>
+    </div>
+
+    <!-- Total Male -->
+    <div class="stat-card">
+      <img src="assets/Img/male.jpg" class="icon" />
+      <p class="label">সর্বমোট পাত্রের বারোডাটা</p>
+      <h3 class="count">{{ totalMale | number }}</h3>
+    </div>
+
+    <!-- Total Female -->
+    <div class="stat-card">
+      <img src="assets/Img/female.png" class="icon" />
+      <p class="label">সর্বমোট পাত্রীর বারোডাটা</p>
+      <h3 class="count">{{ totalFemale | number }}</h3>
+    </div>
+
+    <!-- Successful Marriage -->
+    <div class="stat-card">
+      <img src="assets/Img/Marriage.png" class="icon" />
+      <p class="label">সর্বমোট সফল বিবাহ</p>
+      <h3 class="count">{{ totalMarriage | number }}+</h3>
+    </div>
+
+  </div>
+</div>

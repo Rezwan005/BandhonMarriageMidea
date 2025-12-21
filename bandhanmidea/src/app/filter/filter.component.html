@@ -1,0 +1,38 @@
+<div class="filter-box">
+
+  <h2 class="filter-title">ফিল্টার সমূহ</h2>
+
+  <!-- Category -->
+  <div class="filter-group">
+    <label>আমি খুঁজছি</label>
+    <select [(ngModel)]="filters.searchFor" (change)="emitChanges()">
+      <option value="">সকল</option>
+      <option value="male">পাত্র</option>
+      <option value="female">পাত্রি</option>
+    </select>
+  </div>
+
+  <!-- Marital -->
+  <div class="filter-group">
+    <label>বৈবাহিক অবস্থা</label>
+    <select [(ngModel)]="filters.maritalStatus" (change)="emitChanges()">
+      <option value="">সকল</option>
+      <option value="single">অবিবাহিত</option>
+      <option value="divorced">ডিভোর্সড</option>
+      <option value="widow">বিধবা</option>
+    </select>
+  </div>
+
+  <!-- Age Slider -->
+  <div class="filter-group">
+    <label>বয়স</label>
+
+    <div class="age-range">
+      <span>{{filters.ageMin}}</span>
+      <input type="range" min="18" max="60" [(ngModel)]="filters.ageMin" (input)="emitChanges()">
+      <span>{{filters.ageMax}}</span>
+      <input type="range" min="18" max="60" [(ngModel)]="filters.ageMax" (input)="emitChanges()">
+    </div>
+  </div>
+
+</div>

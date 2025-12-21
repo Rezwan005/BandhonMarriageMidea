@@ -1,0 +1,136 @@
+/* ===== Page background ===== */
+body {
+  background: #f5f3fb;
+  font-family: 'Inter', 'Hind Siliguri', sans-serif;
+}
+
+/* ===== Title ===== */
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #3d246c;
+}
+
+/* ===== Form Card Feel ===== */
+.form-grid {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+/* ===== Full width ===== */
+.form-group.full-width {
+  grid-column: span 2;
+}
+
+/* ===== Labels ===== */
+.form-group label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #5c3a9e;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* ===== Inputs ===== */
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  background: #fafafa;
+  transition: all 0.25s ease;
+}
+
+/* Focus */
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #d81b60;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(216, 27, 96, 0.15);
+}
+
+/* Textarea */
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+/* ===== Hint Text ===== */
+.hint {
+  font-size: 12px;
+  color: #7b1fa2;
+  margin-top: 6px;
+  background: #f3effa;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+/* ===== Buttons Row ===== */
+.btn-row {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Back Button */
+.btn.back {
+  background: #e0e0e0;
+  color: #555;
+}
+
+.btn.back:hover {
+  background: #d6d6d6;
+}
+
+/* Save Button */
+.btn.next {
+  background: linear-gradient(90deg, #512da8, #d81b60);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(216, 27, 96, 0.35);
+}
+
+.btn.next:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(216, 27, 96, 0.45);
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .form-group.full-width {
+    grid-column: span 1;
+  }
+
+  .btn-row {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

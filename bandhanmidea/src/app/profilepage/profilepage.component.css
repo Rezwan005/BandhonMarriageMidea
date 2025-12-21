@@ -1,0 +1,67 @@
+/* MAIN LAYOUT */
+.page-container {
+  display: flex;
+  min-height: 100vh;
+  background: #faf7ff;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 300px;
+  background: #ffffff;
+  border-right: 1px solid #eee;
+  padding: 20px;
+  transition: .3s ease;
+  overflow-y: auto;
+}
+
+/* Mobile Hidden */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    transform: translateX(-100%);
+    z-index: 1000;
+  }
+  .sidebar.open {
+    transform: translateX(0);
+  }
+}
+
+/* FILTER BUTTON (MOBILE) */
+.filter-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .filter-toggle {
+    display: inline-block;
+    background: #7e22ce;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    margin: 12px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+
+/* CONTENT (RIGHT SIDE) */
+.content {
+  flex: 1;
+  padding: 25px;
+}
+
+/* MOBILE OVERLAY */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.45);
+  z-index: 998;
+}
