@@ -1,0 +1,323 @@
+[
+  {
+    "ContainingType": "MarrriageApi.Controllers.BiodataController",
+    "Method": "GetAddress",
+    "RelativePath": "address/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MarrriageApi.Controllers.AuthController",
+    "Method": "GoogleLogin",
+    "RelativePath": "api/auth/google",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "MarrriageApi.Dtos.GoogleLoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MarrriageApi.Controllers.BiodataController",
+    "Method": "SaveGeneralInfo",
+    "RelativePath": "general-info",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "MarrriageApi.Dtos.BiodataGeneralInfoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MarrriageApi.Controllers.BiodataController",
+    "Method": "GetGeneralInfoByUserId",
+    "RelativePath": "general-info/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MarrriageApi.Controllers.BiodataController",
+    "Method": "GetEducationByUserId",
+    "RelativePath": "get-by-user/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MarrriageApi.Controllers.BiodataController",
+    "Method": "GetContactByUserId",
+    "RelativePath": "get-contact-by-user/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MarrriageApi.Controllers.BiodataController",
+    "Method": "GetByUserId",
+    "RelativePath": "get-occupation-by-user/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MarrriageApi.Controllers.BiodataController",
+    "Method": "GetPersonalInfoByUserId",
+    "RelativePath": "get-personalinfo-by-user/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MarrriageApi.Controllers.CommonController",
+    "Method": "GetByCategory",
+    "RelativePath": "lookupcategory/{category}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "category",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MarrriageApi.Controllers.BiodataController",
+    "Method": "SearchProfiles",
+    "RelativePath": "profiles/search",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MarrriageApi.Dtos.BiodataSearchRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MarrriageApi.Controllers.BiodataController",
+    "Method": "SaveAddress",
+    "RelativePath": "save",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "MarrriageApi.Dtos.AddressDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MarrriageApi.Controllers.BiodataController",
+    "Method": "SaveOrUpdate",
+    "RelativePath": "saveContactInfo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "MarrriageApi.Dtos.BiodataContactDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MarrriageApi.Controllers.BiodataController",
+    "Method": "SaveOrUpdateEducation",
+    "RelativePath": "saveEducation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "MarrriageApi.Dtos.EducationDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MarrriageApi.Controllers.BiodataController",
+    "Method": "SaveOrUpdate",
+    "RelativePath": "saveOccupation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "MarrriageApi.Dtos.OccupationalInfoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MarrriageApi.Controllers.BiodataController",
+    "Method": "Save",
+    "RelativePath": "savePersonalInfo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "DressOutside",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DiseaseInfo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SpecialWork",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AboutYourself",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MobileNo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Selfie",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MarrriageApi.Controllers.BiodataController",
+    "Method": "StartBiodata",
+    "RelativePath": "start",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MarrriageApi.Controllers.BiodataController",
+    "Method": "GetBiodataStatus",
+    "RelativePath": "status",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MarrriageApi.Controllers.BiodataController",
+    "Method": "GetSteps",
+    "RelativePath": "steps",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MarrriageApi.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[MarrriageApi.WeatherForecast, MarrriageApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

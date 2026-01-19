@@ -1,0 +1,830 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marrriageapi\\marrriageapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|solutionrelative:marrriageapi\\marrriageapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00F1BBCA-D4FE-423A-849B-0DD3305CA802}|Marriage.Core\\Marriage.Core.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marriage.core\\entity\\useraddress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00F1BBCA-D4FE-423A-849B-0DD3305CA802}|Marriage.Core\\Marriage.Core.csproj|solutionrelative:marriage.core\\entity\\useraddress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marriage.infrastructure\\data\\applicationdbcontext .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|solutionrelative:marriage.infrastructure\\data\\applicationdbcontext .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marrriageapi\\controllers\\biodatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|solutionrelative:marrriageapi\\controllers\\biodatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marrriageapi\\dtos\\addressdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|solutionrelative:marrriageapi\\dtos\\addressdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marrriageapi\\dtos\\biodatasearchrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|solutionrelative:marrriageapi\\dtos\\biodatasearchrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marrriageapi\\controllers\\commoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|solutionrelative:marrriageapi\\controllers\\commoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00F1BBCA-D4FE-423A-849B-0DD3305CA802}|Marriage.Core\\Marriage.Core.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marriage.core\\entity\\userbiostepprogress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00F1BBCA-D4FE-423A-849B-0DD3305CA802}|Marriage.Core\\Marriage.Core.csproj|solutionrelative:marriage.core\\entity\\userbiostepprogress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00F1BBCA-D4FE-423A-849B-0DD3305CA802}|Marriage.Core\\Marriage.Core.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marriage.core\\entity\\userbiodata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00F1BBCA-D4FE-423A-849B-0DD3305CA802}|Marriage.Core\\Marriage.Core.csproj|solutionrelative:marriage.core\\entity\\userbiodata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00F1BBCA-D4FE-423A-849B-0DD3305CA802}|Marriage.Core\\Marriage.Core.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marriage.core\\entity\\biosteps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00F1BBCA-D4FE-423A-849B-0DD3305CA802}|Marriage.Core\\Marriage.Core.csproj|solutionrelative:marriage.core\\entity\\biosteps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marrriageapi\\dtos\\biostepdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|solutionrelative:marrriageapi\\dtos\\biostepdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00F1BBCA-D4FE-423A-849B-0DD3305CA802}|Marriage.Core\\Marriage.Core.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marriage.core\\entity\\biodatageneralinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00F1BBCA-D4FE-423A-849B-0DD3305CA802}|Marriage.Core\\Marriage.Core.csproj|solutionrelative:marriage.core\\entity\\biodatageneralinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marrriageapi\\dtos\\biodatageneralinfodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|solutionrelative:marrriageapi\\dtos\\biodatageneralinfodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marrriageapi\\dtos\\biodataprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|solutionrelative:marrriageapi\\dtos\\biodataprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00F1BBCA-D4FE-423A-849B-0DD3305CA802}|Marriage.Core\\Marriage.Core.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marriage.core\\entity\\biodatacontact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00F1BBCA-D4FE-423A-849B-0DD3305CA802}|Marriage.Core\\Marriage.Core.csproj|solutionrelative:marriage.core\\entity\\biodatacontact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marrriageapi\\dtos\\biodatacontactdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|solutionrelative:marrriageapi\\dtos\\biodatacontactdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00F1BBCA-D4FE-423A-849B-0DD3305CA802}|Marriage.Core\\Marriage.Core.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marriage.core\\entity\\occupationalinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00F1BBCA-D4FE-423A-849B-0DD3305CA802}|Marriage.Core\\Marriage.Core.csproj|solutionrelative:marriage.core\\entity\\occupationalinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marrriageapi\\dtos\\occupationalinfodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|solutionrelative:marrriageapi\\dtos\\occupationalinfodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00F1BBCA-D4FE-423A-849B-0DD3305CA802}|Marriage.Core\\Marriage.Core.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marriage.core\\entity\\personalinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00F1BBCA-D4FE-423A-849B-0DD3305CA802}|Marriage.Core\\Marriage.Core.csproj|solutionrelative:marriage.core\\entity\\personalinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marrriageapi\\dtos\\personalinfodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|solutionrelative:marrriageapi\\dtos\\personalinfodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marrriageapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|solutionrelative:marrriageapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00F1BBCA-D4FE-423A-849B-0DD3305CA802}|Marriage.Core\\Marriage.Core.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marriage.core\\entity\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00F1BBCA-D4FE-423A-849B-0DD3305CA802}|Marriage.Core\\Marriage.Core.csproj|solutionrelative:marriage.core\\entity\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00F1BBCA-D4FE-423A-849B-0DD3305CA802}|Marriage.Core\\Marriage.Core.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marriage.core\\entity\\lookup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00F1BBCA-D4FE-423A-849B-0DD3305CA802}|Marriage.Core\\Marriage.Core.csproj|solutionrelative:marriage.core\\entity\\lookup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00F1BBCA-D4FE-423A-849B-0DD3305CA802}|Marriage.Core\\Marriage.Core.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marriage.core\\entity\\usereducation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00F1BBCA-D4FE-423A-849B-0DD3305CA802}|Marriage.Core\\Marriage.Core.csproj|solutionrelative:marriage.core\\entity\\usereducation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marrriageapi\\dtos\\educationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|solutionrelative:marrriageapi\\dtos\\educationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marrriageapi\\dtos\\lookupdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|solutionrelative:marrriageapi\\dtos\\lookupdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Migrations\\20251229154954_CreateLookupTable2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Marriage.Infrastructure\\Migrations\\20251229154954_CreateLookupTable2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marriage.infrastructure\\migrations\\20251229151816_createaddresstable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|solutionrelative:marriage.infrastructure\\migrations\\20251229151816_createaddresstable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marriage.infrastructure\\migrations\\20251226162612_createusertable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|solutionrelative:marriage.infrastructure\\migrations\\20251226162612_createusertable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marrriageapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|solutionrelative:marrriageapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marrriageapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|solutionrelative:marrriageapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marrriageapi\\marrriageapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|solutionrelative:marrriageapi\\marrriageapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marrriageapi\\dtos\\googlelogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|solutionrelative:marrriageapi\\dtos\\googlelogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marriage.infrastructure\\migrations\\20251225165700_creategeneralinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|solutionrelative:marriage.infrastructure\\migrations\\20251225165700_creategeneralinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marrriageapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9FC810E-5DAB-4BFB-8A82-D6B24765CC1F}|MarrriageApi\\MarrriageApi.csproj|solutionrelative:marrriageapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marriage.infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|solutionrelative:marriage.infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00F1BBCA-D4FE-423A-849B-0DD3305CA802}|Marriage.Core\\Marriage.Core.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marriage.core\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00F1BBCA-D4FE-423A-849B-0DD3305CA802}|Marriage.Core\\Marriage.Core.csproj|solutionrelative:marriage.core\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marriage.infrastructure\\migrations\\20251229155317_createdatalookuptable2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|solutionrelative:marriage.infrastructure\\migrations\\20251229155317_createdatalookuptable2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marriage.infrastructure\\migrations\\20251229155122_createlookuptable2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|solutionrelative:marriage.infrastructure\\migrations\\20251229155122_createlookuptable2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marriage.infrastructure\\migrations\\20260104162255_createoccupationtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|solutionrelative:marriage.infrastructure\\migrations\\20260104162255_createoccupationtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marriage.infrastructure\\migrations\\20260103134501_createedutable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|solutionrelative:marriage.infrastructure\\migrations\\20260103134501_createedutable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marriage.infrastructure\\migrations\\20260103150705_createpersonalinfotable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|solutionrelative:marriage.infrastructure\\migrations\\20260103150705_createpersonalinfotable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marriage.infrastructure\\migrations\\20260117153033_updateaddresstable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|solutionrelative:marriage.infrastructure\\migrations\\20260117153033_updateaddresstable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marriage.infrastructure\\migrations\\20260116182153_createbiotable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|solutionrelative:marriage.infrastructure\\migrations\\20260116182153_createbiotable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marriage.infrastructure\\migrations\\20260116134359_updatetable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|solutionrelative:marriage.infrastructure\\migrations\\20260116134359_updatetable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marriage.infrastructure\\migrations\\20260116160340_createsteptable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|solutionrelative:marriage.infrastructure\\migrations\\20260116160340_createsteptable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marriage.infrastructure\\migrations\\20260113171704_updategitable2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|solutionrelative:marriage.infrastructure\\migrations\\20260113171704_updategitable2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marriage.infrastructure\\migrations\\20260113171012_updategitable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|solutionrelative:marriage.infrastructure\\migrations\\20260113171012_updategitable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marriage.infrastructure\\migrations\\20260113162937_updatecontacttable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|solutionrelative:marriage.infrastructure\\migrations\\20260113162937_updatecontacttable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|e:\\projects\\bandhonmarriagemidea\\marrriageapi\\marriage.infrastructure\\migrations\\20260113160834_createcontacttable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD9B6F47-8871-4027-B992-942189AC79CF}|Marriage.Infrastructure\\Marriage.Infrastructure.csproj|solutionrelative:marriage.infrastructure\\migrations\\20260113160834_createcontacttable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 486,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MarrriageApi",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\MarrriageApi.csproj",
+              "RelativeDocumentMoniker": "MarrriageApi\\MarrriageApi.csproj",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\MarrriageApi.csproj",
+              "RelativeToolTip": "MarrriageApi\\MarrriageApi.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-18T18:36:21.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "20260117153033_UpdateAddresstable.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Migrations\\20260117153033_UpdateAddresstable.cs",
+              "RelativeDocumentMoniker": "Marriage.Infrastructure\\Migrations\\20260117153033_UpdateAddresstable.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Migrations\\20260117153033_UpdateAddresstable.cs",
+              "RelativeToolTip": "Marriage.Infrastructure\\Migrations\\20260117153033_UpdateAddresstable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-17T15:30:33.859Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "20260116182153_Createbiotable.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Migrations\\20260116182153_Createbiotable.cs",
+              "RelativeDocumentMoniker": "Marriage.Infrastructure\\Migrations\\20260116182153_Createbiotable.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Migrations\\20260116182153_Createbiotable.cs",
+              "RelativeToolTip": "Marriage.Infrastructure\\Migrations\\20260116182153_Createbiotable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-16T18:21:53.68Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BiodataController.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\Controllers\\BiodataController.cs",
+              "RelativeDocumentMoniker": "MarrriageApi\\Controllers\\BiodataController.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\Controllers\\BiodataController.cs",
+              "RelativeToolTip": "MarrriageApi\\Controllers\\BiodataController.cs",
+              "ViewState": "AgIAALkAAAAAAAAAAAAuwMEAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T16:42:03.263Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserBiodata.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Core\\Entity\\UserBiodata.cs",
+              "RelativeDocumentMoniker": "Marriage.Core\\Entity\\UserBiodata.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Core\\Entity\\UserBiodata.cs",
+              "RelativeToolTip": "Marriage.Core\\Entity\\UserBiodata.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwAoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-16T17:59:51.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserAddress.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Core\\Entity\\UserAddress.cs",
+              "RelativeDocumentMoniker": "Marriage.Core\\Entity\\UserAddress.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Core\\Entity\\UserAddress.cs",
+              "RelativeToolTip": "Marriage.Core\\Entity\\UserAddress.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwA4AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T14:30:39.583Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ApplicationDbContext .cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Data\\ApplicationDbContext .cs",
+              "RelativeDocumentMoniker": "Marriage.Infrastructure\\Data\\ApplicationDbContext .cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Data\\ApplicationDbContext .cs",
+              "RelativeToolTip": "Marriage.Infrastructure\\Data\\ApplicationDbContext .cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAADwvxIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T16:38:44.729Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BiodataSearchRequest.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\Dtos\\BiodataSearchRequest.cs",
+              "RelativeDocumentMoniker": "MarrriageApi\\Dtos\\BiodataSearchRequest.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\Dtos\\BiodataSearchRequest.cs",
+              "RelativeToolTip": "MarrriageApi\\Dtos\\BiodataSearchRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-17T07:15:30.86Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserBioStepProgress.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Core\\Entity\\UserBioStepProgress.cs",
+              "RelativeDocumentMoniker": "Marriage.Core\\Entity\\UserBioStepProgress.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Core\\Entity\\UserBioStepProgress.cs",
+              "RelativeToolTip": "Marriage.Core\\Entity\\UserBioStepProgress.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-16T14:37:36.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AddressDto.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\Dtos\\AddressDto.cs",
+              "RelativeDocumentMoniker": "MarrriageApi\\Dtos\\AddressDto.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\Dtos\\AddressDto.cs",
+              "RelativeToolTip": "MarrriageApi\\Dtos\\AddressDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T14:29:33.308Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BioStepDto.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\Dtos\\BioStepDto.cs",
+              "RelativeDocumentMoniker": "MarrriageApi\\Dtos\\BioStepDto.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\Dtos\\BioStepDto.cs",
+              "RelativeToolTip": "MarrriageApi\\Dtos\\BioStepDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-16T14:22:56.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "BioSteps.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Core\\Entity\\BioSteps.cs",
+              "RelativeDocumentMoniker": "Marriage.Core\\Entity\\BioSteps.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Core\\Entity\\BioSteps.cs",
+              "RelativeToolTip": "Marriage.Core\\Entity\\BioSteps.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAUwAoAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-16T14:18:46.812Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "20260116134359_Updatetable.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Migrations\\20260116134359_Updatetable.cs",
+              "RelativeDocumentMoniker": "Marriage.Infrastructure\\Migrations\\20260116134359_Updatetable.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Migrations\\20260116134359_Updatetable.cs",
+              "RelativeToolTip": "Marriage.Infrastructure\\Migrations\\20260116134359_Updatetable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-16T13:44:00.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "PersonalInfoDto.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\Dtos\\PersonalInfoDto.cs",
+              "RelativeDocumentMoniker": "MarrriageApi\\Dtos\\PersonalInfoDto.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\Dtos\\PersonalInfoDto.cs",
+              "RelativeToolTip": "MarrriageApi\\Dtos\\PersonalInfoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T14:55:15.186Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CommonController.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\Controllers\\CommonController.cs",
+              "RelativeDocumentMoniker": "MarrriageApi\\Controllers\\CommonController.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\Controllers\\CommonController.cs",
+              "RelativeToolTip": "MarrriageApi\\Controllers\\CommonController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwBEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T16:10:18.92Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "20260116160340_CreateSteptable.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Migrations\\20260116160340_CreateSteptable.cs",
+              "RelativeDocumentMoniker": "Marriage.Infrastructure\\Migrations\\20260116160340_CreateSteptable.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Migrations\\20260116160340_CreateSteptable.cs",
+              "RelativeToolTip": "Marriage.Infrastructure\\Migrations\\20260116160340_CreateSteptable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-16T16:03:40.952Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BiodataGeneralInfoDto.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\Dtos\\BiodataGeneralInfoDto.cs",
+              "RelativeDocumentMoniker": "MarrriageApi\\Dtos\\BiodataGeneralInfoDto.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\Dtos\\BiodataGeneralInfoDto.cs",
+              "RelativeToolTip": "MarrriageApi\\Dtos\\BiodataGeneralInfoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T16:41:19.686Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BiodataGeneralInfo.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Core\\Entity\\BiodataGeneralInfo.cs",
+              "RelativeDocumentMoniker": "Marriage.Core\\Entity\\BiodataGeneralInfo.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Core\\Entity\\BiodataGeneralInfo.cs",
+              "RelativeToolTip": "Marriage.Core\\Entity\\BiodataGeneralInfo.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAA7wCAAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T16:36:05.512Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "BiodataProfileDto.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\Dtos\\BiodataProfileDto.cs",
+              "RelativeDocumentMoniker": "MarrriageApi\\Dtos\\BiodataProfileDto.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\Dtos\\BiodataProfileDto.cs",
+              "RelativeToolTip": "MarrriageApi\\Dtos\\BiodataProfileDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-16T13:30:41.241Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "20260113171704_UpdateGiTable2.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Migrations\\20260113171704_UpdateGiTable2.cs",
+              "RelativeDocumentMoniker": "Marriage.Infrastructure\\Migrations\\20260113171704_UpdateGiTable2.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Migrations\\20260113171704_UpdateGiTable2.cs",
+              "RelativeToolTip": "Marriage.Infrastructure\\Migrations\\20260113171704_UpdateGiTable2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-13T17:17:04.802Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "20260113171012_UpdateGiTable.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Migrations\\20260113171012_UpdateGiTable.cs",
+              "RelativeDocumentMoniker": "Marriage.Infrastructure\\Migrations\\20260113171012_UpdateGiTable.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Migrations\\20260113171012_UpdateGiTable.cs",
+              "RelativeToolTip": "Marriage.Infrastructure\\Migrations\\20260113171012_UpdateGiTable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-13T17:10:12.331Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "20260113162937_UpdateContactTable.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Migrations\\20260113162937_UpdateContactTable.cs",
+              "RelativeDocumentMoniker": "Marriage.Infrastructure\\Migrations\\20260113162937_UpdateContactTable.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Migrations\\20260113162937_UpdateContactTable.cs",
+              "RelativeToolTip": "Marriage.Infrastructure\\Migrations\\20260113162937_UpdateContactTable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-13T16:29:37.753Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "BiodataContact.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Core\\Entity\\BiodataContact.cs",
+              "RelativeDocumentMoniker": "Marriage.Core\\Entity\\BiodataContact.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Core\\Entity\\BiodataContact.cs",
+              "RelativeToolTip": "Marriage.Core\\Entity\\BiodataContact.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBMAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-13T15:51:38.357Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "20260113160834_CreateContactTable.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Migrations\\20260113160834_CreateContactTable.cs",
+              "RelativeDocumentMoniker": "Marriage.Infrastructure\\Migrations\\20260113160834_CreateContactTable.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Migrations\\20260113160834_CreateContactTable.cs",
+              "RelativeToolTip": "Marriage.Infrastructure\\Migrations\\20260113160834_CreateContactTable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-13T16:08:35.207Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "OccupationalInfo.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Core\\Entity\\OccupationalInfo.cs",
+              "RelativeDocumentMoniker": "Marriage.Core\\Entity\\OccupationalInfo.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Core\\Entity\\OccupationalInfo.cs",
+              "RelativeToolTip": "Marriage.Core\\Entity\\OccupationalInfo.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAAAgAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-04T16:15:18.152Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "BiodataContactDto.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\Dtos\\BiodataContactDto.cs",
+              "RelativeDocumentMoniker": "MarrriageApi\\Dtos\\BiodataContactDto.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\Dtos\\BiodataContactDto.cs",
+              "RelativeToolTip": "MarrriageApi\\Dtos\\BiodataContactDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-13T15:52:42.605Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "OccupationalInfoDto.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\Dtos\\OccupationalInfoDto.cs",
+              "RelativeDocumentMoniker": "MarrriageApi\\Dtos\\OccupationalInfoDto.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\Dtos\\OccupationalInfoDto.cs",
+              "RelativeToolTip": "MarrriageApi\\Dtos\\OccupationalInfoDto.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAzwAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-04T16:16:00.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "20260104162255_CreateOccupationTable.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Migrations\\20260104162255_CreateOccupationTable.cs",
+              "RelativeDocumentMoniker": "Marriage.Infrastructure\\Migrations\\20260104162255_CreateOccupationTable.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Migrations\\20260104162255_CreateOccupationTable.cs",
+              "RelativeToolTip": "Marriage.Infrastructure\\Migrations\\20260104162255_CreateOccupationTable.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-04T16:22:55.387Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "PersonalInfo.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Core\\Entity\\PersonalInfo.cs",
+              "RelativeDocumentMoniker": "Marriage.Core\\Entity\\PersonalInfo.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Core\\Entity\\PersonalInfo.cs",
+              "RelativeToolTip": "Marriage.Core\\Entity\\PersonalInfo.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAqwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T14:53:24.778Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "20260103134501_CreateEduTable.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Migrations\\20260103134501_CreateEduTable.cs",
+              "RelativeDocumentMoniker": "Marriage.Infrastructure\\Migrations\\20260103134501_CreateEduTable.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Migrations\\20260103134501_CreateEduTable.cs",
+              "RelativeToolTip": "Marriage.Infrastructure\\Migrations\\20260103134501_CreateEduTable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T13:45:01.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Lookup.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Core\\Entity\\Lookup.cs",
+              "RelativeDocumentMoniker": "Marriage.Core\\Entity\\Lookup.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Core\\Entity\\Lookup.cs",
+              "RelativeToolTip": "Marriage.Core\\Entity\\Lookup.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA0wAgAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T15:40:02.37Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "20260103150705_CreatePersonalInfoTable.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Migrations\\20260103150705_CreatePersonalInfoTable.cs",
+              "RelativeDocumentMoniker": "Marriage.Infrastructure\\Migrations\\20260103150705_CreatePersonalInfoTable.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Migrations\\20260103150705_CreatePersonalInfoTable.cs",
+              "RelativeToolTip": "Marriage.Infrastructure\\Migrations\\20260103150705_CreatePersonalInfoTable.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T15:07:05.592Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\Program.cs",
+              "RelativeDocumentMoniker": "MarrriageApi\\Program.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\Program.cs",
+              "RelativeToolTip": "MarrriageApi\\Program.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAowDYAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T16:39:37.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "User.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Core\\Entity\\User.cs",
+              "RelativeDocumentMoniker": "Marriage.Core\\Entity\\User.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Core\\Entity\\User.cs",
+              "RelativeToolTip": "Marriage.Core\\Entity\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T16:19:51.009Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "20251229155122_CreateLookupTable2.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Migrations\\20251229155122_CreateLookupTable2.cs",
+              "RelativeDocumentMoniker": "Marriage.Infrastructure\\Migrations\\20251229155122_CreateLookupTable2.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Migrations\\20251229155122_CreateLookupTable2.cs",
+              "RelativeToolTip": "Marriage.Infrastructure\\Migrations\\20251229155122_CreateLookupTable2.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T15:51:22.672Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "UserEducation.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Core\\Entity\\UserEducation.cs",
+              "RelativeDocumentMoniker": "Marriage.Core\\Entity\\UserEducation.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Core\\Entity\\UserEducation.cs",
+              "RelativeToolTip": "Marriage.Core\\Entity\\UserEducation.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAcwCIAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T12:51:41.772Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "EducationDto.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\Dtos\\EducationDto.cs",
+              "RelativeDocumentMoniker": "MarrriageApi\\Dtos\\EducationDto.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\Dtos\\EducationDto.cs",
+              "RelativeToolTip": "MarrriageApi\\Dtos\\EducationDto.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T13:22:41.537Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "20251229155317_CreateDataLookupTable2.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Migrations\\20251229155317_CreateDataLookupTable2.cs",
+              "RelativeDocumentMoniker": "Marriage.Infrastructure\\Migrations\\20251229155317_CreateDataLookupTable2.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Migrations\\20251229155317_CreateDataLookupTable2.cs",
+              "RelativeToolTip": "Marriage.Infrastructure\\Migrations\\20251229155317_CreateDataLookupTable2.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T15:53:17.308Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "LookupDto.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\Dtos\\LookupDto.cs",
+              "RelativeDocumentMoniker": "MarrriageApi\\Dtos\\LookupDto.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\Dtos\\LookupDto.cs",
+              "RelativeToolTip": "MarrriageApi\\Dtos\\LookupDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T16:09:29.932Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "20251229154954_CreateLookupTable2.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Migrations\\20251229154954_CreateLookupTable2.cs",
+              "RelativeDocumentMoniker": "Marriage.Infrastructure\\Migrations\\20251229154954_CreateLookupTable2.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Migrations\\20251229154954_CreateLookupTable2.cs",
+              "RelativeToolTip": "Marriage.Infrastructure\\Migrations\\20251229154954_CreateLookupTable2.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T15:49:54.829Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "MarrriageApi\\Controllers\\AuthController.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "MarrriageApi\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAAAAsAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T08:37:55.691Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "20251229151816_CreateAddressTable.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Migrations\\20251229151816_CreateAddressTable.cs",
+              "RelativeDocumentMoniker": "Marriage.Infrastructure\\Migrations\\20251229151816_CreateAddressTable.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Migrations\\20251229151816_CreateAddressTable.cs",
+              "RelativeToolTip": "Marriage.Infrastructure\\Migrations\\20251229151816_CreateAddressTable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T15:18:17.212Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\appsettings.json",
+              "RelativeDocumentMoniker": "MarrriageApi\\appsettings.json",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\appsettings.json",
+              "RelativeToolTip": "MarrriageApi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-25T16:40:25.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "20251226162612_CreateUserTable.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Migrations\\20251226162612_CreateUserTable.cs",
+              "RelativeDocumentMoniker": "Marriage.Infrastructure\\Migrations\\20251226162612_CreateUserTable.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Migrations\\20251226162612_CreateUserTable.cs",
+              "RelativeToolTip": "Marriage.Infrastructure\\Migrations\\20251226162612_CreateUserTable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T16:26:13.38Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "GoogleLoginDto.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\Dtos\\GoogleLoginDto.cs",
+              "RelativeDocumentMoniker": "MarrriageApi\\Dtos\\GoogleLoginDto.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\Dtos\\GoogleLoginDto.cs",
+              "RelativeToolTip": "MarrriageApi\\Dtos\\GoogleLoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T08:39:18.396Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "MarrriageApi.csproj",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\MarrriageApi.csproj",
+              "RelativeDocumentMoniker": "MarrriageApi\\MarrriageApi.csproj",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\MarrriageApi.csproj",
+              "RelativeToolTip": "MarrriageApi\\MarrriageApi.csproj",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-26T08:51:34.519Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "MarrriageApi\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\MarrriageApi\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "MarrriageApi\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T16:43:01.889Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "20251225165700_CreateGeneralInfo.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Migrations\\20251225165700_CreateGeneralInfo.cs",
+              "RelativeDocumentMoniker": "Marriage.Infrastructure\\Migrations\\20251225165700_CreateGeneralInfo.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Migrations\\20251225165700_CreateGeneralInfo.cs",
+              "RelativeToolTip": "Marriage.Infrastructure\\Migrations\\20251225165700_CreateGeneralInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T16:57:00.536Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Class1.cs",
+              "RelativeDocumentMoniker": "Marriage.Infrastructure\\Class1.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Infrastructure\\Class1.cs",
+              "RelativeToolTip": "Marriage.Infrastructure\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T16:23:33.95Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Core\\Class1.cs",
+              "RelativeDocumentMoniker": "Marriage.Core\\Class1.cs",
+              "ToolTip": "E:\\Projects\\BandhonMarriageMidea\\MarrriageApi\\Marriage.Core\\Class1.cs",
+              "RelativeToolTip": "Marriage.Core\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T16:22:20.591Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 282,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

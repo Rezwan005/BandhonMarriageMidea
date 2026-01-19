@@ -66,45 +66,44 @@
   font-weight: 600;
 }
 /* ================= MOBILE EXACT MATCH ================= */
+/* =======================
+   MOBILE: TOP STEPPER
+======================= */
 @media (max-width: 768px) {
 
-  .edit-wrapper {
-    display: block;
-    width: 100%;
+  /* Remove vertical line */
+  .stepper-container .line {
+    display: none;
   }
 
-  .left-panel {
-    display: none !important;   /* 🔥 hide sidebar completely */
-  }
-
-  .right-panel {
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 12px !important;
-  }
-}
-
-@media (max-width: 768px) {
-
-  .brand-text h1 {
-    font-size: 14px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 180px;
-  }
-
-  .brand {
-    max-width: calc(100% - 50px);
-  }
-}
-
-@media (max-width: 768px) {
-
+  /* Stepper becomes grid */
   .stepper-container {
     width: 100%;
-    margin: 0 auto;
-    padding: 10px 0;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 per row */
+    gap: 12px;
+    padding: 10px 6px;
   }
+
+  /* Each step */
+  .step-item {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  /* Circle centered */
+  .step-item .circle {
+    position: static;
+    margin: 0 auto 6px;
+  }
+
+  /* Label under circle */
+  .step-item .label {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+
 }
+
+

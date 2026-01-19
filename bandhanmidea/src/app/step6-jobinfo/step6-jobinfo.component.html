@@ -1,0 +1,49 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-7 custom-form-card">
+
+      <h3 class="mb-3">Occupational Information</h3>
+      <hr>
+
+      <!-- Occupation -->
+      <h5 class="mt-3">Profession Details</h5>
+
+      <select class="form-select mb-2"
+              name="profession"
+              [(ngModel)]="formData.profession">
+        <option [ngValue]="null">Select Occupation</option>
+        <option *ngFor="let item of OccupationList"
+                [ngValue]="item.key">
+          {{ item.value }}
+        </option>
+      </select>
+
+      <!-- Description -->
+      <textarea class="form-control mb-2"
+                rows="5"
+                placeholder="Description of Profession"
+                name="professionDetails"
+                [(ngModel)]="formData.professionDetails">
+      </textarea>
+
+      <div class="hint-text mb-3">
+        You may write where your working place is, which company you are working in,
+        whether your earnings are halal or not, etc.
+      </div>
+
+      <!-- Monthly Income -->
+      <input type="text"
+             class="form-control mb-4"
+             placeholder="Monthly Income (e.g. 20000 tk)"
+             name="monthlyIncome"
+             [(ngModel)]="formData.monthlyIncome">
+
+      <!-- Button -->
+      <button class="btn btn-save w-100"
+              (click)="onSave()">
+        Save & Next
+      </button>
+
+    </div>
+  </div>
+</div>

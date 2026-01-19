@@ -22,6 +22,22 @@ import { BiodataGeneralInfoComponent } from './biodata-general-info/biodata-gene
 import { BiodataLayoutComponent } from './biodata-layout/biodata-layout.component';
 import { StepMenuComponent } from './step-menu/step-menu.component';
 import { Step2AddressComponent } from './step2-address/step2-address.component';
+import { Step3EducationComponent } from './step3-education/step3-education.component';
+import { Step4FamilyinfoComponent } from './step4-familyinfo/step4-familyinfo.component';
+import { Step5PersonalinfoComponent } from './step5-personalinfo/step5-personalinfo.component';
+import { Step6JobinfoComponent } from './step6-jobinfo/step6-jobinfo.component';
+import { Step7MarriageComponent } from './step7-marriage/step7-marriage.component';
+import { Step8PartnerComponent } from './step8-partner/step8-partner.component';
+
+import { Step9ResolutionComponent } from './step9-resolution/step9-resolution.component';
+import { Step10ContactComponent } from './step10-contact/step10-contact.component';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { GoogleLoginProvider, SocialAuthServiceConfig, SocialLoginModule } from '@abacritt/angularx-social-login';
+import { JwtInterceptor } from './_interceptors/jwt.interceptor';
+import { PreviewBiodataComponent } from './preview-biodata/preview-biodata.component';
+import { PreviewlayoutComponent } from './previewlayout/previewlayout.component';
+
 
 
 @NgModule({
@@ -42,15 +58,46 @@ import { Step2AddressComponent } from './step2-address/step2-address.component';
     BiodataGeneralInfoComponent,
     BiodataLayoutComponent,
     StepMenuComponent,
-    Step2AddressComponent
+    Step2AddressComponent,
+    Step3EducationComponent,
+    Step4FamilyinfoComponent,
+    Step5PersonalinfoComponent,
+    Step6JobinfoComponent,
+    Step7MarriageComponent,
+    Step8PartnerComponent,
+
+    Step9ResolutionComponent,
+      Step10ContactComponent,
+      LoginComponent,
+      PreviewBiodataComponent,
+      PreviewlayoutComponent,
+ 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    CommonModule   
+    CommonModule ,
+    SocialLoginModule,
+        HttpClientModule   // ✅ ADD THIS  
   ],
-  providers: [],
+  providers: [{
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false, // set true if you want auto login
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider(
+              '521492801604-ht2gj9q5k6ed5609p069a6bdl7vhvngn.apps.googleusercontent.com' // replace with your client ID
+            )
+          }
+        ]
+      } as SocialAuthServiceConfig,
+    },
+    
+     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

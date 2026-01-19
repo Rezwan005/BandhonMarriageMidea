@@ -1,0 +1,92 @@
+<h1>Preview Biodata</h1>
+<div class="preview-container">
+
+  <!-- Left Side: Photo + Basic Info -->
+  <div class="left-panel">
+    <div class="photo-wrapper">
+      <img [src]="biodata.photoUrl || 'assets/default-user.png'" alt="Profile" />
+    </div>
+
+    <table class="info-table">
+      <tr><td>Biodata Type</td><td>{{biodata.type}}</td></tr>
+      <tr><td>Marital Status</td><td>{{biodata.maritalStatus}}</td></tr>
+      <tr><td>Birth Year</td><td>{{biodata.birthYear}}</td></tr>
+      <tr><td>Height</td><td>{{biodata.height}}</td></tr>
+      <tr><td>Complexion</td><td>{{biodata.complexion}}</td></tr>
+      <tr><td>Weight</td><td>{{biodata.weight}}</td></tr>
+      <tr><td>Blood Group</td><td>{{biodata.bloodGroup}}</td></tr>
+      <tr><td>Nationality</td><td>{{biodata.nationality}}</td></tr>
+    </table>
+  </div>
+
+  <!-- Right Side: Address & Education -->
+  <div class="right-panel">
+
+    <!-- Address -->
+    <div class="card">
+      <h3>Address</h3>
+      <table>
+        <tr>
+          <td>Permanent Address</td>
+          <td>{{biodata.permanentAddress}}</td>
+        </tr>
+        <tr>
+          <td>Present Address</td>
+          <td>{{biodata.presentAddress}}</td>
+        </tr>
+        <tr>
+          <td>Where did you grow up?</td>
+          <td>{{biodata.grewUp}}</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Education -->
+    <div class="card">
+      <h3>Educational Qualifications</h3>
+      <table>
+        <tr>
+          <td>Your Education Method</td>
+          <td>{{biodata.educationMethod}}</td>
+        </tr>
+        <tr>
+          <td>Highest educational qualification</td>
+          <td>{{biodata.highestQualification}}</td>
+        </tr>
+        <tr>
+          <td>SSC / Dakhil / Equivalent Passing year</td>
+          <td>{{biodata.sscYear}}</td>
+        </tr>
+        <tr>
+          <td>Group</td>
+          <td>{{biodata.group}}</td>
+        </tr>
+        <tr>
+          <td>Result</td>
+          <td>{{biodata.result}}</td>
+        </tr>
+        <tr>
+          <td>Which year are you reading in HSC / Alim / Equivalent?</td>
+          <td>{{biodata.hscYear}}</td>
+        </tr>
+        <tr>
+          <td>Other educational qualifications</td>
+          <td>{{biodata.otherQualifications}}</td>
+        </tr>
+        <tr>
+          <td>Islamic educational titles</td>
+          <td>{{biodata.islamicTitles}}</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Copy Link Button -->
+    <div class="copy-link">
+      <button (click)="copyBiodataLink()">
+        Copy Biodata Link
+      </button>
+    </div>
+
+  </div>
+
+</div>

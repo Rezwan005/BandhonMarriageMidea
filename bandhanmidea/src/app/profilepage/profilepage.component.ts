@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BiodataService } from '../_services/biodata.service';
 
 @Component({
   selector: 'app-home',
@@ -6,15 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./profilepage.component.css']
 })
 export class ProfilepageComponent {
-
   isFilterOpen = false;
-  activeFilters: any = {};
+  profiles: any[] = [];
+
+  constructor(private biodataService: BiodataService) {}
 
   toggleFilter() {
     this.isFilterOpen = !this.isFilterOpen;
   }
 
-  applyFilters(filters: any) {
-    this.activeFilters = filters;
+  loadProfiles(filters: any) {
+    this.biodataService.getProfilesByUserId(filters).subscribe(res => {
+      this.profiles = res.data;   // ✅ update list
+    });
   }
 }
+
+

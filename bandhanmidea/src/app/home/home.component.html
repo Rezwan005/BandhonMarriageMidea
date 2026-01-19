@@ -6,74 +6,80 @@
   <!-- Hero + Sidebar -->
   <section class="hero">
 
-  <!-- Hero Card -->
-  <div class="hero-card">
-    <div class="overlay">
-      <h2 class="title">
-        দেশি ও প্রবাসী পাত্র-পাত্রী সন্ধান ও মধ্যস্থতাকারী নির্ভরযোগ্য প্রতিষ্ঠান
-      </h2>
+    <!-- Hero Card -->
+    <div class="hero-card">
+      <div class="overlay">
+        <h2 class="title">
+          A Trusted Matchmaking Platform for Local & Overseas Brides and Grooms
+        </h2>
 
-      <p class="lead">
-        একটি নিরাপদ ও সম্মানজনক স্থান গম্ভীর মিলনের জন্য — শালীন প্রোফাইল, পরিবার-বান্ধব যোগাযোগ এবং শরিয়া-সম্মত দিকনির্দেশনা
-      </p>
+        <p class="lead">
+          A secure and respectful space for serious marriage seekers — verified profiles,
+          family-friendly communication, and guidance aligned with ethical values.
+        </p>
 
-      <!-- Search Form -->
-      <form class="search" (ngSubmit)="onSearch()">
-        <div class="field">
-          <label>আপনি খুঁজছেন</label>
-          <select [(ngModel)]="filters.gender" name="gender">
-            <option value="female">বধূ</option>
-            <option value="male">বর</option>
-          </select>
-        </div>
+        <!-- Search Form -->
+        <form class="search" (ngSubmit)="onSearch()">
+          <div class="field">
+            <label>I am looking for</label>
+         
+             <select class="form-select custom-input"
+                    [(ngModel)]="filters.biodataType">
+                  <option value="" selected>Please Select</option>
+                  <option *ngFor="let item of BiodataTypeList" [value]="item.key">
+                    {{ item.value }}
+                  </option>
+              </select>
+          </div>
 
-        <div class="field">
-          <label>দেশ</label>
-          <select [(ngModel)]="filters.country" name="country">
-            <option value="">যেকোনো</option>
-            <option>বাংলাদেশ</option>
-            <option>যুক্তরাজ্য</option>
-            <option>সৌদি আরব</option>
-            <option>যুক্তরাষ্ট্র</option>
-          </select>
-        </div>
+          <div class="field">
+            <label>Country</label>
+            <select [(ngModel)]="filters.country" name="country">
+              <option value="">Any Country</option>
+              <option>Bangladesh</option>
+              <option>United Kingdom</option>
+              <option>Saudi Arabia</option>
+              <option>United States</option>
+            </select>
+          </div>
 
-        <div class="field">
-          <label>বয়স</label>
-          <input [(ngModel)]="filters.age" name="age" placeholder="25-32" />
-        </div>
+          <div class="field">
+            <label>Age Range</label>
+            <input [(ngModel)]="filters.age" name="age" placeholder="25 - 32" />
+          </div>
 
-        <div class="field full">
-          <button class="btn" type="submit" (click)="goToProfile()">অনুসন্ধান করুন</button>
-        </div>
+          <div class="field full">
+            <button class="btn" type="submit" (click)="goToProfile()">
+              Find Matches
+            </button>
+          </div>
 
-        <div class="stats full">
-          <div class="stat">15,784 প্রোফাইল</div>
-          <div class="stat">2,342 যাচাইকৃত</div>
-          <div class="stat">বিশ্বব্যাপী সম্প্রদায়</div>
-        </div>
-      </form>
+          <div class="stats full">
+            <div class="stat">18,500+ Active Profiles</div>
+            <div class="stat">3,200+ Verified Members</div>
+            <div class="stat">Trusted Worldwide Community</div>
+          </div>
+        </form>
+      </div>
     </div>
 
-    <!-- Filters Sidebar over the background -->
-    
-
-  </div>
-</section>
+  </section>
 
   <section style="margin-bottom:18px">
-   <app-tutorial></app-tutorial>
+    <app-tutorial></app-tutorial>
   </section>
 
   <!-- Stats Counter -->
   <section style="margin-bottom:18px">
     <app-stats-counter></app-stats-counter>
   </section>
+
   <section style="margin-bottom:18px">
     <app-how-itwork></app-how-itwork>
   </section>
+
   <section style="margin-bottom:18px">
-    <app-footer></app-footer>>
+    <app-footer></app-footer>
   </section>
 
 </div>

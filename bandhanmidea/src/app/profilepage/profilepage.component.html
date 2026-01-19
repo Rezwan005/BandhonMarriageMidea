@@ -6,12 +6,13 @@
 
   <!-- Left Filter Drawer -->
   <aside class="sidebar" [class.open]="isFilterOpen">
-    <app-filters (filterChanged)="applyFilters($event)"></app-filters>
+    <app-filters (filterChanged)="loadProfiles($event)"></app-filters>    
   </aside>
 
   <!-- Right Profile List -->
   <section class="content">
-    <app-profile-list [filters]="activeFilters"></app-profile-list>
+      <app-profile-list [profiles]="profiles"></app-profile-list>
+
   </section>
 
 </div>

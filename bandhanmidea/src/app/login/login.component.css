@@ -1,0 +1,104 @@
+/* Page background */
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #faf8ff;
+  padding: 20px;
+}
+
+/* Card */
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+/* Title */
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+/* Buttons */
+.btn {
+  width: 100%;
+  border: none;
+  border-radius: 999px;
+  padding: 14px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.25s ease;
+}
+
+/* Social buttons */
+.social-btn {
+  background: #fff;
+  color: #333;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  margin-bottom: 18px;
+}
+
+.social-btn:hover {
+  transform: translateY(-2px);
+}
+
+.google img {
+  width: 18px;
+  height: 18px;
+}
+
+.email i {
+  font-size: 18px;
+  color: #666;
+}
+
+/* Divider text */
+.divider-text {
+  margin: 18px 0 8px;
+  font-size: 13px;
+  color: #777;
+}
+
+/* No account text */
+.no-account {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+/* Create account button */
+.create-btn {
+  background: linear-gradient(90deg, #5a2d82, #d81b60);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(216, 27, 96, 0.35);
+}
+
+.create-btn span {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.create-btn:hover {
+  opacity: 0.9;
+}
+.google-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+/* Mobile polish */
+@media (max-width: 480px) {
+  .title {
+    font-size: 20px;
+  }
+}

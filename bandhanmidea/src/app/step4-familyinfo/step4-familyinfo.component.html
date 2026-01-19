@@ -1,0 +1,103 @@
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-7">
+
+      <h2 class="title-text">পারিবারিক তথ্য</h2>
+      <hr class="title-divider mb-4">
+
+      <form #familyForm="ngForm" (ngSubmit)="onSave()">
+        
+        <!-- Father Info -->
+        <div class="mb-4">
+          <label class="custom-label">পিতার নাম <span class="text-danger">*</span></label>
+          <input type="text" class="form-control custom-input" name="fatherName" [(ngModel)]="familyData.fatherName" required>
+        </div>
+
+        <div class="mb-4">
+          <label class="custom-label">পিতা কি জীবিত? <span class="text-danger">*</span></label>
+          <select class="form-select custom-input" name="fatherStatus" [(ngModel)]="familyData.fatherStatus" required>
+            <option value="">নির্বাচন করুন</option>
+            <option value="alive">জীবিত</option>
+            <option value="deceased">মৃত</option>
+          </select>
+        </div>
+
+        <div class="mb-4">
+          <label class="custom-label">পিতার পেশার বিবরণ <span class="text-danger">*</span></label>
+          <input type="text" class="form-control custom-input" name="fatherOccupation" [(ngModel)]="familyData.fatherOccupation" required>
+        </div>
+
+        <!-- Mother Info -->
+        <div class="mb-4">
+          <label class="custom-label">মাতার নাম <span class="text-danger">*</span></label>
+          <input type="text" class="form-control custom-input" name="motherName" [(ngModel)]="familyData.motherName" required>
+        </div>
+
+        <div class="mb-4">
+          <label class="custom-label">মাতা কি জীবিত? <span class="text-danger">*</span></label>
+          <select class="form-select custom-input" name="motherStatus" [(ngModel)]="familyData.motherStatus" required>
+            <option value="">নির্বাচন করুন</option>
+            <option value="alive">জীবিত</option>
+            <option value="deceased">মৃত</option>
+          </select>
+        </div>
+
+        <!-- Siblings -->
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <label class="custom-label">আপনার কয়জন ভাই আছে? <span class="text-danger">*</span></label>
+            <select class="form-select custom-input" name="brotherCount" [(ngModel)]="familyData.brotherCount" required>
+              <option value="">ভাই নেই</option>
+              <option value="1">১</option>
+              <option value="2">২</option>
+            </select>
+          </div>
+          <div class="col-md-6 mb-4">
+            <label class="custom-label">আপনার কয়জন বোন আছে? <span class="text-danger">*</span></label>
+            <select class="form-select custom-input" name="sisterCount" [(ngModel)]="familyData.sisterCount" required>
+              <option value="">বোন নেই</option>
+              <option value="1">১</option>
+              <option value="2">২</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <label class="custom-label">ভাই বোনদের পেশা</label>
+          <textarea class="form-control custom-input" rows="3" name="brothersOccupation" [(ngModel)]="familyData.brothersOccupation"></textarea>
+        </div>
+
+        <!-- Marital Status -->
+        <div class="mb-4">
+          <label class="custom-label">বৈবাহিক অবস্থা <span class="text-danger">*</span></label>
+          <select class="form-select custom-input" name="maritalStatus" [(ngModel)]="familyData.maritalStatus" required>
+            <option value="">নির্বাচন করুন</option>
+            <option value="unmarried">অবিবাহিত</option>
+            <option value="married">বিবাহিত</option>
+          </select>
+        </div>
+
+        <!-- Financial Status -->
+        <div class="mb-4">
+          <label class="custom-label">পারিবারিক অর্থনৈতিক অবস্থা <span class="text-danger">*</span></label>
+          <textarea class="form-control custom-input" rows="3" name="financialStatus" [(ngModel)]="familyData.financialStatus" required></textarea>
+          <small class="hint-text">আয়ের উৎস, আবাসন ব্যবস্থা এবং অর্থনৈতিক অবস্থা বিস্তারিত লিখুন।</small>
+        </div>
+
+        <!-- Religious Environment -->
+        <div class="mb-5">
+          <label class="custom-label">পারিবারিক দ্বীনি পরিবেশ কেমন? <span class="text-danger">*</span></label>
+          <textarea class="form-control custom-input" rows="3" name="familyDescription" [(ngModel)]="familyData.familyDescription" required></textarea>
+          <small class="hint-text">পরিবারের সদস্যরা পর্দা করে কি না এবং ইসলামের অন্যান্য বিধান পালনে কেমন।</small>
+        </div>
+
+        <!-- Buttons -->
+        <div class="d-flex flex-wrap gap-3 justify-content-between">
+          <button type="button" class="btn btn-back px-4 py-2">Back</button>
+          <button type="submit" class="btn btn-save px-4 py-2" [disabled]="!familyForm.valid">Save & Next</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

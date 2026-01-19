@@ -1,0 +1,74 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-7 custom-form-card">
+
+      <h3 class="mb-3">Educational Qualifications</h3>
+      <hr>
+
+      <!-- SSC Details -->
+      <h5 class="mt-3">SSC / Equivalent</h5>
+
+      <select class="form-select mb-2"
+              name="sscGroup"
+              [(ngModel)]="eduData.sscGroup">
+        <option value="" disabled>-- নির্বাচন করুন --</option>
+        <option *ngFor="let item of groupList" [value]="item.key">{{ item.value }}</option>
+      </select>
+
+      <input type="text" class="form-control mb-2" placeholder="SSC Passing Year"
+             name="sscPY" [(ngModel)]="eduData.sscPY">
+
+      <select class="form-select mb-2" name="sscResult" [(ngModel)]="eduData.sscResult">
+        <option value="" disabled>-- নির্বাচন করুন --</option>
+        <option *ngFor="let item of ResultList" [value]="item.key">{{ item.value }}</option>
+      </select>
+
+      <input type="text" class="form-control mb-3" placeholder="SSC Institution Name"
+             name="sscInsName" [(ngModel)]="eduData.sscInsName">
+
+      <!-- HSC Details -->
+      <h5 class="mt-4">HSC / Equivalent</h5>
+
+      <select class="form-select mb-2" name="hscGroup" [(ngModel)]="eduData.hscGroup">
+        <option value="" disabled>-- নির্বাচন করুন --</option>
+        <option *ngFor="let item of groupList" [value]="item.key">{{ item.value }}</option>
+      </select>
+
+      <input type="text" class="form-control mb-2" placeholder="HSC Passing Year"
+             name="hscPY" [(ngModel)]="eduData.hscPY">
+
+      <select class="form-select mb-2" name="hscResult" [(ngModel)]="eduData.hscResult">
+        <option value="" disabled>-- নির্বাচন করুন --</option>
+        <option *ngFor="let item of ResultList" [value]="item.key">{{ item.value }}</option>
+      </select>
+
+      <input type="text" class="form-control mb-3" placeholder="HSC Institution Name"
+             name="hscInsName" [(ngModel)]="eduData.hscInsName">
+
+      <!-- Under Graduate / Graduation -->
+      <h5 class="mt-4">Undergraduate / Graduation</h5>
+
+      <input type="text" class="form-control mb-2" placeholder="Passing Year"
+             name="ugPY" [(ngModel)]="eduData.ugPY">
+
+      <input type="text" class="form-control mb-2" placeholder="Graduation Subject"
+             name="gSubject" [(ngModel)]="eduData.gSubject">
+
+      <input type="text" class="form-control mb-3" placeholder="Institution Name"
+             name="ugInsName" [(ngModel)]="eduData.ugInsName">
+
+      <!-- Other Details -->
+      <textarea class="form-control mb-3" rows="5" placeholder="Other Details"
+                name="otherDetails" [(ngModel)]="eduData.otherDetails"></textarea>
+
+      <div class="hint-text mb-4">
+        শিক্ষাপ্রতিষ্ঠানের নাম, বিষয়, পাশের সন সহ বিস্তারিত লিখবেন। কিছু না থাকলে ঘরটি ফাঁকা রাখবেন।
+      </div>
+
+      <!-- Buttons -->
+      <button type="button" class="btn btn-back w-100 mb-2">Back</button>
+      <button type="submit" class="btn btn-save w-100" (click)="onSave()">Save & Next</button>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-7 custom-form-card">
+
+      <h3 class="mb-3">Contact Information</h3>
+      <hr>
+
+      <!-- Groom Name -->
+      <h5 class="mt-3">Guardian Details</h5>
+
+      <input type="text"
+             class="form-control mb-2"
+             placeholder="Groom's full name"
+             name="groomName"
+             [(ngModel)]="contactData.groomName"
+             required>
+
+      <div class="hint-text mb-3">
+        Enter full name
+      </div>
+
+      <!-- Guardian Mobile -->
+      <input type="text"
+             class="form-control mb-2"
+             placeholder="Guardian's mobile number (e.g. 01700-000000)"
+             name="guardianMobile"
+             [(ngModel)]="contactData.guardianMobile"
+             required>
+
+      <div class="hint-text mb-3">
+        This number will be used to verify your biodata.  
+        Using your own or a friend's number may result in permanent ban.
+      </div>
+
+      <!-- Relationship -->
+      <input type="text"
+             class="form-control mb-2"
+             placeholder="Relationship with guardian (e.g. বাবা)"
+             name="guardianRelation"
+             [(ngModel)]="contactData.guardianRelation"
+             required>
+
+      <div class="hint-text mb-3">
+        উক্ত অভিভাবক আপনার সম্পর্কে কি হয় তা লিখুন।
+      </div>
+
+      <!-- Email -->
+      <input type="email"
+             class="form-control mb-4"
+             placeholder="Guardian's email address"
+             name="biodataEmail"
+             [(ngModel)]="contactData.biodataEmail"
+             required>
+
+      <div class="hint-text mb-4">
+        To avoid unwanted incidents, use guardian’s email if possible.
+      </div>
+
+      <!-- Button -->
+      <button class="btn btn-save w-100"
+              [disabled]="!contactData.valid"
+              (click)="onFinalSubmit()">
+        Save & Submit
+      </button>
+
+    </div>
+  </div>
+</div>

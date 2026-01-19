@@ -1,0 +1,53 @@
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-7">
+      
+      <h2 class="form-title">বিবাহ সম্পর্কিত তথ্য</h2>
+      <hr class="title-divider mb-4">
+
+      <form #marriageForm="ngForm">
+        
+        <div class="mb-4">
+          <label class="custom-label">অভিভাবক আপনার বিয়েতে রাজি কি না? <span class="text-danger">*</span></label>
+          <input type="text" class="form-control custom-input py-2" name="guardianAgreed" [(ngModel)]="marriageData.guardianAgreed" required>
+        </div>
+
+        <div class="mb-4">
+          <label class="custom-label">বিয়ের পর স্ত্রীকে পর্দায় রাখতে পারবেন? <span class="text-danger">*</span></label>
+          <input type="text" class="form-control custom-input py-2" name="wifeInParda" [(ngModel)]="marriageData.wifeInParda" required>
+        </div>
+
+        <div class="mb-4">
+          <label class="custom-label">বিয়ের পর স্ত্রীকে পড়াশোনা করতে দিতে চান? <span class="text-danger">*</span></label>
+          <input type="text" class="form-control custom-input py-2" name="wifeStudy" [(ngModel)]="marriageData.wifeStudy" required>
+        </div>
+
+        <div class="mb-4">
+          <label class="custom-label">বিয়ের পর স্ত্রীকে চাকরী করতে দিতে চান? <span class="text-danger">*</span></label>
+          <input type="text" class="form-control custom-input py-2" name="wifeJob" [(ngModel)]="marriageData.wifeJob" required>
+        </div>
+
+        <div class="mb-4">
+          <label class="custom-label">বিয়ের পর স্ত্রীকে কোথায় নিয়ে থাকবেন? <span class="text-danger">*</span></label>
+          <input type="text" class="form-control custom-input py-2" name="livingLocation" [(ngModel)]="marriageData.livingLocation" required>
+        </div>
+
+        <div class="mb-4">
+          <label class="custom-label">আপনি বা আপনার পরিবার পাত্রীপক্ষের কাছে কোনো উপহার আশা করবেন কি না? <span class="text-danger">*</span></label>
+          <input type="text" class="form-control custom-input py-2" name="giftExpectation" [(ngModel)]="marriageData.giftExpectation" required>
+        </div>
+
+        <div class="mb-5">
+          <label class="custom-label">কেন বিয়ে করছেন? বিয়ে সম্পর্কে আপনার ধারণা কি? <span class="text-danger">*</span></label>
+          <textarea class="form-control custom-input" rows="6" name="marriageReason" [(ngModel)]="marriageData.marriageReason" required></textarea>
+        </div>
+
+        <div class="d-flex justify-content-between pb-5">
+          <button type="button" class="btn btn-back px-5 py-2">Back</button>
+          <button type="submit" class="btn btn-save px-5 py-2" [disabled]="!marriageForm.valid" (click)="onSave()">Save & Next</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

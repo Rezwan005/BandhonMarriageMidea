@@ -75,11 +75,7 @@
 }
 
 /* ===== Desktop ===== */
-.sidebar {
-  width: 260px;
-  background: #fff;
-  height: 100%;
-}
+
 
 /* Toggle button hidden on desktop */
 .sidebar-toggle {

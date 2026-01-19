@@ -1,0 +1,865 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "MarrriageApi",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/auth/google": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GoogleLoginDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GoogleLoginDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GoogleLoginDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/general-info": {
+      "post": {
+        "tags": [
+          "Biodata"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BiodataGeneralInfoDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BiodataGeneralInfoDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BiodataGeneralInfoDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/general-info/{userId}": {
+      "get": {
+        "tags": [
+          "Biodata"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/save": {
+      "post": {
+        "tags": [
+          "Biodata"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddressDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddressDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddressDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/address/{userId}": {
+      "get": {
+        "tags": [
+          "Biodata"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/saveEducation": {
+      "post": {
+        "tags": [
+          "Biodata"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EducationDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EducationDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EducationDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/get-by-user/{userId}": {
+      "get": {
+        "tags": [
+          "Biodata"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/savePersonalInfo": {
+      "post": {
+        "tags": [
+          "Biodata"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "UserId": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "DressOutside": {
+                    "type": "string"
+                  },
+                  "DiseaseInfo": {
+                    "type": "string"
+                  },
+                  "SpecialWork": {
+                    "type": "string"
+                  },
+                  "AboutYourself": {
+                    "type": "string"
+                  },
+                  "MobileNo": {
+                    "type": "string"
+                  },
+                  "Selfie": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "UserId": {
+                  "style": "form"
+                },
+                "DressOutside": {
+                  "style": "form"
+                },
+                "DiseaseInfo": {
+                  "style": "form"
+                },
+                "SpecialWork": {
+                  "style": "form"
+                },
+                "AboutYourself": {
+                  "style": "form"
+                },
+                "MobileNo": {
+                  "style": "form"
+                },
+                "Selfie": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/get-personalinfo-by-user/{userId}": {
+      "get": {
+        "tags": [
+          "Biodata"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/saveOccupation": {
+      "post": {
+        "tags": [
+          "Biodata"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OccupationalInfoDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OccupationalInfoDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/OccupationalInfoDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/get-occupation-by-user/{userId}": {
+      "get": {
+        "tags": [
+          "Biodata"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/saveContactInfo": {
+      "post": {
+        "tags": [
+          "Biodata"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BiodataContactDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BiodataContactDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BiodataContactDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/get-contact-by-user/{userId}": {
+      "get": {
+        "tags": [
+          "Biodata"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/profiles/search": {
+      "post": {
+        "tags": [
+          "Biodata"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BiodataSearchRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BiodataSearchRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BiodataSearchRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/steps": {
+      "get": {
+        "tags": [
+          "Biodata"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/start": {
+      "post": {
+        "tags": [
+          "Biodata"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/status": {
+      "get": {
+        "tags": [
+          "Biodata"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/lookupcategory/{category}": {
+      "get": {
+        "tags": [
+          "Common"
+        ],
+        "parameters": [
+          {
+            "name": "category",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/WeatherForecast": {
+      "get": {
+        "tags": [
+          "WeatherForecast"
+        ],
+        "operationId": "GetWeatherForecast",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AddressDto": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "permanentCountry": {
+            "type": "string",
+            "nullable": true
+          },
+          "permanentDivisionId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "permanentDistrictId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "permanentUpazilaId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "permanentDivision": {
+            "type": "string",
+            "nullable": true
+          },
+          "permanentDistrict": {
+            "type": "string",
+            "nullable": true
+          },
+          "permanentUpazila": {
+            "type": "string",
+            "nullable": true
+          },
+          "permanentVillage": {
+            "type": "string",
+            "nullable": true
+          },
+          "permanentRoad": {
+            "type": "string",
+            "nullable": true
+          },
+          "permanentHouse": {
+            "type": "string",
+            "nullable": true
+          },
+          "currentCountry": {
+            "type": "string",
+            "nullable": true
+          },
+          "currentDivisionId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "currentDistrictId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "currentUpazilaId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "currentDivision": {
+            "type": "string",
+            "nullable": true
+          },
+          "currentDistrict": {
+            "type": "string",
+            "nullable": true
+          },
+          "currentUpazila": {
+            "type": "string",
+            "nullable": true
+          },
+          "currentVillage": {
+            "type": "string",
+            "nullable": true
+          },
+          "currentRoad": {
+            "type": "string",
+            "nullable": true
+          },
+          "currentHouse": {
+            "type": "string",
+            "nullable": true
+          },
+          "hometown": {
+            "type": "string",
+            "nullable": true
+          },
+          "isSameAddress": {
+            "type": "boolean"
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BiodataContactDto": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "groomName": {
+            "type": "string",
+            "nullable": true
+          },
+          "guardianMobile": {
+            "type": "string",
+            "nullable": true
+          },
+          "guardianRelation": {
+            "type": "string",
+            "nullable": true
+          },
+          "biodataEmail": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BiodataGeneralInfoDto": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "biodataType": {
+            "type": "string",
+            "nullable": true
+          },
+          "maritalStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "age": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "height": {
+            "type": "string",
+            "nullable": true
+          },
+          "skinTone": {
+            "type": "string",
+            "nullable": true
+          },
+          "weight": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bloodGroup": {
+            "type": "string",
+            "nullable": true
+          },
+          "nationality": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BiodataSearchRequest": {
+        "type": "object",
+        "properties": {
+          "biodataNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "biodataType": {
+            "type": "string",
+            "nullable": true
+          },
+          "maritalStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "ageMin": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ageMax": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EducationDto": {
+        "type": "object",
+        "properties": {
+          "method": {
+            "type": "string",
+            "nullable": true
+          },
+          "highestDegree": {
+            "type": "string",
+            "nullable": true
+          },
+          "sscPY": {
+            "type": "string",
+            "nullable": true
+          },
+          "sscGroup": {
+            "type": "string",
+            "nullable": true
+          },
+          "sscResult": {
+            "type": "string",
+            "nullable": true
+          },
+          "sscInsName": {
+            "type": "string",
+            "nullable": true
+          },
+          "hscPY": {
+            "type": "string",
+            "nullable": true
+          },
+          "hscGroup": {
+            "type": "string",
+            "nullable": true
+          },
+          "hscResult": {
+            "type": "string",
+            "nullable": true
+          },
+          "hscInsName": {
+            "type": "string",
+            "nullable": true
+          },
+          "ugPY": {
+            "type": "string",
+            "nullable": true
+          },
+          "gSubject": {
+            "type": "string",
+            "nullable": true
+          },
+          "ugInsName": {
+            "type": "string",
+            "nullable": true
+          },
+          "otherDetails": {
+            "type": "string",
+            "nullable": true
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GoogleLoginDto": {
+        "type": "object",
+        "properties": {
+          "idToken": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OccupationalInfoDto": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "profession": {
+            "type": "string",
+            "nullable": true
+          },
+          "professionDetails": {
+            "type": "string",
+            "nullable": true
+          },
+          "monthlyIncome": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "WeatherForecast": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "temperatureC": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "temperatureF": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "summary": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

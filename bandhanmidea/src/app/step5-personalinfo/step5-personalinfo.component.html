@@ -1,0 +1,93 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-7 custom-form-card">
+
+      <h3 class="mb-3">Personal Information</h3>
+      <hr>
+
+      <!-- Dress Outside -->
+      <h5 class="mt-3">Lifestyle & Habits</h5>
+
+      <input type="text"
+             class="form-control mb-2"
+             placeholder="What kind of clothes do you usually wear outside?"
+             name="dressOutside"
+             [(ngModel)]="data.dressOutside"
+             required>
+
+      <div class="hint-text mb-3">
+        Example: Wear burqa with hijab, do not wear niqab
+      </div>
+
+      <!-- Disease Info -->
+      <input type="text"
+             class="form-control mb-3"
+             placeholder="Do you have any mental or physical diseases?"
+             name="diseaseInfo"
+             [(ngModel)]="data.diseaseInfo"
+             required>
+
+      <!-- Special Work -->
+      <input type="text"
+             class="form-control mb-3"
+             placeholder="Are you involved in any special work?"
+             name="specialWork"
+             [(ngModel)]="data.specialWork"
+             required>
+
+      <!-- About Yourself -->
+      <textarea class="form-control mb-3"
+                rows="5"
+                placeholder="Write about your hobbies, likes, dislikes, dreams, etc."
+                name="aboutYourself"
+                [(ngModel)]="data.aboutYourself"
+                required>
+      </textarea>
+
+      <!-- Mobile -->
+      <input type="text"
+             class="form-control mb-4"
+             placeholder="Groom's mobile number"
+             name="mobileNo"
+             [(ngModel)]="data.mobileNo"
+             required>
+
+      <!-- Selfie Upload -->
+      <h5 class="mt-4">Selfie Upload</h5>
+
+      <div class="form-check mb-3 text-center"
+           style="cursor:pointer"
+           (click)="fileInput.click()">
+
+        <div *ngIf="!previewUrl">
+          ⬆ Click to upload groom's selfie
+        </div>
+
+        <img *ngIf="previewUrl"
+             [src]="previewUrl"
+             style="max-width: 160px; border-radius: 12px; margin-top: 10px;">
+      </div>
+
+      <input type="file"
+             #fileInput
+             hidden
+             accept="image/*"
+             (change)="onFileSelected($event)" />
+
+      <div *ngIf="previewUrl"
+           class="hint-text mb-4 text-center"
+           style="cursor:pointer"
+           (click)="removePhoto()">
+        🗑 Remove this photo
+      </div>
+
+      <!-- Button -->
+      <button class="btn btn-save w-100"
+              [disabled]="!data.valid || !selectedFile"
+              (click)="onSave()">
+        Save & Next
+      </button>
+
+    </div>
+  </div>
+</div>

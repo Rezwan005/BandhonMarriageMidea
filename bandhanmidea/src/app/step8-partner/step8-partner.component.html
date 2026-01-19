@@ -1,0 +1,71 @@
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-7 bg-white p-4 rounded-4 shadow-sm">
+      
+      <h2 class="form-title">প্রত্যাশিত জীবনসঙ্গী</h2>
+      <hr class="title-divider mb-4">
+
+      <form #partnerForm="ngForm">
+        
+        <div class="mb-4">
+          <label class="custom-label">বয়স <span class="text-danger">*</span></label>
+          <div class="range-container position-relative">
+            <input type="range" class="form-range custom-range" min="18" max="70" 
+                   name="ageRange" [(ngModel)]="partnerData.ageRange">
+            <div class="d-flex justify-content-between range-labels">
+              <span class="badge bg-purple">18</span>
+              <span class="badge bg-purple">70</span>
+            </div>
+            <p class="text-center mt-2 current-value">নির্বাচিত বয়স: {{partnerData.ageRange}}</p>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <label class="custom-label">গাত্রবর্ণ <span class="text-danger">*</span></label>
+          <input type="text" class="form-control custom-input" name="complexion" [(ngModel)]="partnerData.complexion" required>
+          <div class="hint-text mt-2">'যে কোনো' বা 'মানানসই' এই শব্দ দুটি লিখা যাবে না। এখানে নিজের মত লিখতে পারবেন।</div>
+        </div>
+
+        <div class="mb-4">
+          <label class="custom-label">উচ্চতা <span class="text-danger">*</span></label>
+          <input type="text" class="form-control custom-input" name="height" [(ngModel)]="partnerData.height" placeholder="৫'১'' - ৫'১০''" required>
+          <div class="hint-text mt-2">'যে কোনো' বা 'মানানসই' এই শব্দ দুটি লিখা যাবে না।</div>
+        </div>
+
+        <div class="mb-4">
+          <label class="custom-label">শিক্ষাগত যোগ্যতা <span class="text-danger">*</span></label>
+          <input type="text" class="form-control custom-input" name="edu" [(ngModel)]="partnerData.educationalQualification" required>
+        </div>
+
+        <div class="mb-4">
+          <label class="custom-label">জেলা <span class="text-danger">*</span></label>
+          <input type="text" class="form-control custom-input" name="district" [(ngModel)]="partnerData.district" required>
+          <div class="hint-text mt-2">'যে কোনো জেলা' লিখবেন না। পরিবারের সাথে পরামর্শ করে নির্দিষ্ট জেলাগুলো উল্লেখ করুন।</div>
+        </div>
+
+        <div class="mb-4">
+          <label class="custom-label">বৈবাহিক অবস্থা <span class="text-danger">*</span></label>
+          <input type="text" class="form-control custom-input" name="marital" [(ngModel)]="partnerData.maritalStatus" required>
+        </div>
+
+        <div class="mb-4">
+          <label class="custom-label">পেশা <span class="text-danger">*</span></label>
+          <input type="text" class="form-control custom-input" name="profession" [(ngModel)]="partnerData.profession" required>
+          <div class="hint-text mt-2">'যে কোনো' বা 'মানানসই' বা 'যে কোনো হালাল পেশা' এই শব্দগুলো লিখা যাবে না।</div>
+        </div>
+
+        <div class="mb-5">
+          <label class="custom-label">জীবনসঙ্গীর যেসব বৈশিষ্ট্য বা গুণাবলী প্রত্যাশা করেন <span class="text-danger">*</span></label>
+          <textarea class="form-control custom-input" rows="6" name="qualities" [(ngModel)]="partnerData.expectedQualities" required></textarea>
+          <div class="hint-text mt-2">আপনার প্রত্যাশা বিস্তারিত লিখতে পারেন। কোনো বিশেষ শর্ত থাকলে উল্লেখ করতে পারেন।</div>
+        </div>
+
+        <div class="d-flex justify-content-between pb-4">
+          <button type="button" class="btn btn-back px-5 py-2">Back</button>
+          <button type="submit" class="btn btn-save px-5 py-2" [disabled]="!partnerForm.valid" (click)="onSave()">Save & Next</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

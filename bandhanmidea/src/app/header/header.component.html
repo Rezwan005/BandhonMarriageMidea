@@ -1,28 +1,44 @@
 <header class="site-header">
 
-  <!-- Brand / Logo -->
-  <a class="brand" href="#">
+  <!-- Brand -->
+  <a class="brand" routerLink="/">
     <div class="logo">
-      <img src="assets/Img/logo.png" alt="বন্ধন মিডিয়া সেন্টার Logo" />
+      <img src="assets/Img/logo.png" alt="Bondhon Media Center Logo" />
     </div>
     <div class="brand-text">
-      <h1>বন্ধন মিডিয়া সেন্টার </h1>
-      <p>দেশি ও প্রবাসী পাত্র-পাত্রী সন্ধান ও মধ্যস্থতাকারী নির্ভরযোগ্য প্রতিষ্ঠান</p>
+      <h1>Bondhon Media Center</h1>
+      <p>Trusted matchmaking service for local and overseas brides and grooms</p>
     </div>
   </a>
 
-  <!-- Navigation -->
-  <nav [class.active]="isMenuOpen" class="top-nav">
-    <a href="#">কিভাবে কাজ করে</a>
-    <a href="#">প্রোফাইল</a>
-    <a href="#" class="cta">ফ্রি যোগদান করুন</a>
-  </nav>
+  <!-- Right Side -->
+  <div class="right-section">
 
-  <!-- Hamburger for mobile -->
-  <div class="hamburger" (click)="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
+    <!-- Navigation -->
+    <nav [class.active]="isMenuOpen" class="top-nav">
+      <a routerLink="/how-it-works">How It Works</a>
+      <a routerLink="/profiles">Profiles</a>
+
+      <!-- Auth -->
+      <ng-container *ngIf="!userName; else loggedIn">
+        <a class="cta" (click)="goToLogin()">Join for Free</a>
+      </ng-container>
+
+      <ng-template #loggedIn>
+        <div class="user-menu">
+          <span class="user-name">{{ userName }}</span>
+          <button class="logout-btn" (click)="logout()">Logout</button>
+        </div>
+      </ng-template>
+
+    </nav>
+
+    <!-- Hamburger -->
+    <div class="hamburger" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
   </div>
-
 </header>

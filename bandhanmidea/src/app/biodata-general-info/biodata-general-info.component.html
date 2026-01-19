@@ -1,55 +1,114 @@
-<h2 class="title">সাধারণ তথ্য</h2>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-7 custom-form-card">
 
-<form class="form-grid">
+      <h3 class="mb-3">General Information</h3>
+      <hr>
 
-  <div class="form-group">
-    <label>বায়োডাটার ধরণ *</label>
-    <select><option>নির্বাচন করুন</option></select>
+      <form #form="ngForm" (ngSubmit)="save(form)">
+
+        <!-- Biodata Type -->
+        <label class="label-custom">Biodata Type *</label>
+        <select class="form-select"
+                name="biodataType"
+                [(ngModel)]="biodata.biodataType"
+                required>
+          <option [ngValue]="null">Select Biodata Type</option>
+          <option *ngFor="let item of BiodataTypeList" [ngValue]="item.key">
+            {{ item.value }}
+          </option>
+        </select>
+
+        <!-- Marital Status -->
+        <label class="label-custom">Marital Status *</label>
+        <select class="form-select"
+                name="maritalStatus"
+                [(ngModel)]="biodata.maritalStatus"
+                required>
+          <option [ngValue]="null">Select Marital Status</option>
+          <option *ngFor="let item of MeritalStatusList" [ngValue]="item.key">
+            {{ item.value }}
+          </option>
+        </select>
+
+        <!-- Birth Date -->
+        <label class="label-custom">Birth Date *</label>
+        <input type="date"
+               class="form-control"
+               name="birthDate"
+               [(ngModel)]="biodata.birthDate"
+               required>
+
+        <div class="hint-text mb-3">
+          Please provide the actual date of birth. Incorrect information may cause rejection.
+        </div>
+
+        <!-- Age -->
+        <label class="label-custom">Age *</label>
+        <input type="number"
+               class="form-control"
+               name="age"
+               [(ngModel)]="biodata.age"
+               required>
+
+        <!-- Height -->
+        <label class="label-custom">Height *</label>
+        <input type="text"
+               class="form-control"
+               name="height"
+               placeholder="e.g. 5 feet 6 inches"
+               [(ngModel)]="biodata.height"
+               required>
+
+        <!-- Complexion -->
+        <label class="label-custom">Complexion *</label>
+        <select class="form-select"
+                name="skinTone"
+                [(ngModel)]="biodata.skinTone"
+                required>
+          <option [ngValue]="null">Select Complexion</option>
+          <option *ngFor="let item of SkinToneList" [ngValue]="item.key">
+            {{ item.value }}
+          </option>
+        </select>
+
+        <!-- Weight -->
+        <label class="label-custom">Weight (kg) *</label>
+        <input type="number"
+               class="form-control"
+               name="weight"
+               [(ngModel)]="biodata.weight"
+               required>
+
+        <!-- Blood Group -->
+        <label class="label-custom">Blood Group *</label>
+        <select class="form-select"
+                name="bloodGroup"
+                [(ngModel)]="biodata.bloodGroup"
+                required>
+          <option [ngValue]="null">Select Blood Group</option>
+          <option *ngFor="let item of BloodGroupList" [ngValue]="item.key">
+            {{ item.value }}
+          </option>
+        </select>
+
+        <!-- Nationality -->
+        <label class="label-custom">Nationality *</label>
+        <select class="form-select"
+                name="nationality"
+                [(ngModel)]="biodata.nationality"
+                required>
+          <option value="Bangladeshi">Bangladeshi</option>
+        </select>
+
+        <!-- Action -->
+        <button type="submit"
+                class="btn btn-save w-100 mt-4"
+                [disabled]="form.invalid || isSaving">
+          {{ isSaving ? 'Saving...' : 'Save & Next' }}
+        </button>
+
+      </form>
+    </div>
   </div>
-
-  <div class="form-group">
-    <label>বৈবাহিক অবস্থা *</label>
-    <select><option>নির্বাচন করুন</option></select>
-  </div>
-
-  <div class="form-group full-width">
-    <label>জন্মনিবন্ধন *</label>
-    <textarea placeholder="জন্মস্থান"></textarea>
-    <p class="hint">
-      * জাতীয় পরিচয়পত্র/পাসপোর্ট নম্বর দেবেন না।
-    </p>
-  </div>
-
-  <div class="form-group">
-    <label>উচ্চতা *</label>
-    <select><option>নির্বাচন করুন</option></select>
-  </div>
-
-  <div class="form-group">
-    <label>গায়ের রং *</label>
-    <select><option>নির্বাচন করুন</option></select>
-  </div>
-
-  <div class="form-group">
-    <label>ওজন *</label>
-    <select><option>নির্বাচন করুন</option></select>
-  </div>
-
-  <div class="form-group">
-    <label>রক্তের গ্রুপ *</label>
-    <select><option>নির্বাচন করুন</option></select>
-  </div>
-
-  <div class="form-group">
-    <label>জাতীয়তা *</label>
-    <select>
-      <option selected>বাংলাদেশী</option>
-    </select>
-  </div>
-
-</form>
-
-<div class="btn-row">
-  <button class="btn back">Back</button>
-  <button class="btn next">Save & Next</button>
 </div>

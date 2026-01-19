@@ -1,51 +1,113 @@
 <div class="container mt-5">
   <div class="row justify-content-center">
-    <div class="col-md-6 custom-form-card">
-      
-      <h2 class="title-text">ঠিকানা</h2>
-      <hr class="mb-4">
+    <div class="col-md-7 custom-form-card">
+      <h3 class="mb-3">Address Details</h3>
+      <hr>
 
-      <div class="mb-4">
-        <label class="label-custom">স্থায়ী ঠিকানা <span class="text-danger">*</span></label>
-        <select class="form-select custom-input" name="permanent" [(ngModel)]="formData.permanentAddress">
-          <option value="">ঠিকানা নির্বাচন করুন</option>
-          <option value="Dhaka">ঢাকা</option>
-        </select>
-        <div class="hint-text mt-1">
-          বাসার নাম্বার না লিখে শুধু গ্রাম বা এলাকার নাম লিখুন। যেমন- মিরপুর ১০, বাঘমারা।
-        </div>
+      <!-- Permanent Address -->
+      <h5 class="mt-3">Permanent Address</h5>
+
+      <!-- Division -->
+      <select class="form-select mb-2"
+              [(ngModel)]="formData.permanentDivisionId"
+              (change)="onPermanentDivisionChange()">
+        <option [ngValue]="null">Select Division</option>
+        <option *ngFor="let d of divisions" [ngValue]="d.id">{{ d.name }}</option>
+      </select>
+
+      <!-- District -->
+      <select class="form-select mb-2"
+              [(ngModel)]="formData.permanentDistrictId"
+              (change)="onPermanentDistrictChange()"
+              [disabled]="!permanentDistricts.length">
+        <option [ngValue]="null">Select District</option>
+        <option *ngFor="let d of permanentDistricts" [ngValue]="d.id">{{ d.name }}</option>
+      </select>
+
+      <!-- Upazila -->
+      <select class="form-select mb-2"
+              [(ngModel)]="formData.permanentUpazilaId"
+              (change)="onPermanentUpazilaChange()"
+              [disabled]="!permanentUpazilas.length">
+        <option [ngValue]="null">Select Upazila</option>
+        <option *ngFor="let u of permanentUpazilas" [ngValue]="u.id">{{ u.name }}</option>
+      </select>
+
+      <!-- Village -->
+      <select class="form-select mb-2"
+              [(ngModel)]="formData.permanentVillage"
+              [disabled]="!permanentVillages.length">
+        <option value="">Select Union / Village</option>
+        <option *ngFor="let v of permanentVillages" [value]="v.name">{{ v.name }}</option>
+      </select>
+
+      <input type="text" class="form-control mb-2"
+             placeholder="Road / Street No"
+             [(ngModel)]="formData.permanentRoad">
+
+      <input type="text" class="form-control mb-3"
+             placeholder="House / Building No"
+             [(ngModel)]="formData.permanentHouse">
+
+      <!-- Current Address -->
+      <h5 class="mt-4">Current Address</h5>
+
+      <div class="form-check mb-2">
+        <input type="checkbox" class="form-check-input"
+               id="sameAddr"
+               [(ngModel)]="formData.isSameAddress"
+               (change)="toggleSameAddress()">
+        <label class="form-check-label" for="sameAddr">Same as Permanent Address</label>
       </div>
 
-      <div class="mb-4">
-        <label class="label-custom">বর্তমান ঠিকানা <span class="text-danger">*</span></label>
-        
-        <div class="form-check mb-2">
-          <input class="form-check-input" type="checkbox" id="sameAddr" 
-                 name="isSame" [(ngModel)]="formData.isSameAddress" (change)="toggleSameAddress()">
-          <label class="form-check-label checkbox-label" for="sameAddr">
-            স্থায়ী ও বর্তমান ঠিকানা একই
-          </label>
-        </div>
+      <!-- Division -->
+      <select class="form-select mb-2"
+              [(ngModel)]="formData.currentDivisionId"
+              (change)="onCurrentDivisionChange()">
+        <option [ngValue]="">Select Division</option>
+        <option *ngFor="let d of divisions" [ngValue]="d.id">{{ d.name }}</option>
+      </select>
 
-        <select class="form-select custom-input" name="current" [(ngModel)]="formData.currentAddress">
-          <option value="">ঠিকানা নির্বাচন করুন</option>
-          <option value="Dhaka">ঢাকা</option>
-        </select>
-        <div class="hint-text mt-1">
-          বাসার নাম্বার না লিখে শুধু গ্রাম বা এলাকার নাম লিখুন। যেমন- মিরপুর ১০, বাঘমারা।
-        </div>
-      </div>
+      <!-- District -->
+      <select class="form-select mb-2"
+              [(ngModel)]="formData.currentDistrictId"
+              (change)="onCurrentDistrictChange()"
+              [disabled]="!currentDistricts.length">
+        <option [ngValue]="">Select District</option>
+        <option *ngFor="let d of currentDistricts" [ngValue]="d.id">{{ d.name }}</option>
+      </select>
 
-      <div class="mb-5">
-        <label class="label-custom">কোথায় বড় হয়েছেন? <span class="text-danger">*</span></label>
-        <input type="text" class="form-control custom-input" name="hometown" [(ngModel)]="formData.hometown">
-      </div>
+      <!-- Upazila -->
+      <select class="form-select mb-2"
+              [(ngModel)]="formData.currentUpazilaId"
+              (change)="onCurrentUpazilaChange()"
+              [disabled]="!currentUpazilas.length">
+        <option [ngValue]="">Select Upazila</option>
+        <option *ngFor="let u of currentUpazilas" [ngValue]="u.id">{{ u.name }}</option>
+      </select>
 
-      <div class="d-flex justify-content-between">
-        <button type="button" class="btn btn-back px-5">Back</button>
-        <button type="button" class="btn btn-save px-5" (click)="onSave()">Save & Next</button>
-      </div>
+      <!-- Village -->
+      <select class="form-select mb-2"
+              [(ngModel)]="formData.currentVillage"
+              [disabled]="!currentVillages.length">
+        <option value="">Select Union / Village</option>
+        <option *ngFor="let v of currentVillages" [value]="v.name">{{ v.name }}</option>
+      </select>
 
+      <input type="text" class="form-control mb-2"
+             placeholder="Road / Street No"
+             [(ngModel)]="formData.currentRoad">
+
+      <input type="text" class="form-control mb-3"
+             placeholder="House / Building No"
+             [(ngModel)]="formData.currentHouse">
+
+      <!-- Other Info -->
+      <input type="text" class="form-control mb-4"
+             placeholder="Hometown"
+             [(ngModel)]="formData.hometown">
+
+      <button class="btn btn-primary w-100" (click)="onSave()">Save & Next</button>
     </div>
   </div>
 </div>

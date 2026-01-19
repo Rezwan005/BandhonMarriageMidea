@@ -70,8 +70,64 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+
+  .site-footer {
+    padding: 32px 16px;
+    text-align: center;
+  }
+
   .site-footer .container {
     flex-direction: column;
-    gap: 20px;
+    align-items: center;
+    gap: 26px;
+  }
+
+  .footer-section {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .footer-title {
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+  }
+
+  .footer-section p,
+  .footer-section li,
+  .footer-section a {
+    font-size: 0.9rem;
+  }
+
+  /* Links */
+  .footer-section ul {
+    padding: 0;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+
+  /* Social icons centered */
+  .social-icons {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .social-icons a {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    margin-top: 24px;
+    font-size: 0.8rem;
+    padding-top: 12px;
+    border-top: 1px solid #222;
   }
 }
+

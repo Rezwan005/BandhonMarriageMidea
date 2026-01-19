@@ -1,0 +1,96 @@
+:root {
+  --primary-purple: #4b2c71;
+  --label-brown: #a36b4f;
+  --hint-text: #6c3483;
+}
+.form-control{
+    width: 100%;
+}
+/* Title */
+.title-text {
+  color: #4b2c71;
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 6px;
+  letter-spacing: 0.3px;
+}
+.title-divider {
+  border-top: 2px solid #ddd;
+  margin-bottom: 2rem;
+}
+
+/* Labels & Inputs */
+.custom-label {
+  color: var(--label-brown);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* =====================
+   Inputs
+===================== */
+.custom-input {
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  padding: 14px 14px;
+  font-size: 14px;
+  transition: all 0.25s ease;
+  background: #fafafa;
+  width: 100%;
+}
+
+.custom-input:focus {
+  border-color: var(--primary-purple);
+  box-shadow: 0 0 0 0.2rem rgba(75, 44, 113, 0.1);
+}
+
+/* Hint Text */
+.hint-text {
+  color: var(--hint-text);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+/* Buttons */
+.btn-back {
+  background-color: #8e8e8e;
+  color: #fff;
+  border-radius: 50px;
+  border: none;
+  flex: 1;
+  min-width: 120px;
+}
+
+.btn-back:hover {
+  opacity: 0.9;
+}
+
+.btn-save {
+  background: linear-gradient(90deg, #5a2d82 0%, #d81b60 100%);
+  color: #fff;
+  border-radius: 50px;
+  border: none;
+  flex: 1;
+  min-width: 120px;
+}
+
+.btn-save:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.btn-save:hover:not(:disabled) {
+  transform: translateY(-1px);
+  opacity: 0.9;
+  transition: all 0.2s ease;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .d-flex.justify-content-between {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

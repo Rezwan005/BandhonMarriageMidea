@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { BiodataService } from '../_services/biodata.service';
+import { AuthService } from '../_services/authService.service';
 
 @Component({
   selector: 'app-step-menu',
@@ -8,24 +10,20 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class StepMenuComponent implements OnInit {
 
-  steps = [
-    { id: 1, label: 'সাধারণ তথ্য' },
-    { id: 2, label: 'ঠিকানা' },
-    { id: 3, label: 'শিক্ষাগত যোগ্যতা' },
-    { id: 4, label: 'পারিবারিক তথ্য' },
-    { id: 5, label: 'ব্যক্তিগত তথ্য' },
-    { id: 6, label: 'পেশাগত তথ্য' },
-    { id: 7, label: 'বিবাহ সম্পর্কিত' },
-    { id: 8, label: 'প্রতিদিনের জীবনধারা' },
-    { id: 9, label: 'অতিরিক্ত তথ্য' },
-    { id: 10, label: 'যোগাযোগ' }
-  ];
+  steps: any[] = [];
+
+
 
   currentStep = 1;
 
-  constructor(private router: Router, private route: ActivatedRoute) {}
 
+  constructor(
+    private router: Router, private route: ActivatedRoute,
+    private biodataService: BiodataService,
+    private authService: AuthService
+  ) {}
   ngOnInit() {
+     this.loadSteps();
     // Subscribe to the deepest child route that contains 'step' param
     this.route.paramMap.subscribe(() => {
       let child = this.route;
@@ -37,8 +35,14 @@ export class StepMenuComponent implements OnInit {
       });
     });
   }
-
+  loadSteps() {
+    this.biodataService.getSteps().subscribe(res => {
+      this.steps = res;
+    });
+}
   goToStep(stepId: number) {
+
+    debugger;
      this.currentStep = stepId;
     this.router.navigate(['/dashboard/editbio', stepId]);
   }

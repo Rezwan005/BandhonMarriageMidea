@@ -1,4 +1,6 @@
-import { Component, Input, OnChanges } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { BiodataProfile } from '../model/biodataprofile.model';
+import { BiodataService } from '../_services/biodata.service';
 
 @Component({
   selector: 'app-profile-list',
@@ -7,32 +9,16 @@ import { Component, Input, OnChanges } from '@angular/core';
 })
 export class ProfileListComponent implements OnChanges {
 
-  @Input() filters: any = {};
+  @Input() profiles: BiodataProfile[] = [];
 
-  profiles = [
-    { code: 'ODM-20182', age: 26, height: "5'4\"", job: 'শিক্ষক', gender: 'male', marital: 'single', avatar: 'assets/Img/male.jpg' },
-    { code: 'ODF-21087', age: 28, height: "5'", job: 'গৃহিণী', gender: 'female', marital: 'single', avatar: 'assets/Img/female.png' },
-      { code: 'ODM-20182', age: 26, height: "5'4\"", job: 'শিক্ষক', gender: 'male', marital: 'single', avatar: 'assets/Img/male.jpg' },
-    { code: 'ODF-21087', age: 28, height: "5'", job: 'গৃহিণী', gender: 'female', marital: 'single', avatar: 'assets/Img/female.png' },
-      { code: 'ODM-20182', age: 26, height: "5'4\"", job: 'শিক্ষক', gender: 'male', marital: 'single', avatar: 'assets/Img/male.jpg' },
-    { code: 'ODF-21087', age: 28, height: "5'", job: 'গৃহিণী', gender: 'female', marital: 'single', avatar: 'assets/Img/female.png' },
-      { code: 'ODM-20182', age: 26, height: "5'4\"", job: 'শিক্ষক', gender: 'male', marital: 'single', avatar: 'assets/Img/male.jpg' },
-    { code: 'ODF-21087', age: 28, height: "5'", job: 'গৃহিণী', gender: 'female', marital: 'single', avatar: 'assets/Img/female.png' },
-  ];
+  loading = false;
+  errorMessage = '';
 
-  filteredProfiles = [...this.profiles];
+  constructor(private biodataService: BiodataService) {}
 
-  ngOnChanges() {
-    this.applyFilter();
+  ngOnChanges(changes: SimpleChanges): void {
+   
   }
 
-  applyFilter() {
-    this.filteredProfiles = this.profiles.filter(p => {
-      this.filters.ageMin =18;
-      this.filters.ageMax = 40
-      return (!this.filters.searchFor || p.gender === this.filters.searchFor)
-        && (!this.filters.maritalStatus || p.marital === this.filters.maritalStatus)
-        && (p.age >= this.filters.ageMin && p.age <= this.filters.ageMax);
-    });
-  }
+
 }

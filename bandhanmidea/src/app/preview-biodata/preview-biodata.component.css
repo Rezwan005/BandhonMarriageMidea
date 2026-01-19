@@ -1,0 +1,105 @@
+.preview-container {
+  display: flex;
+  gap: 20px;
+  font-family: 'Arial', sans-serif;
+  flex-wrap: wrap; /* allow wrapping on small screens */
+}
+
+/* Left Panel */
+.left-panel {
+  background-color: #4b2f7f;
+  color: white;
+  padding: 20px;
+  flex: 1;
+  min-width: 250px; /* ensure reasonable width on mobile */
+  border-radius: 8px;
+  text-align: center;
+}
+
+.photo-wrapper {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+}
+
+.photo-wrapper img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.info-table {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+
+.info-table td {
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding: 6px 8px;
+  text-align: left;
+  word-break: break-word;
+}
+
+/* Right Panel */
+.right-panel {
+  flex: 2;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Card styles */
+.card {
+  border: 1px solid #4b2f7f;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #fff;
+}
+
+.card h3 {
+  color: #4b2f7f;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.card table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.card td {
+  padding: 6px 8px;
+  border-top: 1px solid #ddd;
+  vertical-align: top;
+  word-break: break-word;
+}
+
+/* Copy Link Button */
+.copy-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.copy-link button {
+  background: linear-gradient(90deg, #a020f0, #ff2b87);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Responsive: stack panels vertically on small screens */
+@media (max-width: 768px) {
+  .preview-container {
+    flex-direction: column;
+  }
+
+  .left-panel, .right-panel {
+    min-width: 100%;
+  }
+}
