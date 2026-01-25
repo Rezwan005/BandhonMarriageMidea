@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Biodata } from '../model/biodata.model';
 import { GoogleLoginProvider, SocialAuthService } from '@abacritt/angularx-social-login';
+import { environment } from 'src/environments/environment.prod';
 
 
 @Injectable({
@@ -10,8 +11,7 @@ import { GoogleLoginProvider, SocialAuthService } from '@abacritt/angularx-socia
 })
 export class AuthService {
 
-  private apiUrl = 'https://localhost:7292/api/auth';
-
+   apiUrl = environment.apiUrl;
   constructor(
     private http: HttpClient,
     private socialAuth: SocialAuthService
@@ -22,7 +22,7 @@ export class AuthService {
   }
 
   sendTokenToBackend(idToken: string) {
-    return this.http.post<any>(`${this.apiUrl}/google`, {
+    return this.http.post<any>(`${this.apiUrl}/auth/google`, {
       idToken
     });
   }

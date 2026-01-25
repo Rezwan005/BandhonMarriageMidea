@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/auth/google": {
+    "/auth/google": {
       "post": {
         "tags": [
           "Auth"
@@ -457,6 +457,28 @@
       "get": {
         "tags": [
           "Biodata"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/details/{biodataNo}": {
+      "get": {
+        "tags": [
+          "Biodata"
+        ],
+        "parameters": [
+          {
+            "name": "biodataNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
         ],
         "responses": {
           "200": {

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Marriage.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2088ec12137f9d7c1dc3610124948f8279decca2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c002c2738ca3fb03fab38b76d93d70875ede0c05")]
 [assembly: System.Reflection.AssemblyProductAttribute("Marriage.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Marriage.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -7,6 +7,7 @@ import { DataLookup } from '../model/lookup.model';
 import { Education } from '../model/Education.model';
 import { PersonalInfo } from '../model/personalinfo.model';
 import { BiodataProfile } from '../model/biodataprofile.model';
+import { environment } from 'src/environments/environment.prod';
 
 
 @Injectable({
@@ -14,8 +15,8 @@ import { BiodataProfile } from '../model/biodataprofile.model';
 })
 export class BiodataService {
 
-  private apiUrl = 'https://localhost:7292'; // 🔁 change if needed
 
+  apiUrl = environment.apiUrl;
   constructor(private http: HttpClient) {}
 
   saveBiodata(data: Biodata): Observable<any> {
@@ -102,4 +103,9 @@ saveOrUpdateContact(data: any): Observable<any> {
       {}   // empty body is required
     );
   }
+  getBiodataDetails(biodataNo: string) {
+  return this.http.get<any>(
+    `${this.apiUrl}/details/${biodataNo}`
+  );
+}
 }

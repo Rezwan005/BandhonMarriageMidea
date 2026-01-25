@@ -23,33 +23,42 @@
           <div class="field">
             <label>I am looking for</label>
          
-             <select class="form-select custom-input"
-                    [(ngModel)]="filters.biodataType">
-                  <option value="" selected>Please Select</option>
-                  <option *ngFor="let item of BiodataTypeList" [value]="item.key">
-                    {{ item.value }}
-                  </option>
-              </select>
+        <select class="form-select custom-input"
+                [(ngModel)]="filters.biodataType"
+                name="biodataType">
+          <option value="" disabled selected>Please Select</option>
+          <option *ngFor="let item of BiodataTypeList" [value]="item.key">
+            {{ item.value }}
+          </option>
+        </select>
+
           </div>
 
           <div class="field">
             <label>Country</label>
             <select [(ngModel)]="filters.country" name="country">
               <option value="">Any Country</option>
-              <option>Bangladesh</option>
-              <option>United Kingdom</option>
-              <option>Saudi Arabia</option>
-              <option>United States</option>
+              <option value="Bangladesh">Bangladesh</option>
             </select>
           </div>
 
           <div class="field">
-            <label>Age Range</label>
-            <input [(ngModel)]="filters.age" name="age" placeholder="25 - 32" />
+              <div class="field">
+                <label>Merital Status</label>
+            
+                <select class="form-select custom-input"
+                        [(ngModel)]="filters.MaritalStatus"
+                        name="maritalStatus">
+                        <option value="" disabled selected>Please Select</option>
+                        <option *ngFor="let item of MeritalStatusList" [value]="item.key">
+                          {{ item.value }}
+                        </option>
+                </select>
+              </div>
           </div>
 
           <div class="field full">
-            <button class="btn" type="submit" (click)="goToProfile()">
+            <button class="btn" type="submit" (click)="onSearch()">
               Find Matches
             </button>
           </div>

@@ -18,6 +18,8 @@ import { Step10ContactComponent } from './step10-contact/step10-contact.componen
 import { LoginComponent } from './login/login.component';
 import { PreviewBiodataComponent } from './preview-biodata/preview-biodata.component';
 import { PreviewlayoutComponent } from './previewlayout/previewlayout.component';
+import { BiodataDetailsComponent } from './biodata-details/biodata-details.component';
+import { GoogleLoginCallbackComponent } from './google-login-callback/google-login-callback.component';
 
 
 
@@ -25,7 +27,8 @@ const routes: Routes = [
   {path: '', component: HomeComponent},
   { path: 'profile', component: ProfilepageComponent },
    { path: 'login', component: LoginComponent },
-
+   { path: 'google-login-callback', component: GoogleLoginCallbackComponent },
+{ path: 'biodata/:biodataNo', component: BiodataDetailsComponent },
    { path: 'dashboard', component: DashboardComponent ,children: [
       { path: 'editbio', 
         component: BiodataLayoutComponent,   // left menu + right form layout

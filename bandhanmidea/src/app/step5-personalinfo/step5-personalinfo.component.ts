@@ -60,6 +60,7 @@ loadPersonalInfo() {
 }
 
   onSave() {
+    debugger;
     const formData = new FormData();
     formData.append('userId', this.authService.getUser().id);
     formData.append('dressOutside', this.data.dressOutside);

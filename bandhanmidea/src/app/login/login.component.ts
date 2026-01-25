@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, NgZone } from '@angular/core';
 import { AuthService } from '../_services/authService.service';
 import { GoogleLoginProvider, SocialAuthService, SocialUser } from '@abacritt/angularx-social-login';
 import { Router } from '@angular/router';
@@ -11,23 +11,29 @@ declare const google: any;
 
 export class LoginComponent {
      google: any;
-  constructor(private authService: AuthService,  private socialAuthService: SocialAuthService,private router: Router) {}
+  constructor(private authService: AuthService,  private socialAuthService: SocialAuthService,private router: Router,private ngZone: NgZone) {}
   ngAfterViewInit(): void {
     google.accounts.id.initialize({
-      client_id: '521492801604-ht2gj9q5k6ed5609p069a6bdl7vhvngn.apps.googleusercontent.com',
-      callback: (response: any) => {
-        // This is the JWT token
-        const idToken = response.credential;
+    client_id: '521492801604-hj8uabij1uhn1mqrgha7beglcvsjv5or.apps.googleusercontent.com',
+    itp_support: true,
+    
+    callback: (response: any) => {
+      // 3. Wrap everything in ngZone
+      this.ngZone.run(() => {
+        this.authService.sendTokenToBackend(response.credential).subscribe({
 
-        this.authService.sendTokenToBackend(idToken)
-          .subscribe(res => {
+          
+          next: (res) => {
+                      console.log(res);
             localStorage.setItem('token', res.token);
-            localStorage.setItem('user', JSON.stringify(res.user)); // ✅ store user
-             this.router.navigate(['']); // ✅ redirect
-          });
-      }
-    });
-
+            localStorage.setItem('user', JSON.stringify(res.user));
+            this.router.navigate(['/']); 
+          },
+          error: (err) => console.error("Backend Error:", err)
+        });
+      });
+    }
+  });
     google.accounts.id.renderButton(
       document.getElementById('googleBtn'),
       {

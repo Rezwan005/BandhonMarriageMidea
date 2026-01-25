@@ -1,4 +1,5 @@
-using Marriage.Infrastructure.Data;
+﻿using Marriage.Infrastructure.Data;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
@@ -6,24 +7,31 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Add DbContext
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
 
+// Add Controllers
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+// Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngular", policy =>
     {
-        policy.WithOrigins("http://localhost:4200") // Angular dev server
+        policy.WithOrigins("http://localhost:4200", "https://bondhonmideacenter.com")
               .AllowAnyHeader()
-              .AllowAnyMethod();
+              .AllowAnyMethod()
+              .AllowCredentials();
     });
 });
+
+// JWT Authentication
 builder.Services.AddAuthentication("Bearer")
 .AddJwtBearer("Bearer", options =>
 {
@@ -39,11 +47,18 @@ builder.Services.AddAuthentication("Bearer")
             Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
     };
 });
+
 var app = builder.Build();
-// Serve wwwroot by default
+app.Use(async (context, next) =>
+{
+    context.Response.Headers["Cross-Origin-Opener-Policy"] = "unsafe-none";
+    context.Response.Headers["Cross-Origin-Embedder-Policy"] = "unsafe-none";
+    await next();
+});
+// Serve wwwroot
 app.UseStaticFiles();
 
-// Ensure selfies folder is served
+// Ensure selfies folder exists and is served
 var selfiesPath = Path.Combine(builder.Environment.WebRootPath, "selfies");
 if (!Directory.Exists(selfiesPath))
     Directory.CreateDirectory(selfiesPath);
@@ -53,20 +68,24 @@ app.UseStaticFiles(new StaticFileOptions
     FileProvider = new PhysicalFileProvider(selfiesPath),
     RequestPath = "/selfies"
 });
+
+
+
+// 2️⃣ HTTPS redirection
 app.UseHttpsRedirection();
 
+// 3️⃣ CORS
 app.UseCors("AllowAngular");
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
 
-app.UseHttpsRedirection();
-
+// 4️⃣ Authentication & Authorization
+app.UseAuthentication();
 app.UseAuthorization();
 
+// 5️⃣ Swagger
+app.UseSwagger();
+app.UseSwaggerUI();
+
+// 6️⃣ Map controllers
 app.MapControllers();
 
 app.Run();

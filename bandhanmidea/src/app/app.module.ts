@@ -37,6 +37,8 @@ import { GoogleLoginProvider, SocialAuthServiceConfig, SocialLoginModule } from 
 import { JwtInterceptor } from './_interceptors/jwt.interceptor';
 import { PreviewBiodataComponent } from './preview-biodata/preview-biodata.component';
 import { PreviewlayoutComponent } from './previewlayout/previewlayout.component';
+import { BiodataDetailsComponent } from './biodata-details/biodata-details.component';
+import { GoogleLoginCallbackComponent } from './google-login-callback/google-login-callback.component';
 
 
 
@@ -71,6 +73,8 @@ import { PreviewlayoutComponent } from './previewlayout/previewlayout.component'
       LoginComponent,
       PreviewBiodataComponent,
       PreviewlayoutComponent,
+      BiodataDetailsComponent,
+      GoogleLoginCallbackComponent,
  
   ],
   imports: [

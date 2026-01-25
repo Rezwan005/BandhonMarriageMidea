@@ -56,86 +56,92 @@ export class Step2AddressComponent implements OnInit {
 
   ngOnInit(): void {
     this.formData.userId = this.authService.getUser().id;
-    this.locationService.getDivisions().subscribe((res: any) => {
-    this.divisions = res.data;
-    // Now load existing address (after divisions are ready)
-    this.loadExistingAddress();
-  });
-  }
 
-  // Load all divisions
-  loadDivisions() {
     this.locationService.getDivisions().subscribe((res: any) => {
       this.divisions = res.data;
+      this.loadExistingAddress(); // ✅ divisions loaded first
     });
   }
 
-loadExistingAddress() {
-  this.biodataService.getAddressByUserId(this.formData.userId).subscribe((res: any) => {
-    if (!res) return;
+  // ---------------- LOAD EXISTING ----------------
+  loadExistingAddress() {
+    this.biodataService.getAddressByUserId(this.formData.userId)
+      .subscribe((res: any) => {
+        if (!res) return;
 
-    this.formData = res;
+        this.formData = res;
 
-    // ---------- PERMANENT ----------
-    if (this.formData.permanentDivisionId) {
-      this.onPermanentDivisionChange(true);
-    }
+        if (this.formData.permanentDivisionId) {
+          this.onPermanentDivisionChange(true);
+        }
 
-    // ---------- CURRENT ----------
-    if (!this.formData.isSameAddress && this.formData.currentDivisionId) {
-      this.onCurrentDivisionChange(true);
-    }
+        if (!this.formData.isSameAddress && this.formData.currentDivisionId) {
+          this.onCurrentDivisionChange(true);
+        }
 
-    // ---------- SAME ADDRESS ----------
-    if (this.formData.isSameAddress) {
-      this.copyPermanentToCurrent();
-    }
-  });
-}
-copyPermanentToCurrent() {
-  this.formData.currentDivisionId = this.formData.permanentDivisionId;
-  this.formData.currentDistrictId = this.formData.permanentDistrictId;
-  this.formData.currentUpazilaId = this.formData.permanentUpazilaId;
-  this.formData.currentVillage = this.formData.permanentVillage;
-  this.formData.currentRoad = this.formData.permanentRoad;
-  this.formData.currentHouse = this.formData.permanentHouse;
+        if (this.formData.isSameAddress) {
+          this.copyPermanentToCurrent();
+        }
+      });
+  }
 
-  this.onCurrentDivisionChange(true);
-  
-}
+  copyPermanentToCurrent() {
+    this.formData.currentDivisionId = this.formData.permanentDivisionId;
+    this.formData.currentDistrictId = this.formData.permanentDistrictId;
+    this.formData.currentUpazilaId = this.formData.permanentUpazilaId;
+    this.formData.currentVillage = this.formData.permanentVillage;
+    this.formData.currentRoad = this.formData.permanentRoad;
+    this.formData.currentHouse = this.formData.permanentHouse;
 
-  // ---------------- PERMANENT ADDRESS ----------------
+    this.onCurrentDivisionChange(true);
+  }
+
+  // ================= PERMANENT =================
   onPermanentDivisionChange(loadExisting = false) {
-    debugger;
-  if (!this.formData.permanentDivisionId) return;
+    if (!this.formData.permanentDivisionId) return;
 
-  const div = this.divisions.find(d => d.id === this.formData.permanentDivisionId?.toString());
-  this.formData.permanentDivision = div?.name || '';
+    // ✅ FIX: number vs number (removed toString)
+    const div = this.divisions.find(
+      d => d.id === this.formData.permanentDivisionId
+    );
+    this.formData.permanentDivision = div?.name || '';
 
-  this.locationService.getDistrictsByDivision(this.formData.permanentDivisionId)
-    .subscribe((res :any)=> {
-      this.permanentDistricts = res.data;
-
-      if (loadExisting && this.formData.permanentDistrictId) {
-        this.onPermanentDistrictChange(true);
-      }
-    });
-}
-
-  onPermanentDistrictChange(loadExisting = false) {
-    if (!this.formData.permanentDistrictId) {
+    // ✅ FIX: reset children
+    if (!loadExisting) {
+      this.formData.permanentDistrictId = null;
+      this.formData.permanentUpazilaId = null;
       this.permanentUpazilas = [];
       this.permanentVillages = [];
-      return;
     }
 
-    const dist = this.permanentDistricts.find(d => d.id === this.formData.permanentDistrictId);
+    this.locationService
+      .getDistrictsByDivision(this.formData.permanentDivisionId)
+      .subscribe((res: any) => {
+        this.permanentDistricts = res.data;
+
+        if (loadExisting && this.formData.permanentDistrictId) {
+          this.onPermanentDistrictChange(true);
+        }
+      });
+  }
+
+  onPermanentDistrictChange(loadExisting = false) {
+    if (!this.formData.permanentDistrictId) return;
+
+    const dist = this.permanentDistricts.find(
+      d => d.id === this.formData.permanentDistrictId
+    );
     this.formData.permanentDistrict = dist?.name || '';
 
-    this.locationService.getUpazilasByDistrict(this.formData.permanentDistrictId!)
+    if (!loadExisting) {
+      this.formData.permanentUpazilaId = null;
+      this.permanentVillages = [];
+    }
+
+    this.locationService
+      .getUpazilasByDistrict(this.formData.permanentDistrictId)
       .subscribe((res: any) => {
         this.permanentUpazilas = res.data;
-        this.permanentVillages = [];
 
         if (loadExisting && this.formData.permanentUpazilaId) {
           this.onPermanentUpazilaChange(true);
@@ -144,37 +150,40 @@ copyPermanentToCurrent() {
   }
 
   onPermanentUpazilaChange(loadExisting = false) {
-    if (!this.formData.permanentUpazilaId) {
-      this.permanentVillages = [];
-      return;
-    }
+    if (!this.formData.permanentUpazilaId) return;
 
-    const upz = this.permanentUpazilas.find(u => u.id === this.formData.permanentUpazilaId);
+    const upz = this.permanentUpazilas.find(
+      u => u.id === this.formData.permanentUpazilaId
+    );
     this.formData.permanentUpazila = upz?.name || '';
 
-    this.locationService.getUnionsByUpazila(this.formData.permanentUpazilaId!)
+    this.locationService
+      .getUnionsByUpazila(this.formData.permanentUpazilaId)
       .subscribe((res: any) => {
         this.permanentVillages = res.data;
       });
   }
 
-  // ---------------- CURRENT ADDRESS ----------------
+  // ================= CURRENT =================
   onCurrentDivisionChange(loadExisting = false) {
-    if (!this.formData.currentDivisionId) {
-      this.currentDistricts = [];
-      this.currentUpazilas = [];
-      this.currentVillages = [];
-      return;
-    }
+    if (!this.formData.currentDivisionId) return;
 
-    const div = this.divisions.find(d => d.id === this.formData.currentDivisionId);
+    const div = this.divisions.find(
+      d => d.id === this.formData.currentDivisionId
+    );
     this.formData.currentDivision = div?.name || '';
 
-    this.locationService.getDistrictsByDivision(this.formData.currentDivisionId!)
+    if (!loadExisting) {
+      this.formData.currentDistrictId = null;
+      this.formData.currentUpazilaId = null;
+      this.currentUpazilas = [];
+      this.currentVillages = [];
+    }
+
+    this.locationService
+      .getDistrictsByDivision(this.formData.currentDivisionId)
       .subscribe((res: any) => {
         this.currentDistricts = res.data;
-        this.currentUpazilas = [];
-        this.currentVillages = [];
 
         if (loadExisting && this.formData.currentDistrictId) {
           this.onCurrentDistrictChange(true);
@@ -183,19 +192,22 @@ copyPermanentToCurrent() {
   }
 
   onCurrentDistrictChange(loadExisting = false) {
-    if (!this.formData.currentDistrictId) {
-      this.currentUpazilas = [];
-      this.currentVillages = [];
-      return;
-    }
+    if (!this.formData.currentDistrictId) return;
 
-    const dist = this.currentDistricts.find(d => d.id === this.formData.currentDistrictId);
+    const dist = this.currentDistricts.find(
+      d => d.id === this.formData.currentDistrictId
+    );
     this.formData.currentDistrict = dist?.name || '';
 
-    this.locationService.getUpazilasByDistrict(this.formData.currentDistrictId!)
+    if (!loadExisting) {
+      this.formData.currentUpazilaId = null;
+      this.currentVillages = [];
+    }
+
+    this.locationService
+      .getUpazilasByDistrict(this.formData.currentDistrictId)
       .subscribe((res: any) => {
         this.currentUpazilas = res.data;
-        this.currentVillages = [];
 
         if (loadExisting && this.formData.currentUpazilaId) {
           this.onCurrentUpazilaChange(true);
@@ -204,15 +216,15 @@ copyPermanentToCurrent() {
   }
 
   onCurrentUpazilaChange(loadExisting = false) {
-    if (!this.formData.currentUpazilaId) {
-      this.currentVillages = [];
-      return;
-    }
+    if (!this.formData.currentUpazilaId) return;
 
-    const upz = this.currentUpazilas.find(u => u.id === this.formData.currentUpazilaId);
+    const upz = this.currentUpazilas.find(
+      u => u.id === this.formData.currentUpazilaId
+    );
     this.formData.currentUpazila = upz?.name || '';
 
-    this.locationService.getUnionsByUpazila(this.formData.currentUpazilaId!)
+    this.locationService
+      .getUnionsByUpazila(this.formData.currentUpazilaId)
       .subscribe((res: any) => {
         this.currentVillages = res.data;
       });
@@ -220,23 +232,13 @@ copyPermanentToCurrent() {
 
   toggleSameAddress() {
     if (this.formData.isSameAddress) {
-      this.formData.currentDivisionId = this.formData.permanentDivisionId;
-      this.formData.currentDistrictId = this.formData.permanentDistrictId;
-      this.formData.currentUpazilaId = this.formData.permanentUpazilaId;
-      this.formData.currentVillage = this.formData.permanentVillage;
-      this.formData.currentRoad = this.formData.permanentRoad;
-      this.formData.currentHouse = this.formData.permanentHouse;
-
-      this.onCurrentDivisionChange(true);
+      this.copyPermanentToCurrent();
     }
   }
 
   onSave() {
     this.biodataService.saveAddress(this.formData).subscribe(() => {
       alert('Address saved successfully ✅');
-      // Optionally navigate to next step
-      // this.router.navigate(['/dashboard/editbio/step3']);
     });
   }
-
 }

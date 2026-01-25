@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { BiodataService } from '../_services/biodata.service';
 import { AuthService } from '../_services/authService.service';
@@ -13,7 +13,7 @@ import { DataLookup } from '../model/lookup.model';
 })
 
 export class HomeComponent {
-  
+ 
   constructor(
     private router: Router,
       private biodataService: BiodataService,
@@ -22,7 +22,7 @@ export class HomeComponent {
     filters = {
     biodataType: '',
     country: '',
-    age: ''
+    MaritalStatus: ''
   };
  BiodataTypeList: DataLookup[] = [];
   MeritalStatusList: DataLookup[] = [];
@@ -44,8 +44,15 @@ export class HomeComponent {
     this.router.navigate(['/profile']);
   }
  
-  onSearch() {
-    const g = this.filters.biodataType;
-   
+   onSearch() {
+    debugger;
+    this.router.navigate(['/profile'], {
+      queryParams: {
+        biodataType: this.filters.biodataType,
+        country: this.filters.country,
+        maritalStatus: this.filters.MaritalStatus
+      }
+    });
   }
+
 }

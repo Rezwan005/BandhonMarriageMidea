@@ -1,10 +1,10 @@
 <div class="stepper-container">
   <div *ngFor="let step of steps"
        class="step-item"
-       [class.active]="step.isAccessible && !step.isCompleted"
+       [class.active]="step.stepId === currentStep"
        [class.completed]="step.isCompleted"
-       [class.disabled]="!step.isAccessible"
-       (click)="goToStep(step.stepId)">
+
+       (click)=" goToStep(step.stepId)">
 
     <div class="circle">
       {{ step.isCompleted ? '✓' : step.stepId }}
@@ -12,4 +12,3 @@
     <div class="label">{{ step.stepName }}</div>
   </div>
 </div>
-

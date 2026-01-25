@@ -358,7 +358,7 @@ namespace MarrriageApi.Controllers
                 mobileNo = info.MobileNo,
                 selfieUrl = string.IsNullOrEmpty(info.SelfiePath)
                     ? null
-                    : $"{Request.Scheme}://{Request.Host}/selfies/{info.SelfiePath}"
+                    : $"{Request.Scheme}://{Request.Host}/api/selfies/{info.SelfiePath}"
             };
 
             return Ok(result);
@@ -512,7 +512,7 @@ namespace MarrriageApi.Controllers
                 from p in pj.DefaultIfEmpty()
 
                 select new { ub, bc, bg, oc, p };
-            if(request != null && request.AgeMin > 0)
+            if(request != null )
             {
                 // Biodata No
                 if (!string.IsNullOrEmpty(request.BiodataNo))
@@ -525,11 +525,14 @@ namespace MarrriageApi.Controllers
                 // Marital Status
                 if (!string.IsNullOrEmpty(request.MaritalStatus))
                     query = query.Where(x => x.bg.MaritalStatus == request.MaritalStatus);
-                
-                // Age Range
-                query = query.Where(x =>
-                    x.bg.Age >= request.AgeMin &&
-                    x.bg.Age <= request.AgeMax);
+                if(request.AgeMin>0)
+                {
+                    // Age Range
+                    query = query.Where(x =>
+                        x.bg.Age >= request.AgeMin &&
+                        x.bg.Age <= request.AgeMax);
+                }
+              
             }
             
 
@@ -542,7 +545,7 @@ namespace MarrriageApi.Controllers
                 Profession = x.oc.Profession,
                 Avatar = string.IsNullOrEmpty(x.p.SelfiePath)
                     ? null
-                    : $"{Request.Scheme}://{Request.Host}/selfies/{x.p.SelfiePath}"
+                    : $"{Request.Scheme}://{Request.Host}/api/selfies/{x.p.SelfiePath}"
             }).ToListAsync();
 
             return Ok(new { success = true, data = result });
@@ -692,6 +695,80 @@ namespace MarrriageApi.Controllers
         private string GenerateBiodataNo(int nextId)
         {
             return $"BIO-{DateTime.Now.Year}-{nextId.ToString().PadLeft(6, '0')}";
+        }
+
+        [HttpGet("details/{biodataNo}")]
+        public async Task<IActionResult> GetBiodataDetails(string biodataNo)
+        {
+            var data = await (
+                from ub in _context.UserBiodata
+                join u in _context.Users on ub.UserId equals u.Id
+                join g in _context.BiodataGeneralInfos on u.Id equals g.UserId
+                join p in _context.PersonalInfos on u.Id equals p.UserId
+                join o in _context.OccupationalInfos on u.Id equals o.UserId
+                join e in _context.UserEducations on u.Id equals e.UserId
+                join a in _context.UserAddresses on u.Id equals a.UserId
+                join c in _context.BiodataContacts on u.Id equals c.UserId
+                where ub.BiodataNo == biodataNo
+                select new BiodataDetailDto
+                {
+                    BiodataNo = ub.BiodataNo,
+                    Status = ub.Status,
+
+                    Name = u.Name,
+                    Email = u.Email,
+
+                    GeneralInfo = new GeneralInfoDto
+                    {
+                        BiodataType = g.BiodataType,
+                        MaritalStatus = g.MaritalStatus,
+                        Age = g.Age,
+                        Height = g.Height,
+                        SkinTone = g.SkinTone,
+                        BloodGroup = g.BloodGroup
+                    },
+
+                    PersonalInfo = new PersonalInfo
+                    {
+                        AboutYourself = p.AboutYourself,
+                        MobileNo = p.MobileNo,
+                     
+                       SelfiePath = string.IsNullOrEmpty(p.SelfiePath)
+                        ? null
+                        : $"{Request.Scheme}://{Request.Host}/api/selfies/{p.SelfiePath}"
+                        },
+
+                    OccupationalInfo = new OccupationalInfoDto
+                    {
+                        Profession = o.Profession,
+                        MonthlyIncome = o.MonthlyIncome
+                    },
+
+                    Education = new EducationDto
+                    {
+                        HighestDegree = e.HighestDegree,
+                        GSubject = e.GSubject
+                    },
+
+                    Address = new AddressDto
+                    {
+                        PermanentDistrict = a.PermanentDistrict,
+                        CurrentDistrict = a.CurrentDistrict
+                    },
+
+                    Contact = new BiodataContactDto
+                    {
+                        GroomName = c.GroomName,
+                        GuardianMobile = c.GuardianMobile,
+                        GuardianRelation = c.GuardianRelation
+                    }
+                }
+            ).FirstOrDefaultAsync();
+
+            if (data == null)
+                return NotFound(new { message = "Biodata not found" });
+
+            return Ok(data);
         }
 
     }

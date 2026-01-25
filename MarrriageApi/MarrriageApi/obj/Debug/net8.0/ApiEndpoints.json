@@ -18,7 +18,7 @@
   {
     "ContainingType": "MarrriageApi.Controllers.AuthController",
     "Method": "GoogleLogin",
-    "RelativePath": "api/auth/google",
+    "RelativePath": "auth/google",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -26,6 +26,22 @@
       {
         "Name": "dto",
         "Type": "MarrriageApi.Dtos.GoogleLoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MarrriageApi.Controllers.BiodataController",
+    "Method": "GetBiodataDetails",
+    "RelativePath": "details/{biodataNo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "biodataNo",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],
