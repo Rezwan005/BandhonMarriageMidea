@@ -1,20 +1,26 @@
 <h2 class="result-title">Biodatas</h2>
 
 <div class="profiles-grid">
-  
+
   <div class="profile-card" *ngFor="let p of profiles">
 
-    <div class="left">
+    <div class="avatar-box">
       <img [src]="p.avatar" class="avatar">
     </div>
 
-    <div class="right">
+    <div class="profile-info">
       <h3 class="code">{{ p.bioDataCode }}</h3>
-      <p>Age {{ p.age }}</p>
-      <p>Height {{ p.height }}</p>
-      <p>profession {{ p.profession }}</p>
 
-      <button class="view-btn" (click)="goToBioDetails(p.bioDataCode)">Biodata →</button>
+      <div class="info-row">
+        <span>Age: {{ p.age }}</span>
+        <span>Height: {{ p.height }}</span>
+      </div>
+
+      <p class="profession">{{ p.profession }}</p>
+
+      <button class="view-btn" (click)="goToBioDetails(p.bioDataCode)">
+        View Biodata
+      </button>
     </div>
 
   </div>

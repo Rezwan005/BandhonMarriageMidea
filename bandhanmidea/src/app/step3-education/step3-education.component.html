@@ -1,73 +1,154 @@
-<div class="container mt-5">
-  <div class="row justify-content-center">
-    <div class="col-md-7 custom-form-card">
+<div class="page-bg">
+  <div class="container">
+    <div class="form-card">
 
-      <h3 class="mb-3">Educational Qualifications</h3>
-      <hr>
+      <h2 class="form-title">Educational Qualifications</h2>
+      <p class="form-subtitle">Provide your academic details accurately</p>
 
-      <!-- SSC Details -->
-      <h5 class="mt-3">SSC / Equivalent</h5>
+      <!-- SSC -->
+      <div class="form-section">
+        <h4>SSC / Equivalent</h4>
 
-      <select class="form-select mb-2"
-              name="sscGroup"
-              [(ngModel)]="eduData.sscGroup">
-        <option value="" disabled>-- নির্বাচন করুন --</option>
-        <option *ngFor="let item of groupList" [value]="item.key">{{ item.value }}</option>
-      </select>
+        <div class="form-grid">
+          <div class="form-field">
+            <label>Group</label>
+            <select class="input"
+                    name="sscGroup"
+                    [(ngModel)]="eduData.sscGroup">
+              <option value="">Select Group</option>
+              <option *ngFor="let item of groupList" [value]="item.key">
+                {{ item.value }}
+              </option>
+            </select>
+          </div>
 
-      <input type="text" class="form-control mb-2" placeholder="SSC Passing Year"
-             name="sscPY" [(ngModel)]="eduData.sscPY">
+          <div class="form-field">
+            <label>Passing Year</label>
+            <input class="input"
+                   type="text"
+                   name="sscPY"
+                   [(ngModel)]="eduData.sscPY">
+          </div>
 
-      <select class="form-select mb-2" name="sscResult" [(ngModel)]="eduData.sscResult">
-        <option value="" disabled>-- নির্বাচন করুন --</option>
-        <option *ngFor="let item of ResultList" [value]="item.key">{{ item.value }}</option>
-      </select>
+          <div class="form-field">
+            <label>Result</label>
+            <select class="input"
+                    name="sscResult"
+                    [(ngModel)]="eduData.sscResult">
+              <option value="">Select Result</option>
+              <option *ngFor="let item of ResultList" [value]="item.key">
+                {{ item.value }}
+              </option>
+            </select>
+          </div>
 
-      <input type="text" class="form-control mb-3" placeholder="SSC Institution Name"
-             name="sscInsName" [(ngModel)]="eduData.sscInsName">
+          <div class="form-field full">
+            <label>Institution Name</label>
+            <input class="input"
+                   type="text"
+                   name="sscInsName"
+                   [(ngModel)]="eduData.sscInsName">
+          </div>
+        </div>
+      </div>
 
-      <!-- HSC Details -->
-      <h5 class="mt-4">HSC / Equivalent</h5>
+      <!-- HSC -->
+      <div class="form-section">
+        <h4>HSC / Equivalent</h4>
 
-      <select class="form-select mb-2" name="hscGroup" [(ngModel)]="eduData.hscGroup">
-        <option value="" disabled>-- নির্বাচন করুন --</option>
-        <option *ngFor="let item of groupList" [value]="item.key">{{ item.value }}</option>
-      </select>
+        <div class="form-grid">
+          <div class="form-field">
+            <label>Group</label>
+            <select class="input"
+                    name="hscGroup"
+                    [(ngModel)]="eduData.hscGroup">
+              <option value="">Select Group</option>
+              <option *ngFor="let item of groupList" [value]="item.key">
+                {{ item.value }}
+              </option>
+            </select>
+          </div>
 
-      <input type="text" class="form-control mb-2" placeholder="HSC Passing Year"
-             name="hscPY" [(ngModel)]="eduData.hscPY">
+          <div class="form-field">
+            <label>Passing Year</label>
+            <input class="input"
+                   type="text"
+                   name="hscPY"
+                   [(ngModel)]="eduData.hscPY">
+          </div>
 
-      <select class="form-select mb-2" name="hscResult" [(ngModel)]="eduData.hscResult">
-        <option value="" disabled>-- নির্বাচন করুন --</option>
-        <option *ngFor="let item of ResultList" [value]="item.key">{{ item.value }}</option>
-      </select>
+          <div class="form-field">
+            <label>Result</label>
+            <select class="input"
+                    name="hscResult"
+                    [(ngModel)]="eduData.hscResult">
+              <option value="">Select Result</option>
+              <option *ngFor="let item of ResultList" [value]="item.key">
+                {{ item.value }}
+              </option>
+            </select>
+          </div>
 
-      <input type="text" class="form-control mb-3" placeholder="HSC Institution Name"
-             name="hscInsName" [(ngModel)]="eduData.hscInsName">
+          <div class="form-field full">
+            <label>Institution Name</label>
+            <input class="input"
+                   type="text"
+                   name="hscInsName"
+                   [(ngModel)]="eduData.hscInsName">
+          </div>
+        </div>
+      </div>
 
-      <!-- Under Graduate / Graduation -->
-      <h5 class="mt-4">Undergraduate / Graduation</h5>
+      <!-- Graduation -->
+      <div class="form-section">
+        <h4>Undergraduate / Graduation</h4>
 
-      <input type="text" class="form-control mb-2" placeholder="Passing Year"
-             name="ugPY" [(ngModel)]="eduData.ugPY">
+        <div class="form-grid">
+          <div class="form-field">
+            <label>Passing Year</label>
+            <input class="input"
+                   type="text"
+                   name="ugPY"
+                   [(ngModel)]="eduData.ugPY">
+          </div>
 
-      <input type="text" class="form-control mb-2" placeholder="Graduation Subject"
-             name="gSubject" [(ngModel)]="eduData.gSubject">
+          <div class="form-field">
+            <label>Subject</label>
+            <input class="input"
+                   type="text"
+                   name="gSubject"
+                   [(ngModel)]="eduData.gSubject">
+          </div>
 
-      <input type="text" class="form-control mb-3" placeholder="Institution Name"
-             name="ugInsName" [(ngModel)]="eduData.ugInsName">
+          <div class="form-field full">
+            <label>Institution Name</label>
+            <input class="input"
+                   type="text"
+                   name="ugInsName"
+                   [(ngModel)]="eduData.ugInsName">
+          </div>
+        </div>
+      </div>
 
-      <!-- Other Details -->
-      <textarea class="form-control mb-3" rows="5" placeholder="Other Details"
-                name="otherDetails" [(ngModel)]="eduData.otherDetails"></textarea>
+      <!-- Other -->
+      <div class="form-section">
+        <h4>Other Details</h4>
 
-      <div class="hint-text mb-4">
-        শিক্ষাপ্রতিষ্ঠানের নাম, বিষয়, পাশের সন সহ বিস্তারিত লিখবেন। কিছু না থাকলে ঘরটি ফাঁকা রাখবেন।
+        <textarea class="input"
+                  rows="4"
+                  name="otherDetails"
+                  [(ngModel)]="eduData.otherDetails"></textarea>
+
+        <div class="hint">
+          Include institution, subject, and year if applicable.
+        </div>
       </div>
 
       <!-- Buttons -->
-      <button type="button" class="btn btn-back w-100 mb-2">Back</button>
-      <button type="submit" class="btn btn-save w-100" (click)="onSave()">Save & Next</button>
+      <div class="form-actions">
+        <button class="btn btn-secondary">Back</button>
+        <button class="btn btn-primary" (click)="onSave()">Save & Next</button>
+      </div>
 
     </div>
   </div>

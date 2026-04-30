@@ -3,38 +3,39 @@
   <!-- Header -->
   <app-header></app-header>
 
-  <!-- Hero + Sidebar -->
+  <!-- Hero Section -->
   <section class="hero">
 
-    <!-- Hero Card -->
-    <div class="hero-card">
-      <div class="overlay">
-        <h2 class="title">
+    <div class="hero-container">
+
+      <!-- Text Content -->
+      <div class="hero-content">
+        <h1 class="title">
           A Trusted Matchmaking Platform for Local & Overseas Brides and Grooms
-        </h2>
+        </h1>
 
-        <p class="lead">
-          A secure and respectful space for serious marriage seekers — verified profiles,
-          family-friendly communication, and guidance aligned with ethical values.
+        <p class="subtitle">
+          A secure and respectful space for serious marriage seekers —
+          verified profiles, family-friendly communication, and guidance
+          aligned with ethical values.
         </p>
+      </div>
 
-        <!-- Search Form -->
-        <form class="search" (ngSubmit)="onSearch()">
-          <div class="field">
+      <!-- Search Card -->
+      <div class="search-card">
+        <form class="search-form" (ngSubmit)="onSearch()">
+
+          <div class="form-group">
             <label>I am looking for</label>
-         
-        <select class="form-select custom-input"
-                [(ngModel)]="filters.biodataType"
-                name="biodataType">
-          <option value="" disabled selected>Please Select</option>
-          <option *ngFor="let item of BiodataTypeList" [value]="item.key">
-            {{ item.value }}
-          </option>
-        </select>
-
+            <select [(ngModel)]="filters.biodataType" name="biodataType">
+              <option value="" disabled selected>Please Select</option>
+              <option *ngFor="let item of BiodataTypeList" [value]="item.key">
+                {{ item.value }}
+              </option>
+            </select>
           </div>
 
-          <div class="field">
+          <div class="form-group">
             <label>Country</label>
             <select [(ngModel)]="filters.country" name="country">
               <option value="">Any Country</option>
@@ -42,52 +43,48 @@
             </select>
           </div>
 
-          <div class="field">
-              <div class="field">
-                <label>Merital Status</label>
-            
-                <select class="form-select custom-input"
-                        [(ngModel)]="filters.MaritalStatus"
-                        name="maritalStatus">
-                        <option value="" disabled selected>Please Select</option>
-                        <option *ngFor="let item of MeritalStatusList" [value]="item.key">
-                          {{ item.value }}
-                        </option>
-                </select>
-              </div>
+          <div class="form-group">
+            <label>Marital Status</label>
+            <select [(ngModel)]="filters.MaritalStatus" name="maritalStatus">
+              <option value="" disabled selected>Please Select</option>
+              <option *ngFor="let item of MeritalStatusList" [value]="item.key">
+                {{ item.value }}
+              </option>
+            </select>
           </div>
 
-          <div class="field full">
-            <button class="btn" type="submit" (click)="onSearch()">
-              Find Matches
-            </button>
-          </div>
+          <button class="search-btn" type="submit">
+            Find Matches
+          </button>
 
-          <div class="stats full">
-            <div class="stat">18,500+ Active Profiles</div>
-            <div class="stat">3,200+ Verified Members</div>
-            <div class="stat">Trusted Worldwide Community</div>
-          </div>
         </form>
+
+        <!-- Stats -->
+        <div class="stats">
+          <div class="stat">18,500+ Active Profiles</div>
+          <div class="stat">3,200+ Verified Members</div>
+          <div class="stat">Trusted Worldwide Community</div>
+        </div>
       </div>
+
     </div>
 
   </section>
 
-  <section style="margin-bottom:18px">
+  <!-- Other Sections -->
+  <section class="section-space">
     <app-tutorial></app-tutorial>
   </section>
 
-  <!-- Stats Counter -->
-  <section style="margin-bottom:18px">
+  <section class="section-space">
     <app-stats-counter></app-stats-counter>
   </section>
 
-  <section style="margin-bottom:18px">
+  <section class="section-space">
     <app-how-itwork></app-how-itwork>
   </section>
 
-  <section style="margin-bottom:18px">
+  <section>
     <app-footer></app-footer>
   </section>
 

@@ -56,9 +56,9 @@ export class Step2AddressComponent implements OnInit {
 
   ngOnInit(): void {
     this.formData.userId = this.authService.getUser().id;
-
+   debugger;
     this.locationService.getDivisions().subscribe((res: any) => {
-      this.divisions = res.data;
+      this.divisions = res;
       this.loadExistingAddress(); // ✅ divisions loaded first
     });
   }
@@ -98,6 +98,7 @@ export class Step2AddressComponent implements OnInit {
 
   // ================= PERMANENT =================
   onPermanentDivisionChange(loadExisting = false) {
+
     if (!this.formData.permanentDivisionId) return;
 
     // ✅ FIX: number vs number (removed toString)
@@ -117,7 +118,7 @@ export class Step2AddressComponent implements OnInit {
     this.locationService
       .getDistrictsByDivision(this.formData.permanentDivisionId)
       .subscribe((res: any) => {
-        this.permanentDistricts = res.data;
+        this.permanentDistricts = res;
 
         if (loadExisting && this.formData.permanentDistrictId) {
           this.onPermanentDistrictChange(true);
@@ -141,7 +142,7 @@ export class Step2AddressComponent implements OnInit {
     this.locationService
       .getUpazilasByDistrict(this.formData.permanentDistrictId)
       .subscribe((res: any) => {
-        this.permanentUpazilas = res.data;
+        this.permanentUpazilas = res;
 
         if (loadExisting && this.formData.permanentUpazilaId) {
           this.onPermanentUpazilaChange(true);
@@ -160,7 +161,7 @@ export class Step2AddressComponent implements OnInit {
     this.locationService
       .getUnionsByUpazila(this.formData.permanentUpazilaId)
       .subscribe((res: any) => {
-        this.permanentVillages = res.data;
+        this.permanentVillages = res;
       });
   }
 
@@ -183,7 +184,7 @@ export class Step2AddressComponent implements OnInit {
     this.locationService
       .getDistrictsByDivision(this.formData.currentDivisionId)
       .subscribe((res: any) => {
-        this.currentDistricts = res.data;
+        this.currentDistricts = res;
 
         if (loadExisting && this.formData.currentDistrictId) {
           this.onCurrentDistrictChange(true);
@@ -207,7 +208,7 @@ export class Step2AddressComponent implements OnInit {
     this.locationService
       .getUpazilasByDistrict(this.formData.currentDistrictId)
       .subscribe((res: any) => {
-        this.currentUpazilas = res.data;
+        this.currentUpazilas = res;
 
         if (loadExisting && this.formData.currentUpazilaId) {
           this.onCurrentUpazilaChange(true);
@@ -226,7 +227,7 @@ export class Step2AddressComponent implements OnInit {
     this.locationService
       .getUnionsByUpazila(this.formData.currentUpazilaId)
       .subscribe((res: any) => {
-        this.currentVillages = res.data;
+        this.currentVillages = res;
       });
   }
 

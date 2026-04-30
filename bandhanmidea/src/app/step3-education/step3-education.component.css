@@ -1,195 +1,129 @@
-/* ===============================
-   Page Background
-================================ */
-body {
-  background: linear-gradient(135deg, #f6f4fb, #ece9f6);
-  font-family: 'Inter', 'Segoe UI', sans-serif;
+/* Page background */
+.page-bg {
+  background: #f6f7fb;
+  min-height: 100vh;
+  padding: 40px 0;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-/* ===============================
-   Card Container
-================================ */
-.custom-form-card {
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 40px 36px;
-  box-shadow:
-    0 10px 25px rgba(0, 0, 0, 0.08),
-    0 2px 8px rgba(0, 0, 0, 0.04);
-  border: 1px solid #eee;
+/* Card */
+.form-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 760px;
+  margin: auto;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
 }
 
-/* ===============================
-   Section Titles
-================================ */
-h3 {
-  color: #4b2c71;
-  font-weight: 700;
-  font-size: 22px;
-  letter-spacing: 0.3px;
-}
-
-h5 {
-  color: #512da8;
+/* Titles */
+.form-title {
+  font-size: 24px;
   font-weight: 600;
-  font-size: 15px;
-  margin-top: 28px;
+  margin-bottom: 4px;
+}
+
+.form-subtitle {
+  color: #777;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+/* Sections */
+.form-section {
+  margin-bottom: 28px;
+}
+
+.form-section h4 {
+  font-size: 16px;
+  font-weight: 600;
   margin-bottom: 12px;
+  color: #333;
 }
 
-/* Divider */
-hr {
-  border: none;
-  height: 1px;
-  background: linear-gradient(to right, #512da8, #d81b60);
-  opacity: 0.35;
-  margin: 16px 0 24px;
+/* Grid layout */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
 }
 
-/* ===============================
-   Labels
-================================ */
-.label-custom {
-  color: #6b4a8f;
-  font-weight: 600;
-  font-size: 13px;
-  margin-bottom: 6px;
-  display: block;
+.form-field.full {
+  grid-column: span 2;
 }
 
-/* ===============================
-   Inputs & Selects
-================================ */
-.form-select,
-.form-control {
+/* Inputs */
+.input {
   width: 100%;
-  padding: 12px 14px;
-  margin-bottom: 20px;
-  border-radius: 12px;
-  border: 1px solid #d1d5db;
+  padding: 11px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
   font-size: 14px;
-  background: #ffffff;
-  transition: all 0.25s ease;
+  transition: 0.2s;
 }
 
-.form-select:focus,
-.form-control:focus {
+.input:focus {
+  border-color: #ff5a60;
   outline: none;
-  border-color: #512da8;
-  box-shadow: 0 0 0 3px rgba(81, 45, 168, 0.15);
+  box-shadow: 0 0 0 2px rgba(255,90,96,0.15);
 }
 
-/* Disabled */
-.form-select:disabled,
-.form-control:disabled {
-  background: #f4f5f7;
-  cursor: not-allowed;
-}
-
-/* ===============================
-   Checkbox
-================================ */
-.form-check {
-  background: #f6f4fb;
-  padding: 12px 14px;
-  border-radius: 12px;
-  border: 1px dashed #d6c8f0;
-}
-
-.form-check-input {
-  cursor: pointer;
-}
-
-.form-check-label {
-  font-size: 14px;
-  color: #555;
-  font-weight: 500;
-}
-
-/* ===============================
-   Hint / Info Text
-================================ */
-.hint-text {
+/* Labels */
+label {
   font-size: 13px;
-  color: #7a4eb5;
-  background: #f3effa;
-  padding: 8px 12px;
-  border-radius: 10px;
-  margin-top: 6px;
-}
-
-/* ===============================
-   Buttons
-================================ */
-.btn {
-  padding: 12px 28px;
-  border-radius: 30px;
-  border: none;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.25s ease;
-}
-
-/* Back Button */
-.btn.back {
-  background: #e5e7eb;
-  color: #374151;
-}
-
-.btn.back:hover {
-  background: #d1d5db;
-}
-
-/* Save / Next Button */
-.btn.next,
-.btn-save {
-  background: linear-gradient(90deg, #512da8, #d81b60);
-  color: #ffffff;
-  box-shadow: 0 8px 18px rgba(216, 27, 96, 0.35);
-}
-
-.btn.next:hover,
-.btn-save:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 26px rgba(216, 27, 96, 0.45);
-}
-
-/* Button alignment */
-.d-flex {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  margin-top: 24px;
-}
-
-/* ===============================
-   Section Separation
-================================ */
-h5::after {
-  content: "";
+  margin-bottom: 5px;
   display: block;
-  width: 40px;
-  height: 3px;
-  background: linear-gradient(90deg, #512da8, #d81b60);
-  border-radius: 2px;
+  color: #555;
+}
+
+/* Hint */
+.hint {
+  font-size: 12px;
+  color: #777;
   margin-top: 6px;
 }
 
-/* ===============================
-   Mobile Optimization
-================================ */
-@media (max-width: 576px) {
-  .custom-form-card {
-    padding: 24px 18px;
-    border-radius: 14px;
+/* Buttons */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.btn {
+  padding: 10px 22px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #ff5a60;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #e94b50;
+}
+
+.btn-secondary {
+  background: #e5e7eb;
+  color: #333;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
   }
 
-  .btn {
-    width: 100%;
+  .form-field.full {
+    grid-column: span 1;
   }
 
-  .d-flex {
+  .form-actions {
     flex-direction: column;
+    gap: 10px;
   }
 }

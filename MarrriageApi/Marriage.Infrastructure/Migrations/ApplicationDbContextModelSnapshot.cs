@@ -177,6 +177,45 @@ namespace Marriage.Infrastructure.Migrations
                     b.ToTable("DataLookups");
                 });
 
+            modelBuilder.Entity("Marriage.Core.Entity.District", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("DivisionId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DivisionId");
+
+                    b.ToTable("Districts");
+                });
+
+            modelBuilder.Entity("Marriage.Core.Entity.Division", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Divisions");
+                });
+
             modelBuilder.Entity("Marriage.Core.Entity.OccupationalInfo", b =>
                 {
                     b.Property<int>("Id")
@@ -255,6 +294,50 @@ namespace Marriage.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("PersonalInfos");
+                });
+
+            modelBuilder.Entity("Marriage.Core.Entity.Union", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UpazilaId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UpazilaId");
+
+                    b.ToTable("Unions");
+                });
+
+            modelBuilder.Entity("Marriage.Core.Entity.Upazila", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("DistrictId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DistrictId");
+
+                    b.ToTable("Upazilas");
                 });
 
             modelBuilder.Entity("Marriage.Core.Entity.User", b =>
@@ -530,6 +613,54 @@ namespace Marriage.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("UserEducations");
+                });
+
+            modelBuilder.Entity("Marriage.Core.Entity.District", b =>
+                {
+                    b.HasOne("Marriage.Core.Entity.Division", "Division")
+                        .WithMany("Districts")
+                        .HasForeignKey("DivisionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Division");
+                });
+
+            modelBuilder.Entity("Marriage.Core.Entity.Union", b =>
+                {
+                    b.HasOne("Marriage.Core.Entity.Upazila", "Upazila")
+                        .WithMany("Unions")
+                        .HasForeignKey("UpazilaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Upazila");
+                });
+
+            modelBuilder.Entity("Marriage.Core.Entity.Upazila", b =>
+                {
+                    b.HasOne("Marriage.Core.Entity.District", "District")
+                        .WithMany("Upazilas")
+                        .HasForeignKey("DistrictId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("District");
+                });
+
+            modelBuilder.Entity("Marriage.Core.Entity.District", b =>
+                {
+                    b.Navigation("Upazilas");
+                });
+
+            modelBuilder.Entity("Marriage.Core.Entity.Division", b =>
+                {
+                    b.Navigation("Districts");
+                });
+
+            modelBuilder.Entity("Marriage.Core.Entity.Upazila", b =>
+                {
+                    b.Navigation("Unions");
                 });
 #pragma warning restore 612, 618
         }

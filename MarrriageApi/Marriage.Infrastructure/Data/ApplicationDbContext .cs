@@ -26,6 +26,11 @@ namespace Marriage.Infrastructure.Data
         public DbSet<BioSteps> BioSteps { get; set; }
         public DbSet<UserBioStepProgress> UserBioStepProgress { get; set; }
         public DbSet<UserBiodata> UserBiodata { get; set; }
+
+        public DbSet<Division> Divisions { get; set; }
+        public DbSet<District> Districts { get; set; }
+        public DbSet<Upazila> Upazilas { get; set; }
+        public DbSet<Union> Unions { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<UserBioStepProgress>()

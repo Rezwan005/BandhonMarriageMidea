@@ -1,113 +1,144 @@
-<div class="container mt-5">
-  <div class="row justify-content-center">
-    <div class="col-md-7 custom-form-card">
-      <h3 class="mb-3">Address Details</h3>
-      <hr>
+<div class="page-bg">
+  <div class="form-wrapper">
 
-      <!-- Permanent Address -->
-      <h5 class="mt-3">Permanent Address</h5>
+    <h2 class="form-title">Address Details</h2>
+    <p class="form-subtitle">Please provide your permanent and current address</p>
 
-      <!-- Division -->
-      <select class="form-select mb-2"
-              [(ngModel)]="formData.permanentDivisionId"
-              (change)="onPermanentDivisionChange()">
-        <option [ngValue]="null">Select Division</option>
-        <option *ngFor="let d of divisions" [ngValue]="d.id">{{ d.name }}</option>
-      </select>
+    <!-- Permanent Address -->
+    <div class="card-section">
+      <h4 class="section-title">Permanent Address</h4>
 
-      <!-- District -->
-      <select class="form-select mb-2"
-              [(ngModel)]="formData.permanentDistrictId"
-              (change)="onPermanentDistrictChange()"
-              [disabled]="!permanentDistricts.length">
-        <option [ngValue]="null">Select District</option>
-        <option *ngFor="let d of permanentDistricts" [ngValue]="d.id">{{ d.name }}</option>
-      </select>
+      <div class="form-grid">
 
-      <!-- Upazila -->
-      <select class="form-select mb-2"
-              [(ngModel)]="formData.permanentUpazilaId"
-              (change)="onPermanentUpazilaChange()"
-              [disabled]="!permanentUpazilas.length">
-        <option [ngValue]="null">Select Upazila</option>
-        <option *ngFor="let u of permanentUpazilas" [ngValue]="u.id">{{ u.name }}</option>
-      </select>
+        <div class="form-group">
+          <label>Division</label>
+          <select class="form-control"
+                  [(ngModel)]="formData.permanentDivisionId"
+                  (change)="onPermanentDivisionChange()">
+            <option [ngValue]="null">Select Division</option>
+            <option *ngFor="let d of divisions" [ngValue]="d.id">{{ d.name }}</option>
+          </select>
+        </div>
 
-      <!-- Village -->
-      <select class="form-select mb-2"
-              [(ngModel)]="formData.permanentVillage"
-              [disabled]="!permanentVillages.length">
-        <option value="">Select Union / Village</option>
-        <option *ngFor="let v of permanentVillages" [value]="v.name">{{ v.name }}</option>
-      </select>
+        <div class="form-group">
+          <label>District</label>
+          <select class="form-control"
+                  [(ngModel)]="formData.permanentDistrictId"
+                  (change)="onPermanentDistrictChange()"
+                  [disabled]="!permanentDistricts.length">
+            <option [ngValue]="null">Select District</option>
+            <option *ngFor="let d of permanentDistricts" [ngValue]="d.id">{{ d.name }}</option>
+          </select>
+        </div>
 
-      <input type="text" class="form-control mb-2"
-             placeholder="Road / Street No"
-             [(ngModel)]="formData.permanentRoad">
+        <div class="form-group">
+          <label>Upazila</label>
+          <select class="form-control"
+                  [(ngModel)]="formData.permanentUpazilaId"
+                  (change)="onPermanentUpazilaChange()"
+                  [disabled]="!permanentUpazilas.length">
+            <option [ngValue]="null">Select Upazila</option>
+            <option *ngFor="let u of permanentUpazilas" [ngValue]="u.id">{{ u.name }}</option>
+          </select>
+        </div>
 
-      <input type="text" class="form-control mb-3"
-             placeholder="House / Building No"
-             [(ngModel)]="formData.permanentHouse">
+        <div class="form-group">
+          <label>Union / Village</label>
+          <select class="form-control"
+                  [(ngModel)]="formData.permanentVillage"
+                  [disabled]="!permanentVillages.length">
+            <option value="">Select Village</option>
+            <option *ngFor="let v of permanentVillages" [value]="v.name">{{ v.name }}</option>
+          </select>
+        </div>
 
-      <!-- Current Address -->
-      <h5 class="mt-4">Current Address</h5>
+        <div class="form-group">
+          <label>Road / Street</label>
+          <input type="text" class="form-control"
+                 [(ngModel)]="formData.permanentRoad">
+        </div>
 
-      <div class="form-check mb-2">
-        <input type="checkbox" class="form-check-input"
-               id="sameAddr"
+        <div class="form-group">
+          <label>House / Building</label>
+          <input type="text" class="form-control"
+                 [(ngModel)]="formData.permanentHouse">
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- Current Address -->
+    <div class="card-section">
+      <h4 class="section-title">Current Address</h4>
+
+      <div class="checkbox-box">
+        <input type="checkbox"
                [(ngModel)]="formData.isSameAddress"
                (change)="toggleSameAddress()">
-        <label class="form-check-label" for="sameAddr">Same as Permanent Address</label>
+        <span>Same as Permanent Address</span>
       </div>
 
-      <!-- Division -->
-      <select class="form-select mb-2"
-              [(ngModel)]="formData.currentDivisionId"
-              (change)="onCurrentDivisionChange()">
-        <option [ngValue]="">Select Division</option>
-        <option *ngFor="let d of divisions" [ngValue]="d.id">{{ d.name }}</option>
-      </select>
+      <div class="form-grid">
 
-      <!-- District -->
-      <select class="form-select mb-2"
-              [(ngModel)]="formData.currentDistrictId"
-              (change)="onCurrentDistrictChange()"
-              [disabled]="!currentDistricts.length">
-        <option [ngValue]="">Select District</option>
-        <option *ngFor="let d of currentDistricts" [ngValue]="d.id">{{ d.name }}</option>
-      </select>
+        <div class="form-group">
+          <label>Division</label>
+          <select class="form-control"
+                  [(ngModel)]="formData.currentDivisionId"
+                  (change)="onCurrentDivisionChange()">
+            <option [ngValue]="null">Select Division</option>
+            <option *ngFor="let d of divisions" [ngValue]="d.id">{{ d.name }}</option>
+          </select>
+        </div>
 
-      <!-- Upazila -->
-      <select class="form-select mb-2"
-              [(ngModel)]="formData.currentUpazilaId"
-              (change)="onCurrentUpazilaChange()"
-              [disabled]="!currentUpazilas.length">
-        <option [ngValue]="">Select Upazila</option>
-        <option *ngFor="let u of currentUpazilas" [ngValue]="u.id">{{ u.name }}</option>
-      </select>
+        <div class="form-group">
+          <label>District</label>
+          <select class="form-control"
+                  [(ngModel)]="formData.currentDistrictId"
+                  (change)="onCurrentDistrictChange()"
+                  [disabled]="!currentDistricts.length">
+            <option [ngValue]="null">Select District</option>
+            <option *ngFor="let d of currentDistricts" [ngValue]="d.id">{{ d.name }}</option>
+          </select>
+        </div>
 
-      <!-- Village -->
-      <select class="form-select mb-2"
-              [(ngModel)]="formData.currentVillage"
-              [disabled]="!currentVillages.length">
-        <option value="">Select Union / Village</option>
-        <option *ngFor="let v of currentVillages" [value]="v.name">{{ v.name }}</option>
-      </select>
+        <div class="form-group">
+          <label>Upazila</label>
+          <select class="form-control"
+                  [(ngModel)]="formData.currentUpazilaId"
+                  (change)="onCurrentUpazilaChange()"
+                  [disabled]="!currentUpazilas.length">
+            <option [ngValue]="null">Select Upazila</option>
+            <option *ngFor="let u of currentUpazilas" [ngValue]="u.id">{{ u.name }}</option>
+          </select>
+        </div>
 
-      <input type="text" class="form-control mb-2"
-             placeholder="Road / Street No"
-             [(ngModel)]="formData.currentRoad">
+        <div class="form-group">
+          <label>Union / Village</label>
+          <select class="form-control"
+                  [(ngModel)]="formData.currentVillage"
+                  [disabled]="!currentVillages.length">
+            <option value="">Select Village</option>
+            <option *ngFor="let v of currentVillages" [value]="v.name">{{ v.name }}</option>
+          </select>
+        </div>
 
-      <input type="text" class="form-control mb-3"
-             placeholder="House / Building No"
-             [(ngModel)]="formData.currentHouse">
+        <div class="form-group">
+          <label>Road / Street</label>
+          <input type="text" class="form-control"
+                 [(ngModel)]="formData.currentRoad">
+        </div>
 
-      <!-- Other Info -->
-      <input type="text" class="form-control mb-4"
-             placeholder="Hometown"
-             [(ngModel)]="formData.hometown">
+        <div class="form-group">
+          <label>House / Building</label>
+          <input type="text" class="form-control"
+                 [(ngModel)]="formData.currentHouse">
+        </div>
 
-      <button class="btn btn-primary w-100" (click)="onSave()">Save & Next</button>
+      </div>
     </div>
+
+    <button class="btn-save" (click)="onSave()">Save & Continue</button>
+
   </div>
 </div>

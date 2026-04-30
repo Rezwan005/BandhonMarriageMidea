@@ -1,36 +1,28 @@
 <div class="filter-box">
 
-  <h2 class="filter-title">Filters</h2>
+  <h2 class="filter-title">Search Filters</h2>
 
-  <!-- Biodata Number -->
   <div class="filter-group">
     <label>Biodata Number</label>
     <input
       type="text"
-      class="form-control custom-input"
-      placeholder="0000"
+      placeholder="Enter Biodata No"
       [(ngModel)]="filters.biodataNo">
   </div>
 
-  <!-- Category -->
   <div class="filter-group">
     <label>I'm looking for</label>
-
-     <select class="form-select custom-input"
-          [(ngModel)]="filters.biodataType">
-    <option value="" selected disabled>Please Select</option>  <!-- default selection -->
-    <option *ngFor="let item of BiodataTypeList" [value]="item.key">
-      {{ item.value }}
-    </option>
-  </select>
+    <select [(ngModel)]="filters.biodataType">
+      <option value="" disabled selected>Please Select</option>
+      <option *ngFor="let item of BiodataTypeList" [value]="item.key">
+        {{ item.value }}
+      </option>
+    </select>
   </div>
 
-  <!-- Marital -->
   <div class="filter-group">
     <label>Marital Status</label>
-
-    <select class="form-select custom-input"
-            [(ngModel)]="filters.maritalStatus">
+    <select [(ngModel)]="filters.maritalStatus">
       <option value="">Please Select</option>
       <option *ngFor="let item of MeritalStatusList" [value]="item.key">
         {{ item.value }}
@@ -38,22 +30,20 @@
     </select>
   </div>
 
-  <!-- Age -->
   <div class="filter-group">
-    <label>Age</label>
+    <label>Age Range</label>
 
-    <div class="age-range">
+    <div class="range-display">
       <span>{{filters.ageMin}}</span>
-      <input type="range" min="18" max="60" [(ngModel)]="filters.ageMin">
-
       <span>{{filters.ageMax}}</span>
-      <input type="range" min="18" max="60" [(ngModel)]="filters.ageMax">
     </div>
+
+    <input type="range" min="18" max="60" [(ngModel)]="filters.ageMin">
+    <input type="range" min="18" max="60" [(ngModel)]="filters.ageMax">
   </div>
 
-  <!-- Search Button -->
-  <button class="btn btn-search w-100" (click)="onSearch()">
-    🔍 Search Biodata
+  <button class="btn-search" (click)="onSearch()">
+    Search Biodata
   </button>
 
 </div>

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36127.28
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "MigrationService", "MigrationService\MigrationService.dtproj", "{9672FBDD-D9FA-374A-F670-C11EB086A68A}"
+EndProject
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "OldPortalMigration", "OldPortalMigration\OldPortalMigration.dtproj", "{E8C60A50-3461-B990-198D-0C69A4739ECE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9672FBDD-D9FA-374A-F670-C11EB086A68A}.Development|Default.ActiveCfg = Development
+		{9672FBDD-D9FA-374A-F670-C11EB086A68A}.Development|Default.Build.0 = Development
+		{E8C60A50-3461-B990-198D-0C69A4739ECE}.Development|Default.ActiveCfg = Development
+		{E8C60A50-3461-B990-198D-0C69A4739ECE}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4AA470B1-8950-4FDF-8335-B4F9824040F0}
+	EndGlobalSection
+EndGlobal

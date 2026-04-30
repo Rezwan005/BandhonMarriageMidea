@@ -1,0 +1,13 @@
+E:\Projects\BandhonMarriageMidea\MarrriageApi\Marriage.Core\bin\Release\net8.0\Marriage.Core.deps.json
+E:\Projects\BandhonMarriageMidea\MarrriageApi\Marriage.Core\bin\Release\net8.0\Marriage.Core.dll
+E:\Projects\BandhonMarriageMidea\MarrriageApi\Marriage.Core\bin\Release\net8.0\Marriage.Core.pdb
+E:\Projects\BandhonMarriageMidea\MarrriageApi\Marriage.Core\obj\Release\net8.0\Marriage.Core.csproj.AssemblyReference.cache
+E:\Projects\BandhonMarriageMidea\MarrriageApi\Marriage.Core\obj\Release\net8.0\Marriage.Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\BandhonMarriageMidea\MarrriageApi\Marriage.Core\obj\Release\net8.0\Marriage.Core.AssemblyInfoInputs.cache
+E:\Projects\BandhonMarriageMidea\MarrriageApi\Marriage.Core\obj\Release\net8.0\Marriage.Core.AssemblyInfo.cs
+E:\Projects\BandhonMarriageMidea\MarrriageApi\Marriage.Core\obj\Release\net8.0\Marriage.Core.csproj.CoreCompileInputs.cache
+E:\Projects\BandhonMarriageMidea\MarrriageApi\Marriage.Core\obj\Release\net8.0\Marriage.Core.sourcelink.json
+E:\Projects\BandhonMarriageMidea\MarrriageApi\Marriage.Core\obj\Release\net8.0\Marriage.Core.dll
+E:\Projects\BandhonMarriageMidea\MarrriageApi\Marriage.Core\obj\Release\net8.0\refint\Marriage.Core.dll
+E:\Projects\BandhonMarriageMidea\MarrriageApi\Marriage.Core\obj\Release\net8.0\Marriage.Core.pdb
+E:\Projects\BandhonMarriageMidea\MarrriageApi\Marriage.Core\obj\Release\net8.0\ref\Marriage.Core.dll

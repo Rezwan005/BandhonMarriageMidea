@@ -1,0 +1,6 @@
+wwwroot\selfies\42b6c827-4a90-4cd5-b080-e52e3bbfb1da.jpg
+wwwroot\selfies\6f4c0912-434c-4724-968c-9e4ddf665137.jpg
+wwwroot\selfies\70fd1dc0-a0a1-442a-8df1-63608a484d55.jpg
+wwwroot\selfies\9faacdbb-e1ac-409f-ad4c-0538e593478e.jpeg
+wwwroot\selfies\a0968955-7d19-4fc9-8d79-d196693c3861.jpg
+wwwroot\selfies\a341156f-5802-4e04-8ece-9ca8e47360c5.jpeg

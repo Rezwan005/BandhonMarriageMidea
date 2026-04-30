@@ -1,93 +1,100 @@
-<div class="container mt-5">
-  <div class="row justify-content-center">
-    <div class="col-md-7 custom-form-card">
+<div class="page-bg">
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
 
-      <h3 class="mb-3">Personal Information</h3>
-      <hr>
+        <div class="form-card">
+          <h3 class="form-title">Personal Information</h3>
+          <p class="form-subtitle">Tell us about yourself</p>
 
-      <!-- Dress Outside -->
-      <h5 class="mt-3">Lifestyle & Habits</h5>
+          <!-- Lifestyle -->
+          <div class="section-card">
+            <h5>Lifestyle & Habits</h5>
 
-      <input type="text"
-             class="form-control mb-2"
-             placeholder="What kind of clothes do you usually wear outside?"
-             name="dressOutside"
-             [(ngModel)]="data.dressOutside"
-             required>
+            <div class="form-group">
+              <label>What kind of clothes do you usually wear outside?</label>
+              <input type="text"
+                     class="form-control"
+                     name="dressOutside"
+                     [(ngModel)]="data.dressOutside">
+              <div class="hint-text">
+                Example: Wear burqa with hijab, do not wear niqab
+              </div>
+            </div>
 
-      <div class="hint-text mb-3">
-        Example: Wear burqa with hijab, do not wear niqab
-      </div>
+            <div class="form-group">
+              <label>Do you have any mental or physical diseases?</label>
+              <input type="text"
+                     class="form-control"
+                     name="diseaseInfo"
+                     [(ngModel)]="data.diseaseInfo">
+            </div>
 
-      <!-- Disease Info -->
-      <input type="text"
-             class="form-control mb-3"
-             placeholder="Do you have any mental or physical diseases?"
-             name="diseaseInfo"
-             [(ngModel)]="data.diseaseInfo"
-             required>
+            <div class="form-group">
+              <label>Are you involved in any special work?</label>
+              <input type="text"
+                     class="form-control"
+                     name="specialWork"
+                     [(ngModel)]="data.specialWork">
+            </div>
 
-      <!-- Special Work -->
-      <input type="text"
-             class="form-control mb-3"
-             placeholder="Are you involved in any special work?"
-             name="specialWork"
-             [(ngModel)]="data.specialWork"
-             required>
+            <div class="form-group">
+              <label>About Yourself</label>
+              <textarea class="form-control"
+                        rows="4"
+                        name="aboutYourself"
+                        [(ngModel)]="data.aboutYourself">
+              </textarea>
+            </div>
 
-      <!-- About Yourself -->
-      <textarea class="form-control mb-3"
-                rows="5"
-                placeholder="Write about your hobbies, likes, dislikes, dreams, etc."
-                name="aboutYourself"
-                [(ngModel)]="data.aboutYourself"
-                required>
-      </textarea>
+            <div class="form-group">
+              <label>Groom's Mobile Number</label>
+              <input type="text"
+                     class="form-control"
+                     name="mobileNo"
+                     [(ngModel)]="data.mobileNo">
+            </div>
+          </div>
 
-      <!-- Mobile -->
-      <input type="text"
-             class="form-control mb-4"
-             placeholder="Groom's mobile number"
-             name="mobileNo"
-             [(ngModel)]="data.mobileNo"
-             required>
+          <!-- Photo Upload -->
+          <div class="section-card text-center">
+            <h5>Selfie Upload</h5>
 
-      <!-- Selfie Upload -->
-      <h5 class="mt-4">Selfie Upload</h5>
+            <div class="photo-upload" (click)="fileInput.click()">
 
-      <div class="form-check mb-3 text-center"
-           style="cursor:pointer"
-           (click)="fileInput.click()">
+              <div *ngIf="!previewUrl" class="upload-placeholder">
+                <div class="upload-icon">📷</div>
+                <div>Click to upload selfie</div>
+              </div>
 
-        <div *ngIf="!previewUrl">
-          ⬆ Click to upload groom's selfie
+              <img *ngIf="previewUrl"
+                   [src]="previewUrl"
+                   class="preview-img">
+            </div>
+
+            <input type="file"
+                   #fileInput
+                   hidden
+                   accept="image/*"
+                   (change)="onFileSelected($event)" />
+
+            <div *ngIf="previewUrl"
+                 class="remove-photo"
+                 (click)="removePhoto()">
+              Remove photo
+            </div>
+          </div>
+
+          <!-- Button -->
+          <div class="button-row">
+            <button class="btn btn-primary w-100"
+                    (click)="onSave()">
+              Save & Next
+            </button>
+          </div>
+
         </div>
-
-        <img *ngIf="previewUrl"
-             [src]="previewUrl"
-             style="max-width: 160px; border-radius: 12px; margin-top: 10px;">
       </div>
-
-      <input type="file"
-             #fileInput
-             hidden
-             accept="image/*"
-             (change)="onFileSelected($event)" />
-
-      <div *ngIf="previewUrl"
-           class="hint-text mb-4 text-center"
-           style="cursor:pointer"
-           (click)="removePhoto()">
-        🗑 Remove this photo
-      </div>
-
-      <!-- Button -->
-      <button class="btn btn-save w-100"
-            
-              (click)="onSave()">
-        Save & Next
-      </button>
-
     </div>
   </div>
 </div>

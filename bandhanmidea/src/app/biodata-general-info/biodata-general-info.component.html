@@ -1,114 +1,166 @@
-<div class="container mt-5">
-  <div class="row justify-content-center">
-    <div class="col-md-7 custom-form-card">
+<div class="page-bg">
+  <div class="form-wrapper">
 
-      <h3 class="mb-3">General Information</h3>
-      <hr>
+    <h2 class="form-title">General Information</h2>
+    <p class="form-subtitle">Tell us about yourself</p>
 
-      <form #form="ngForm" (ngSubmit)="save(form)">
+    <form #form="ngForm" (ngSubmit)="save(form)" novalidate>
+
+      <div class="form-grid">
 
         <!-- Biodata Type -->
-        <label class="label-custom">Biodata Type *</label>
-        <select class="form-select"
-                name="biodataType"
-                [(ngModel)]="biodata.biodataType"
-                required>
-          <option [ngValue]="null">Select Biodata Type</option>
-          <option *ngFor="let item of BiodataTypeList" [ngValue]="item.key">
-            {{ item.value }}
-          </option>
-        </select>
+        <div class="form-group">
+          <label>Biodata Type *</label>
+          <select class="form-control"
+                  name="biodataType"
+                  [(ngModel)]="biodata.biodataType"
+                  #biodataType="ngModel"
+                  required>
+            <option [ngValue]="null">Select Biodata Type</option>
+            <option *ngFor="let item of BiodataTypeList" [ngValue]="item.key">
+              {{ item.value }}
+            </option>
+          </select>
+          <small class="error" *ngIf="biodataType.invalid && biodataType.touched">
+            Biodata type is required
+          </small>
+        </div>
 
         <!-- Marital Status -->
-        <label class="label-custom">Marital Status *</label>
-        <select class="form-select"
-                name="maritalStatus"
-                [(ngModel)]="biodata.maritalStatus"
-                required>
-          <option [ngValue]="null">Select Marital Status</option>
-          <option *ngFor="let item of MeritalStatusList" [ngValue]="item.key">
-            {{ item.value }}
-          </option>
-        </select>
+        <div class="form-group">
+          <label>Marital Status *</label>
+          <select class="form-control"
+                  name="maritalStatus"
+                  [(ngModel)]="biodata.maritalStatus"
+                  #maritalStatus="ngModel"
+                  required>
+            <option [ngValue]="null">Select Marital Status</option>
+            <option *ngFor="let item of MeritalStatusList" [ngValue]="item.key">
+              {{ item.value }}
+            </option>
+          </select>
+          <small class="error" *ngIf="maritalStatus.invalid && maritalStatus.touched">
+            Marital status is required
+          </small>
+        </div>
 
         <!-- Birth Date -->
-        <label class="label-custom">Birth Date *</label>
-        <input type="date"
-               class="form-control"
-               name="birthDate"
-               [(ngModel)]="biodata.birthDate"
-               required>
-
-        <div class="hint-text mb-3">
-          Please provide the actual date of birth. Incorrect information may cause rejection.
+        <div class="form-group">
+          <label>Birth Date *</label>
+          <input type="date"
+                 class="form-control"
+                 name="birthDate"
+                 [(ngModel)]="biodata.birthDate"
+                 #birthDate="ngModel"
+                 required>
+          <small class="error" *ngIf="birthDate.invalid && birthDate.touched">
+            Birth date is required
+          </small>
         </div>
 
         <!-- Age -->
-        <label class="label-custom">Age *</label>
-        <input type="number"
-               class="form-control"
-               name="age"
-               [(ngModel)]="biodata.age"
-               required>
+        <div class="form-group">
+          <label>Age *</label>
+          <input type="number"
+                 class="form-control"
+                 name="age"
+                 [(ngModel)]="biodata.age"
+                 #age="ngModel"
+                 required
+                 min="18"
+                 max="70">
+          <small class="error" *ngIf="age.invalid && age.touched">
+            Age must be between 18 and 70
+          </small>
+        </div>
 
         <!-- Height -->
-        <label class="label-custom">Height *</label>
-        <input type="text"
-               class="form-control"
-               name="height"
-               placeholder="e.g. 5 feet 6 inches"
-               [(ngModel)]="biodata.height"
-               required>
+        <div class="form-group">
+          <label>Height *</label>
+          <input type="text"
+                 class="form-control"
+                 name="height"
+                 placeholder="Example: 5 feet 6 inches"
+                 [(ngModel)]="biodata.height"
+                 #height="ngModel"
+                 required>
+          <small class="error" *ngIf="height.invalid && height.touched">
+            Height is required
+          </small>
+        </div>
 
         <!-- Complexion -->
-        <label class="label-custom">Complexion *</label>
-        <select class="form-select"
-                name="skinTone"
-                [(ngModel)]="biodata.skinTone"
-                required>
-          <option [ngValue]="null">Select Complexion</option>
-          <option *ngFor="let item of SkinToneList" [ngValue]="item.key">
-            {{ item.value }}
-          </option>
-        </select>
+        <div class="form-group">
+          <label>Complexion *</label>
+          <select class="form-control"
+                  name="skinTone"
+                  [(ngModel)]="biodata.skinTone"
+                  #skinTone="ngModel"
+                  required>
+            <option [ngValue]="null">Select Complexion</option>
+            <option *ngFor="let item of SkinToneList" [ngValue]="item.key">
+              {{ item.value }}
+            </option>
+          </select>
+          <small class="error" *ngIf="skinTone.invalid && skinTone.touched">
+            Complexion is required
+          </small>
+        </div>
 
         <!-- Weight -->
-        <label class="label-custom">Weight (kg) *</label>
-        <input type="number"
-               class="form-control"
-               name="weight"
-               [(ngModel)]="biodata.weight"
-               required>
+        <div class="form-group">
+          <label>Weight (kg) *</label>
+          <input type="number"
+                 class="form-control"
+                 name="weight"
+                 [(ngModel)]="biodata.weight"
+                 #weight="ngModel"
+                 required
+                 min="30"
+                 max="200">
+          <small class="error" *ngIf="weight.invalid && weight.touched">
+            Weight must be between 30 and 200 kg
+          </small>
+        </div>
 
         <!-- Blood Group -->
-        <label class="label-custom">Blood Group *</label>
-        <select class="form-select"
-                name="bloodGroup"
-                [(ngModel)]="biodata.bloodGroup"
-                required>
-          <option [ngValue]="null">Select Blood Group</option>
-          <option *ngFor="let item of BloodGroupList" [ngValue]="item.key">
-            {{ item.value }}
-          </option>
-        </select>
+        <div class="form-group">
+          <label>Blood Group *</label>
+          <select class="form-control"
+                  name="bloodGroup"
+                  [(ngModel)]="biodata.bloodGroup"
+                  #bloodGroup="ngModel"
+                  required>
+            <option [ngValue]="null">Select Blood Group</option>
+            <option *ngFor="let item of BloodGroupList" [ngValue]="item.key">
+              {{ item.value }}
+            </option>
+          </select>
+          <small class="error" *ngIf="bloodGroup.invalid && bloodGroup.touched">
+            Blood group is required
+          </small>
+        </div>
 
         <!-- Nationality -->
-        <label class="label-custom">Nationality *</label>
-        <select class="form-select"
-                name="nationality"
-                [(ngModel)]="biodata.nationality"
-                required>
-          <option value="Bangladeshi">Bangladeshi</option>
-        </select>
+        <div class="form-group full-width">
+          <label>Nationality *</label>
+          <select class="form-control"
+                  name="nationality"
+                  [(ngModel)]="biodata.nationality"
+                  required>
+            <option value="Bangladeshi">Bangladeshi</option>
+          </select>
+        </div>
 
-        <!-- Action -->
-        <button type="submit"
-                class="btn btn-save w-100 mt-4"
-                [disabled]="form.invalid || isSaving">
-          {{ isSaving ? 'Saving...' : 'Save & Next' }}
-        </button>
+      </div>
 
-      </form>
-    </div>
+      <button type="submit"
+              class="btn-save"
+              [disabled]="form.invalid || isSaving">
+        {{ isSaving ? 'Saving...' : 'Save & Continue' }}
+      </button>
+
+    </form>
+
   </div>
 </div>

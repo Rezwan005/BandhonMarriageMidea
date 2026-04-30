@@ -20,7 +20,9 @@ export class HeaderComponent {
     const user = this.authService.getUser();
     this.userName = user ? user.name : null;
   }
-
+ goToAcc() {
+    this.router.navigate(['/dashboard/accinfo']);
+  }
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }

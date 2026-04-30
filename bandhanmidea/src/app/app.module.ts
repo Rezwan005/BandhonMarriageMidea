@@ -39,6 +39,7 @@ import { PreviewBiodataComponent } from './preview-biodata/preview-biodata.compo
 import { PreviewlayoutComponent } from './previewlayout/previewlayout.component';
 import { BiodataDetailsComponent } from './biodata-details/biodata-details.component';
 import { GoogleLoginCallbackComponent } from './google-login-callback/google-login-callback.component';
+import { MyacountComponent } from './myacount/myacount.component';
 
 
 
@@ -75,6 +76,7 @@ import { GoogleLoginCallbackComponent } from './google-login-callback/google-log
       PreviewlayoutComponent,
       BiodataDetailsComponent,
       GoogleLoginCallbackComponent,
+      MyacountComponent,
  
   ],
   imports: [

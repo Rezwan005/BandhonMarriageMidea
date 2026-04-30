@@ -14,7 +14,9 @@ export class LoginComponent {
   constructor(private authService: AuthService,  private socialAuthService: SocialAuthService,private router: Router,private ngZone: NgZone) {}
   ngAfterViewInit(): void {
     google.accounts.id.initialize({
-    client_id: '521492801604-hj8uabij1uhn1mqrgha7beglcvsjv5or.apps.googleusercontent.com',
+   // client_id: '521492801604-hj8uabij1uhn1mqrgha7beglcvsjv5or.apps.googleusercontent.com',
+   //Local ------->
+   client_id: '521492801604-hj8uabij1uhn1mqrgha7beglcvsjv5or.apps.googleusercontent.com',
     itp_support: true,
     
     callback: (response: any) => {

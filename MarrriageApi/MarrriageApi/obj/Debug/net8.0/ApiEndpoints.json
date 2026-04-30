@@ -48,6 +48,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MarrriageApi.Controllers.LocationController",
+    "Method": "GetDistricts",
+    "RelativePath": "districts/{divisionId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "divisionId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MarrriageApi.Controllers.LocationController",
+    "Method": "GetDivisions",
+    "RelativePath": "divisions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MarrriageApi.Controllers.BiodataController",
     "Method": "SaveGeneralInfo",
     "RelativePath": "general-info",
@@ -313,6 +339,38 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MarrriageApi.Controllers.LocationController",
+    "Method": "GetUnions",
+    "RelativePath": "unions/{upazilaId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "upazilaId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MarrriageApi.Controllers.LocationController",
+    "Method": "GetUpazilas",
+    "RelativePath": "upazilas/{districtId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "districtId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {

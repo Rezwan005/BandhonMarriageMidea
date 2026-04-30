@@ -1,0 +1,79 @@
+<app-header></app-header>
+<div class="biodata-wrapper" *ngIf="biodata">
+<button class="btn btn-outline-secondary mb-3" style="float: right;" (click)="goBack()">
+  ← Back to List
+</button>
+  <!-- Header -->
+  <div class="biodata-header">
+    <div class="photo-box">
+      <img [src]="biodata.personalInfo.selfiePath" alt="Profile Photo">
+    </div>
+
+    <div class="basic-info">
+      <h2>{{ biodata.biodataNo }}</h2>
+      <p class="status">{{ biodata.status }}</p>
+      <p><strong>Name:</strong> {{ biodata.name }}</p>
+      <p><strong>Email:</strong> {{ biodata.email }}</p>
+    </div>
+  </div>
+
+  <!-- General Information -->
+  <div class="card">
+    <h3>General Information</h3>
+    <div class="grid">
+      <p><span>Type</span>{{ biodata.generalInfo.biodataType }}</p>
+      <p><span>Marital Status</span>{{ biodata.generalInfo.maritalStatus }}</p>
+      <p><span>Age</span>{{ biodata.generalInfo.age }}</p>
+      <p><span>Height</span>{{ biodata.generalInfo.height }}</p>
+      <p><span>Skin Tone</span>{{ biodata.generalInfo.skinTone }}</p>
+      <p><span>Blood Group</span>{{ biodata.generalInfo.bloodGroup }}</p>
+    </div>
+  </div>
+
+  <!-- Education -->
+  <div class="card">
+    <h3>Educational Qualification</h3>
+    <div class="grid">
+      <p><span>Highest Degree</span>{{ biodata.education.highestDegree }}</p>
+      <p><span>Subject</span>{{ biodata.education.gSubject }}</p>
+    </div>
+  </div>
+
+  <!-- Occupation -->
+  <div class="card">
+    <h3>Occupation</h3>
+    <div class="grid">
+      <p><span>Profession</span>{{ biodata.occupationalInfo.profession }}</p>
+      <p><span>Monthly Income</span>{{ biodata.occupationalInfo.monthlyIncome }}</p>
+    </div>
+  </div>
+
+  <!-- Address -->
+  <div class="card">
+    <h3>Address</h3>
+    <div class="grid">
+      <p><span>Permanent District</span>{{ biodata.address.permanentDistrict }}</p>
+      <p><span>Current District</span>{{ biodata.address.currentDistrict }}</p>
+    </div>
+  </div>
+
+  <!-- Personal Info -->
+  <div class="card">
+    <h3>Personal Information</h3>
+    <p class="about">{{ biodata.personalInfo.aboutYourself }}</p>
+  </div>
+
+  <!-- Contact Info -->
+  <div class="card highlight">
+    <h3>Guardian Contact</h3>
+    <div class="grid">
+      <p><span>Guardian Name</span>{{ biodata.contact.groomName }}</p>
+      <p><span>Relation</span>{{ biodata.contact.guardianRelation }}</p>
+      <p><span>Mobile</span>{{ biodata.contact.guardianMobile }}</p>
+    </div>
+  </div>
+
+</div>
+  <section style="margin-bottom:18px">
+    <app-footer></app-footer>>
+  </section>

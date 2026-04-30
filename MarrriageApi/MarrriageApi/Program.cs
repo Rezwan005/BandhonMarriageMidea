@@ -47,8 +47,14 @@ builder.Services.AddAuthentication("Bearer")
             Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
     };
 });
-
+// ✅ Register your LocationSeederService
+builder.Services.AddHttpClient<LocationSeederService>();
 var app = builder.Build();
+//using (var scope = app.Services.CreateScope())
+//{
+//    var seeder = scope.ServiceProvider.GetRequiredService<LocationSeederService>();
+//    await seeder.SeedAllLocationsAsync();
+//}
 app.Use(async (context, next) =>
 {
     context.Response.Headers["Cross-Origin-Opener-Policy"] = "unsafe-none";

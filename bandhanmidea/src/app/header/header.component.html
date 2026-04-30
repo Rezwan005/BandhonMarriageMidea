@@ -17,10 +17,11 @@
     <!-- Navigation -->
     <nav [class.active]="isMenuOpen" class="top-nav">
       <a routerLink="/how-it-works">How It Works</a>
-      <a routerLink="/profiles">Profiles</a>
+      <a routerLink="/dashboard/accinfo">Profiles</a>
 
       <!-- Auth -->
-      <ng-container *ngIf="!userName; else loggedIn">
+      <ng-container  *ngIf="!userName; else loggedIn">
+     
         <a class="cta" (click)="goToLogin()">Join for Free</a>
       </ng-container>
 
